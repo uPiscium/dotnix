@@ -24,7 +24,7 @@
     gcc
     gdb
     go
-    glfw
+    grim
     htop
     jdk17
     less
