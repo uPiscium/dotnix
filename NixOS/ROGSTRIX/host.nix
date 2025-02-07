@@ -9,6 +9,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware.nix
+      ./wireguard.nix
       ../common
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
@@ -50,6 +51,7 @@
 
   environment.systemPackages = with pkgs; [
     nvtopPackages.full
+    wireguard-tools
   ];
 
   # This value determines the NixOS release from which the default
