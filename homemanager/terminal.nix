@@ -4,21 +4,21 @@
     wezterm
   ];
 
-  # programs.kitty = {
-  #   enable = true;
-  # };
-
-  programs.wezterm = {
+  programs.kitty = {
     enable = true;
   };
 
-  # home.file.".config/kitty" = {
-  #   source = ../config.d/kitty;
-  #   recursive = true;
+  # programs.wezterm = {
+  #   enable = true;
   # };
 
-  home.file.".config/wezterm" = {
-    source = ../config.d/wezterm;
+  home.file.".config/kitty" = {
+    source = ../config.d/kitty;
     recursive = true;
   };
+
+  # home.file.".config/wezterm" = {
+  #   source = ../config.d/wezterm;
+  #   recursive = true;
+  # };
 }
