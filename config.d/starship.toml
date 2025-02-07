@@ -1,0 +1,113 @@
+format = """
+[](#880000)\
+$time\
+[](fg:#880000 bg:#000000)\
+$battery\
+[](fg:#000000 bg:#880000)\
+$directory\
+[](fg:#880000 bg:#000000)\
+$git_branch\
+$git_status\
+[](fg:#000000 bg:#880000)\
+$python\
+[](fg:#880000)\
+\n$character
+"""
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "fg:#000000 bg:#880000"
+format = '[$time ]($style)'
+
+[battery]
+format = '[ $symbol$percentage ]($style)'
+
+[[battery.display]]
+threshold = 15
+charging_symbol = '󰢜 '
+discharging_symbol = '󰂃 '
+style = 'fg:#FF0000 bg:#000000'
+
+[[battery.display]]
+threshold = 20
+charging_symbol = '󰂆 '
+discharging_symbol = '󰁻 '
+style = 'fg:#FF0000 bg:#000000'
+
+[[battery.display]]
+threshold = 30
+charging_symbol = '󰂇 '
+discharging_symbol = '󰁼 '
+style = 'fg:#FFFF00 bg:#000000'
+
+[[battery.display]]
+threshold = 40
+charging_symbol = '󰂈 '
+discharging_symbol = '󰁽 '
+style = 'fg:#FFF900 bg:#000000'
+
+[[battery.display]]
+threshold = 50
+charging_symbol = '󰢝 '
+discharging_symbol = '󰁾 '
+style = 'fg:#00AA00 bg:#000000'
+
+[[battery.display]]
+threshold = 60
+charging_symbol = '󰂉 '
+discharging_symbol = '󰁿 '
+style = 'fg:#00BB00 bg:#000000'
+
+[[battery.display]]
+threshold = 70
+charging_symbol = '󰢞 '
+discharging_symbol = '󰂀 '
+style = 'fg:#00CC00 bg:#000000'
+
+[[battery.display]]
+threshold = 80
+charging_symbol = '󰂊 '
+discharging_symbol = '󰂁 '
+style = 'fg:#00DD00 bg:#000000'
+
+[[battery.display]]
+threshold = 90
+charging_symbol = '󰂋 '
+discharging_symbol = '󰂂 '
+style = 'fg:#00EE00 bg:#000000'
+
+[[battery.display]]
+threshold = 100
+charging_symbol = '󰂅 '
+discharging_symbol = '󰁹 '
+style = 'fg:#00FF00 bg:#000000'
+
+[directory]
+style = "fg:#000000 bg:#880000"
+format = "[ $path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Musics" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = '  '
+truncation_length = 32
+truncation_symbol = ''
+style = "fg:#FF0000 bg:#000000"
+format = '[$symbol$branch ]($style)'
+
+[git_status]
+style = "fg:#FF0000 bg:#000000"
+format = '[$all_status ]($style)'
+
+[python]
+symbol = '󰆦 '
+style = "fg:#000000 bg:#880000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+

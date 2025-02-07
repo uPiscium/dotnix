@@ -1,0 +1,23 @@
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+# Window settings
+[window]
+dimensions = { columns = 200, lines = 60 }
+padding = { x = 3, y = 2 }
+opacity = 0.9
+
+# Scrolling settings
+[scrolling]
+history = 2000
+multiplier = 3
+
+# Font settings
+[font]
+size = 10.0
+
+# Key bindings
+[keyboard]
+bindings = [
+  { key = "Escape", mods = "Alt", action = "ToggleViMode" }
+]
