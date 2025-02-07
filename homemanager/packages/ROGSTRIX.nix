@@ -9,7 +9,7 @@
     hexedit
     jetbrains-toolbox
     libreoffice-fresh
-    parsec-bin
+      parsec-bin
     unityhub
     zoom
 
