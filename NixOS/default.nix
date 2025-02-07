@@ -41,6 +41,22 @@ let
 in
 {
   nixos = {
+    ArchServer = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "ArchServer";
+      username = "upiscium";
+      modules = [
+        ./ArchServer/host.nix
+      ];
+    };
+    NAS = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "NAS";
+      username = "upiscium";
+      modules = [
+        ./NAS/host.nix
+      ];
+    };
     ROGSTRIX = mkNixosSystem {
       system = "x86_64-linux";
       hostname = "ROGSTRIX";
@@ -49,20 +65,43 @@ in
         ./ROGSTRIX/host.nix
       ];
     };
-    # Komachan = mkNixosSystem {
-    #   system = "x86_64-linux";
-    #   hostname = "Komachan";
-    #   username = "ojii3";
-    #   modules = [ ./Komachan/nixos.nix ];
-    # };
+    WireGuard = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "WireGuard";
+      username = "upiscium";
+      modules = [
+        ./WireGuard/host.nix
+      ];
+    };
   };
 
   home-manager = {
+    upiscium-ArchServer = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./ArchServer/home.nix
+      ];
+    };
+    upiscium-NAS = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./NAS/home.nix
+      ];
+    };
     upiscium-ROGSTRIX = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
         ./ROGSTRIX/home.nix
+      ];
+    };
+    upiscium-WireGuard = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./WireGuard/home.nix
       ];
     };
   };
