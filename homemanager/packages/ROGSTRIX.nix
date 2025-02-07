@@ -45,6 +45,7 @@
     traceroute
     tree
     typst
+    unar
     unzip
     uv
     vlc

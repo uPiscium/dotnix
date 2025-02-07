@@ -10,6 +10,7 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.disable_default_key_bindings = true;
 config.color_scheme = "Tokyo Night"
 config.font_size = 10.0
 config.warn_about_missing_glyphs = false
