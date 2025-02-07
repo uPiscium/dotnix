@@ -60,6 +60,13 @@
           exec $1;
         fi
       }
+
+      if [ -n "$\{commands[fzf-share]\}" ]; then
+        source "$(fzf-share)/key-bindings.zsh"
+        source "$(fzf-share)/completion.zsh"
+      fi
+
+      export LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib:$LD_LIBRARY_PATH";
     '';
   };
 
