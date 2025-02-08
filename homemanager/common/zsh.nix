@@ -9,7 +9,7 @@
 
     shellAliases = {
       grep = "rg";
-      ip = "ip -ca";
+      ip = "ip -a";
       ls = "ls --color=auto";
       ll = "ls -l";
       la = "ls -a";

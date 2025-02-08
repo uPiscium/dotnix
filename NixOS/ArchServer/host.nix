@@ -9,6 +9,7 @@
     [
       # Include the results of the hardware scan.
       ./hardware.nix
+      ./ssh.nix
       ../common
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
@@ -25,6 +26,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [ ];
+
+  services.xserver.displayManager.lightdm.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
