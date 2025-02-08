@@ -9,10 +9,10 @@
       ips = [ "10.0.0.2/24" ];
       listenPort = 30000;
       mtu = 1420;
-      privateKeyFile = "/home/upiscium/Wireguard/ROGSTRIX.key";
+      privateKeyFile = "/home/upiscium/WireGuard/ROGSTRIX.key";
       peers = [
         {
-          publicKey = "EnygLlrjdYo/kDZil5x8wCc5k6cb3+Zsya14Dot7/iQ=";
+          publicKey = "rj2Fy53+fondOM1dZ9trbNaXAVEM438UAcC6ni6beQM=";
           allowedIPs = [ "10.0.0.0/24" "192.168.11.0/24" ];
           endpoint = "uPiscium.f5.si:30000";
           persistentKeepalive = 25;

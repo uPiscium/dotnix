@@ -9,12 +9,13 @@
     hexedit
     jetbrains-toolbox
     libreoffice-fresh
-      parsec-bin
+    parsec-bin
     unityhub
     zoom
 
     bottom
-    llvmPackages_19.clang-unwrapped
+    clang-tools
+    clangStdenv
     cmake
     # cpupower
     docker-compose

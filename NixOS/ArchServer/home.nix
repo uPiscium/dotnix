@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ../../homemanager
-    ../../homemanager/packages/ArchServer.nix
+    ../../homemanager/common
+    ../../homemanager/ArchServer
   ];
 }

@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
-    ../../homemanager
-    ../../homemanager/packages/ROGSTRIX.nix
+    ../../homemanager/common
+    ../../homemanager/ROGSTRIX
   ];
   home.file.".config/uwsm/env".text = ''
     export GMB_BACKEND=nvidia-drm

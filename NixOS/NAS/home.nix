@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ../../homemanager
-    ../../homemanager/packages/NAS.nix
+    ../../homemanager/common
+    ../../homemanager/NAS
   ];
 }

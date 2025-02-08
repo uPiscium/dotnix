@@ -13,7 +13,7 @@
   # };
 
   home.file.".config/kitty" = {
-    source = ../config.d/kitty;
+    source = ../../config.d/kitty;
     recursive = true;
   };
 
