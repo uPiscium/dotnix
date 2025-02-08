@@ -8,7 +8,9 @@
   imports =
     [
       # Include the results of the hardware scan.
+      ./desktop.nix
       ./hardware.nix
+      ./steam.nix
       ./wireguard.nix
       ../common
     ]

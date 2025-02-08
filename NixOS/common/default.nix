@@ -4,14 +4,12 @@
       # Include the results of the hardware scan.
       ./audio.nix
       ./bluetooth.nix
-      ./desktop.nix
       ./flatpak.nix
       ./gpg.nix
       ./i18n.nix
       ./keymap.nix
       ./network.nix
       ./services.nix
-      ./steam.nix
       ./sudoers.nix
       ./toolbox.nix
       ./virtualize.nix
