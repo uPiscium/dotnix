@@ -13,6 +13,7 @@
       ./sudoers.nix
       ./toolbox.nix
       ./virtualize.nix
+      ./xsetting.nix
     ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
