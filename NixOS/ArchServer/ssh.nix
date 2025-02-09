@@ -13,7 +13,7 @@
     };
   };
 
-  # users.users."upiscium".openssh.authorizedKeys.keys = [
-  #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILmhk61jAkamnJnwiIOsiYf3EcPrfBn94QrAz8UL9pbs upiscium@ROGSTRIX"
-  # ];
+  users.users."upiscium".openssh.authorizedKeys.keyFiles = [
+    "/home/upiscium/.ssh/authorized_keys"
+  ];
 }
