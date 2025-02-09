@@ -3,10 +3,14 @@
     enable = true;
     ports = [ 20000 ];
     settings = {
-      #PubkeyAuthentication = "yes";
       PasswordAuthentication = false;
-      KbdInteractiveAuthentication = false;
+      AllowUsers = [ "upiscium" ];
+      ChallengeResponseAuthentication = false;
+      PubkeyAuthentication = true;
+      PermitEmptyPasswords = false;
       PermitRootLogin = "no";
+      KbdInteractiveAuthentication = false;
+      X11Forwarding = false;
     };
   };
 
