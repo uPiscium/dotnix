@@ -3,6 +3,7 @@
     ./browser.nix
     ./direnv.nix
     ./hyprland.nix
+    ./packages.nix
   ];
 
   # home = rec {
