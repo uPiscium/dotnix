@@ -14,6 +14,6 @@
   };
 
   users.users."upiscium".openssh.authorizedKeys.keyFiles = [
-    "../../.ssh/authorized_keys"
+    ../../.ssh/authorized_keys
   ];
 }
