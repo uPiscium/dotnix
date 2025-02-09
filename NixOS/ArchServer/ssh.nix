@@ -3,6 +3,7 @@
     enable = true;
     ports = [ 20000 ];
     settings = {
+      PubkeyAuthentication = "yes";
       PasswordAuthentication = false;
       PermitRootLogin = "no";
     };
