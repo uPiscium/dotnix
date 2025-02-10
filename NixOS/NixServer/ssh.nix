@@ -1,6 +1,9 @@
 { ... }: {
   users.users.upiscium.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfOfHIAEsrWG0hdPDB+TPXoDJ6qUffe0Z8xOPgSUV8e upiscium"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILCp49Fwz/03KWdH63I3AFz1vIu9BJyew+NcP4TSoua1 upiscium"
+  ];
+  users.users.upiscium.openssh.authorizedKeys.keyFiles = [
+    "%h/upiscium/.ssh/ROGSTRIX.pub"
   ];
   services.openssh = {
     ports = [ 20000 ];
