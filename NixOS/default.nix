@@ -49,6 +49,14 @@ in
         ./ROGSTRIX/host.nix
       ];
     };
+    MinecraftServer = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "MinecraftServer";
+      username = "upiscium";
+      modules = [
+        ./MinecraftServer/host.nix
+      ];
+    };
   };
 
   home-manager = {
@@ -57,6 +65,13 @@ in
       username = "upiscium";
       modules = [
         ./ROGSTRIX/home.nix
+      ];
+    };
+    MinecraftServer = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./MinecraftServer/home.nix
       ];
     };
   };
