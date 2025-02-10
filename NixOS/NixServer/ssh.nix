@@ -1,13 +1,13 @@
 { ... }: {
-  # users.users.upiscium.openssh.authorizedKeys.keys = [
-  #   "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfOfHIAEsrWG0hdPDB+TPXoDJ6qUffe0Z8xOPgSUV8e upiscium"
-  # ];
+  users.users.upiscium.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfOfHIAEsrWG0hdPDB+TPXoDJ6qUffe0Z8xOPgSUV8e upiscium"
+  ];
   services.openssh = {
     ports = [ 20000 ];
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       AllowUsers = [ "upiscium" ];
-      # PubkeyAuthentication = true;
+      PubkeyAuthentication = true;
       PermitRootLogin = "no";
       X11Forwarding = false;
     };
