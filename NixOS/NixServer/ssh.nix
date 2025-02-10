@@ -3,7 +3,7 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILCp49Fwz/03KWdH63I3AFz1vIu9BJyew+NcP4TSoua1 upiscium"
   ];
   users.users.upiscium.openssh.authorizedKeys.keyFiles = [
-    %h/upiscium/.ssh/ROGSTRIX.pub
+    /etc/nixos/ssh/authorized_keys
   ];
   services.openssh = {
     ports = [ 20000 ];
