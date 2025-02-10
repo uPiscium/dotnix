@@ -4,6 +4,7 @@
     brightnessctl
     grim
     hypridle
+    hyprlock
     hyprpaper
     hyprpicker
     libnotify
