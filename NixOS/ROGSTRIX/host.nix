@@ -8,6 +8,7 @@
   imports =
     [
       # Include the results of the hardware scan.
+      ./asusctl.nix
       ./desktop.nix
       ./hardware.nix
       ./steam.nix
@@ -44,7 +45,8 @@
   };
 
   # Bootloader.
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
