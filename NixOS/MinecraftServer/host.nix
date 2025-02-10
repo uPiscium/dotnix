@@ -10,6 +10,7 @@
       # Include the results of the hardware scan.
       ./hardware.nix
       ./ipfix.nix
+      ./ssh.nix
       ../common
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [

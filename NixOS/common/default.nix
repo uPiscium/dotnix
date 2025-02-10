@@ -10,7 +10,6 @@
       ./keymap.nix
       ./network.nix
       ./services.nix
-      ./ssh.nix
       ./sudoers.nix
       ./toolbox.nix
       ./virtualize.nix
