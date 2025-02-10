@@ -2,13 +2,13 @@
   services.openssh = {
     enable = true;
     ports = [ 20000 ];
-    settings = {
-      PasswordAuthentication = true;
-      AllowUsers = [ "upiscium" ];
-      UseDns = true;
-      X11Forwarding = false;
-      PermitRootLogin = "prohibit-password";
-    };
+    # settings = {
+    #   PasswordAuthentication = true;
+    #   AllowUsers = [ "upiscium" ];
+    #   UseDns = true;
+    #   X11Forwarding = false;
+    #   PermitRootLogin = "prohibit-password";
+    # };
   };
 
   # users.users.upiscium.openssh.authorizedKeys.keys = [
