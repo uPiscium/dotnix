@@ -41,20 +41,20 @@ let
 in
 {
   nixos = {
-    ArchServer = mkNixosSystem {
-      system = "x86_64-linux";
-      hostname = "ArchServer";
-      username = "upiscium";
-      modules = [
-        ./ArchServer/host.nix
-      ];
-    };
     NAS = mkNixosSystem {
       system = "x86_64-linux";
       hostname = "NAS";
       username = "upiscium";
       modules = [
         ./NAS/host.nix
+      ];
+    };
+    NixServer = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "ArchServer";
+      username = "upiscium";
+      modules = [
+        ./NixServer/host.nix
       ];
     };
     ROGSTRIX = mkNixosSystem {
