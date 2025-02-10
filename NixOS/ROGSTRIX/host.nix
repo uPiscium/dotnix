@@ -11,7 +11,6 @@
       ./asusctl.nix
       ./desktop.nix
       ./hardware.nix
-      ./ssh.nix
       ./steam.nix
       ./wireguard.nix
       ../common
