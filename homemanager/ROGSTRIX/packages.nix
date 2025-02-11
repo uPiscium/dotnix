@@ -29,6 +29,8 @@
     htop
     jdk17
     less
+    nettools
+    nmap
     nyancat
     ollama
     power-profiles-daemon
