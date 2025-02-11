@@ -57,6 +57,14 @@ in
         ./MinecraftServer/host.nix
       ];
     };
+    WireGuardServer = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "WireGuardServer";
+      username = "upiscium";
+      modules = [
+        ./WireGuardServer/host.nix
+      ];
+    };
   };
 
   home-manager = {
@@ -72,6 +80,13 @@ in
       username = "upiscium";
       modules = [
         ./MinecraftServer/home.nix
+      ];
+    };
+    WireGuardServer = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./WireGuardServer/home.nix
       ];
     };
   };
