@@ -5,7 +5,7 @@
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
-  networking.firewall.enable = true;
+  networking.firewall.enable = false;
 
   services.avahi = {
     enable = true;

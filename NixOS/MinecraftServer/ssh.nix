@@ -9,10 +9,9 @@
     };
   };
 
-  networking.firewall.enable = false;
   users.users."upiscium".openssh.authorizedKeys.keyFiles = [
     ./authorized_keys
   ];
 
-  networking.firewall.allowedTCPPorts = [ 40000 ];
+  # networking.firewall.allowedTCPPorts = [ 40000 ];
 }
