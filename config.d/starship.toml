@@ -1,39 +1,73 @@
 format = """
-[](#880000)\
+[](fg:#000000 bg:#FF0000)\
 $hostname\
-[](fg:#880000 bg:#000000)\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
 $time\
-[](fg:#000000 bg:#880000)\
-$memory_usage\
-[](fg:#880000 bg:#000000)\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
 $battery\
-[](fg:#000000 bg:#880000)\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
 $directory\
-[](fg:#880000 bg:#000000)\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
 $git_branch\
 $git_status\
-[](fg:#000000 bg:#880000)\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
 $python\
-[](fg:#880000)\
+$aws\
+$buf\
+$c\
+$cmake\
+$conda\
+$crystal\
+$dart\
+$docker_context\
+$elixir\
+$elm\
+$fennel\
+$golang\
+$guix_shell\
+$haskell\
+$haxe\
+$java\
+$julia\
+$kotlin\
+$lua\
+$meson\
+$nim\
+$nodejs\
+$ocaml\
+$package\
+$perl\
+$php\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$swift\
+$zig\
+$gradle\
+[](fg:#000000 bg:#FF0000)\
+[](fg:#000000 bg:#FF0000)\
+$nix_shell\
+[](fg:#000000 bg:#FF0000)\
 \n$character
 """
 
 [hostname]
 ssh_only = false
-ssh_symbol ="🌐 "
-style = "fg:#000000 bg:#880000"
-format = "[$ssh_symbol$hostname ]($style)"
+ssh_symbol ="🌐"
+style = "fg:#FF0000 bg:#000000"
+format = "[ $ssh_symbol$hostname ]($style)"
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "fg:#880000 bg:#000000"
+style = "fg:#FF0000 bg:#000000"
 format = '[ $time ]($style)'
-
-[nix_shell]
-disabled = false
-symbol = ''
-style = "fg:#000000 bg:#880000"
 
 [battery]
 format = '[ $symbol$percentage ]($style)'
@@ -99,7 +133,7 @@ discharging_symbol = '󰁹 '
 style = 'fg:#00FF00 bg:#000000'
 
 [directory]
-style = "fg:#000000 bg:#880000"
+style = "fg:#FF0000 bg:#000000"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"
@@ -109,6 +143,12 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Musics" = " "
 "Pictures" = " "
+"Videos" = " "
+"Desktop" = " "
+"Public" = " "
+"Templates" = " "
+"Projects" = "󰜩 "
+
 
 [git_branch]
 symbol = '  '
@@ -123,6 +163,177 @@ format = '[$all_status ]($style)'
 
 [python]
 symbol = '󰆦 '
-style = "fg:#000000 bg:#880000"
+style = "fg:#FF0000 bg:#000000"
 format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[aws]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[buf]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[c]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[cmake]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[conda]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[crystal]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[dart]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[docker_context]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[elixir]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[elm]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[fennel]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[golang]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[guix_shell]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[haskell]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[haxe]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[java]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[julia]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[kotlin]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[lua]
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+symbol = " "
+
+[meson]
+symbol = "󰔷 "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[nim]
+symbol = "󰆥 "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[nodejs]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[ocaml]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[package]
+symbol = "󰏗 "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[perl]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[php]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[rlang]
+symbol = "󰟔 "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[ruby]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[rust]
+symbol = "󱘗 "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[scala]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[swift]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[zig]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[gradle]
+symbol = " "
+style = "fg:#FF0000 bg:#000000"
+format = '[ ${symbol}${version}(\($virtualenv\))]($style)'
+
+[nix_shell]
+disabled = false
+symbol = ' 󱄅 '
+style = "fg:#00FFFF bg:#000000"
+format = '[$symbol]($style)'
 
