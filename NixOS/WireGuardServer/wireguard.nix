@@ -16,11 +16,11 @@
       listenPort = 30000;
       mtu = 1420;
 
-      postUp = ''
+      postSetup = ''
         ${pkgs.iptables}/bin/iptables -A FORWARD -i %i -j ACCEPT;
         ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE;
       '';
-      postDown = ''
+      postShutdown = ''
         ${pkgs.iptables}/bin/iptables -D FORWARD -i %i -j ACCEPT;
         ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE;
       '';
