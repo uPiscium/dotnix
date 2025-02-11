@@ -27,6 +27,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  services.xserver.displayManager.lightdm.enable = false;
+
   # environment.systemPackages = with pkgs; [ ];
 
 
