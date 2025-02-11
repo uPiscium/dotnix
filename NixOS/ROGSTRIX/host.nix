@@ -12,7 +12,6 @@
       ./desktop.nix
       ./hardware.nix
       ./steam.nix
-      ./ssh.nix
       ./wireguard.nix
       ../common
     ]
