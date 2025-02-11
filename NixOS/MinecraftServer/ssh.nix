@@ -1,6 +1,6 @@
 { ... }: {
   services.openssh = {
-    # ports = [ 20000 ];
+    ports = [ 22 ];
     # settings = {
     #   PasswordAuthentication = true;
     #   AllowUsers = [ "upiscium" ];
@@ -15,4 +15,5 @@
   # ];
 
   networking.firewall.allowedTCPPorts = [ 22 ];
+  networking.firewall.allowedUDPPorts = [ 22 ];
 }
