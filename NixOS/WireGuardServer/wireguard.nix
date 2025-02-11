@@ -5,7 +5,7 @@
 
   networking.nat = {
     enable = true;
-    externalInterface = "eth0";
+    externalInterface = "eno1";
     internalInterfaces = [ "wg0" ];
   };
 
@@ -18,11 +18,11 @@
 
       postSetup = ''
         ${pkgs.iptables}/bin/iptables -A FORWARD -i %i -j ACCEPT;
-        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE;
+        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -o eno1 -j MASQUERADE;
       '';
       postShutdown = ''
         ${pkgs.iptables}/bin/iptables -D FORWARD -i %i -j ACCEPT;
-        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE;
+        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -o eno1 -j MASQUERADE;
       '';
 
       privateKeyFile = "/home/upiscium/WireGuard/Server.key";
@@ -34,6 +34,7 @@
           allowedIPs = [ "10.0.0.2/32" ];
         }
         {
+          # ROGphone6
           publicKey = "RSd+ou+GdtSou2X5QrcfbfhKhalTIbDEM5zjH5zOb38=";
           allowedIPs = [ "10.0.0.3/32" ];
         }
