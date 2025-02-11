@@ -59,7 +59,7 @@ $nix_shell\
 
 [hostname]
 ssh_only = false
-ssh_symbol ="🌐"
+ssh_symbol =" "
 style = "fg:#FF0000 bg:#000000"
 format = "[ $ssh_symbol$hostname ]($style)"
 
