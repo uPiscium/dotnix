@@ -15,7 +15,7 @@
       ./wireguard.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
-      common-cpu-intel
+      common-cpu-amd
       common-pc-ssd
     ]);
 
