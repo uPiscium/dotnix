@@ -6,6 +6,7 @@
     ffmpeg
     fzf
     less
+    jdk17
     ripgrep
     traceroute
     tree
