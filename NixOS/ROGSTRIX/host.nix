@@ -8,12 +8,12 @@
   imports =
     [
       # Include the results of the hardware scan.
+      ./hardware.nix
+      ../common
       ./asusctl.nix
       ./desktop.nix
-      ./hardware.nix
       ./steam.nix
       ./wireguard.nix
-      ../common
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel

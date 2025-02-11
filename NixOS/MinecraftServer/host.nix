@@ -9,9 +9,9 @@
     [
       # Include the results of the hardware scan.
       ./hardware.nix
+      ../common
       ./ipfix.nix
       ./ssh.nix
-      ../common
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel
