@@ -14,5 +14,5 @@
   #   ./authorized_keys
   # ];
 
-  # networking.firewall.allowedTCPPorts = [ 20000 ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
 }
