@@ -5,7 +5,6 @@
       ./audio.nix
       ./bluetooth.nix
       ./flatpak.nix
-      ./gpg.nix
       ./i18n.nix
       ./keymap.nix
       ./network.nix

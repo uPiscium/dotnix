@@ -2,12 +2,10 @@
   services.openssh = {
     ports = [ 20000 ];
     settings = {
-      PubkeyAuthentication = true;
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
       AllowUsers = [ "upiscium" ];
-      UseDns = true;
       X11Forwarding = false;
-      PermitRootLogin = "prohibit-password";
+      PermitRootLogin = "no";
     };
   };
 

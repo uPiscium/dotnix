@@ -67,6 +67,10 @@
       fi
 
       export LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib:$LD_LIBRARY_PATH";
+
+      if [ -d ~/.ssh/private_key ]; then
+        ssh-add ~/.ssh/private_key/* > /dev/null;
+      fi
     '';
   };
 
