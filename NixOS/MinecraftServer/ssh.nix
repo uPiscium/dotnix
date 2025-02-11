@@ -10,7 +10,7 @@
   };
 
   users.users."upiscium".openssh.authorizedKeys.keyFiles = [
-    ./authorized_keys
+    ../ROGSTRIX.pub
   ];
 
   networking.firewall.allowedTCPPorts = [ 20000 ];
