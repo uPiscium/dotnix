@@ -4,7 +4,7 @@
     settings = {
       PasswordAuthentication = false;
       AllowUsers = [ "upiscium" ];
-      X11Forwarding = false;
+      X11Forwarding = true;
       PermitRootLogin = "no";
     };
   };
