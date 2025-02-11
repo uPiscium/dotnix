@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   networking.useDHCP = false;
-  networking.interfaces.enp5s0 = {
+  networking.interfaces.eno1 = {
     useDHCP = false;
     ipv4.addresses = [
       {
