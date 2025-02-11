@@ -4,7 +4,7 @@
     settings = {
       PasswordAuthentication = false;
       AllowUsers = [ "upiscium" ];
-      X11Forwarding = true;
+      X11Forwarding = false;
       PermitRootLogin = "no";
     };
   };
@@ -13,5 +13,7 @@
     ../ROGSTRIX.pub
   ];
 
-  networking.firewall.allowedTCPPorts = [ 20000 ];
+  networking.firewall = {
+    allowedTCPPorts = [ 20000 ];
+  };
 }

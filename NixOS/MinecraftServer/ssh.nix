@@ -13,5 +13,7 @@
     ../ROGSTRIX.pub
   ];
 
-  networking.firewall.allowedTCPPorts = [ 20000 ];
+  networking.firewall = {
+    allowedTCPPorts = [ 20000 ];
+  };
 }
