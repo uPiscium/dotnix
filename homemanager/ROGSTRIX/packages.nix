@@ -4,6 +4,7 @@
     blender
     # curseforge
     discord
+    gdlauncher-carbon
     # gpu-screen-recorder-git
     # gpu-screen-recorder-gtk-git
     hexedit
