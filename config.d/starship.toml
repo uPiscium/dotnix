@@ -1,6 +1,10 @@
 format = """
 [](#880000)\
+$hostname\
+[](fg:#880000 bg:#000000)\
 $time\
+[](fg:#000000 bg:#880000)\
+$memory_usage\
 [](fg:#880000 bg:#000000)\
 $battery\
 [](fg:#000000 bg:#880000)\
@@ -14,11 +18,22 @@ $python\
 \n$character
 """
 
+[hostname]
+ssh_only = false
+ssh_symbol ="🌐 "
+style = "fg:#000000 bg:#880000"
+format = "[$ssh_symbol$hostname ]($style)"
+
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
+style = "fg:#880000 bg:#000000"
+format = '[ $time ]($style)'
+
+[nix_shell]
+disabled = false
+symbol = ''
 style = "fg:#000000 bg:#880000"
-format = '[$time ]($style)'
 
 [battery]
 format = '[ $symbol$percentage ]($style)'

@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     ./neovim.nix
+    ./packages.nix
     ./terminal.nix
     ./zsh.nix
   ];

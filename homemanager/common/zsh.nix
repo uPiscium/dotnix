@@ -25,6 +25,7 @@
       zstyle ':completion:*' menu select
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
       autoload -U compinit && compinit
+      eval "$(direnv hook zsh)"
 
       function uzp() {
         echo "\033[1;mUnzipping '$1'...\033[0m";
