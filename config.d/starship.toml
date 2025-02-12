@@ -49,7 +49,8 @@ $rust\
 $scala\
 $swift\
 $zig\
-$gradle \
+$gradle\
+[](fg:#000000 bg:#000000)\
 [](fg:#000000 bg:#FF0000)\
 [](fg:#000000 bg:#FF0000)\
 $nix_shell\
