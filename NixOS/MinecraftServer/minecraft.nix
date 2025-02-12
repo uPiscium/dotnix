@@ -1,5 +1,3 @@
 { ... }: {
-  networking.firewall = {
-    allowedTCPPorts = [ 21000 ];
-  };
+  networking.firewall.interfaces.enp5s0.allowedTCPPorts = [21000];
 }
