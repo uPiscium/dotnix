@@ -11,8 +11,8 @@
       ./hardware.nix
       ../common
       ./ipfix.nix
+      ./network.nix
       ./ssh.nix
-      ./minecraft.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd

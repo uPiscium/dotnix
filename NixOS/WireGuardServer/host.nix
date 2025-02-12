@@ -11,6 +11,7 @@
       ./hardware.nix
       ../common
       ./ipfix.nix
+      ./network.nix
       ./ssh.nix
       ./wireguard.nix
     ]

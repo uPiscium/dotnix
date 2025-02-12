@@ -1,8 +1,4 @@
 { pkgs, ... }: {
-  networking.firewall = {
-    allowedUDPPorts = [ 30000 ];
-  };
-
   networking.nat = {
     enable = true;
     externalInterface = "eno1";
