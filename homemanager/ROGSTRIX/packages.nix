@@ -23,7 +23,8 @@
     htop
     jdk17
     nyancat
-    ollama
+    ollama-cuda
+    nextjs-ollama-llm-ui
     power-profiles-daemon
     python311
     realvnc-vnc-viewer
