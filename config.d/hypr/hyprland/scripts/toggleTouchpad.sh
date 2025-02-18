@@ -4,13 +4,13 @@ export STATUS_FILE="$XDG_RUNTIME_DIR/keyboard.status"
 
 enable_keyboard() {
     printf "true" >"$STATUS_FILE"
-    notify-send -u normal "Enabling Keyboard"
+    notify-send -u normal "Enabling touchpad"
     hyprctl keyword '$LAPTOP_KB_ENABLED' "true" -r
 }
 
 disable_keyboard() {
     printf "false" >"$STATUS_FILE"
-    notify-send -u normal "Disabling Keyboard"
+    notify-send -u normal "Disabling touchpad"
     hyprctl keyword '$LAPTOP_KB_ENABLED' "false" -r
 }
 
