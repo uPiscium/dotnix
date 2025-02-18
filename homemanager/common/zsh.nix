@@ -40,12 +40,6 @@
       autoload -U compinit && compinit
       eval "$(direnv hook zsh)"
 
-      function uzp() {
-        echo "\033[1;mUnzipping '$1'...\033[0m";
-        local filename=$(basename "$1" .zip);
-        unzip -q "$1" -d "$filename";
-      }
-
       function WOL() {
         echo -ne "\033[1;32mWake up '$1'? (Y/n)\033[0m";
         read answer;
