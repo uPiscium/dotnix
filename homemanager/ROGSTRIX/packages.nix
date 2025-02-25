@@ -36,6 +36,7 @@
     tdf
     tinymist
     tmux
+    termpdfpy
     typst
     uv
     vlc

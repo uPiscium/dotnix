@@ -2,16 +2,16 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		{ "folke/neoconf.nvim" },
-		{
-			"williamboman/mason.nvim",
-			enabled = not vim.fn.executable("home-manager"),
-			event = "VeryLazy",
-		},
-		{
-			"williamboman/mason-lspconfig.nvim",
-			enabled = not vim.fn.executable("home-manager"), -- home-manager がある場合のみ
-			cmd = { "LspInstall", "LspUninstall" },
-		},
+		-- {
+		-- 	"williamboman/mason.nvim",
+		-- 	enabled = not vim.fn.executable("home-manager"),
+		-- 	event = "VeryLazy",
+		-- },
+		-- {
+		-- 	"williamboman/mason-lspconfig.nvim",
+		-- 	enabled = not vim.fn.executable("home-manager"), -- home-manager がある場合のみ
+		-- 	cmd = { "LspInstall", "LspUninstall" },
+		-- },
 		{
 			"b0o/schemastore.nvim",
 			ft = { "json", "yaml", "toml" },
