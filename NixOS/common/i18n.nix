@@ -18,6 +18,13 @@
     skktools mozcdic-ut-skk-jisyo
   ];
 
+  environment.variables = {
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    XMODIFIERS = "@im=fcitx";
+    GLFW_IM_MODULE = "ibus";
+  };
+
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
