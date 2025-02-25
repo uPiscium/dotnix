@@ -34,7 +34,6 @@
     slurp
     swappy
     tdf
-    tinymist
     tmux
     termpdfpy
     typst

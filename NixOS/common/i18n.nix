@@ -15,7 +15,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    skktools mozcdic-ut-skk-jisyo
+    skktools
+    mozcdic-ut-skk-jisyo
   ];
 
   environment.variables = {
@@ -42,6 +43,10 @@
       noto-fonts-cjk-sans
       noto-fonts-emoji
       nerd-fonts.caskaydia-cove
+      source-sans
+      source-serif
+      source-han-sans
+      source-han-serif
     ];
     fontDir.enable = true;
     fontconfig = {
