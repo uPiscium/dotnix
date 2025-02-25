@@ -4,6 +4,8 @@
     blender
     discord
     gdlauncher-carbon
+    gpu-screen-recorder
+    gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
     libreoffice-fresh
@@ -29,6 +31,8 @@
     realvnc-vnc-viewer
     rustup
     sl
+    slurp
+    swappy
     tdf
     tinymist
     tmux
