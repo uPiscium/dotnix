@@ -1,7 +1,6 @@
 { ... }: {
   imports = [
     ./browser.nix
-    ./direnv.nix
     ./hyprland.nix
     ./packages.nix
   ];
