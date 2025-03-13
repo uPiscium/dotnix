@@ -8,6 +8,7 @@
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
+    jetbrains.rider
     libreoffice-fresh
     parsec-bin
     unityhub
@@ -18,6 +19,8 @@
     cmake
     # cpupower
     docker-compose
+    # dotnetCorePackages.runtime_9_0-bin
+    dotnetCorePackages.sdk_9_0-bin
     gcc
     gdb
     go
@@ -25,6 +28,7 @@
     htop
     jdk17
     nyancat
+    mono
     ollama-cuda
     power-profiles-daemon
     python311
