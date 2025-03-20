@@ -49,6 +49,14 @@ in
         ./ROGSTRIX/host.nix
       ];
     };
+    Zenbook = mkNixosSystem {
+      system = "x86_64-linux";
+      hostname = "Zenbook";
+      username = "upiscium";
+      modules = [
+        ./Zenbook/host.nix
+      ];
+    };
     MinecraftServer = mkNixosSystem {
       system = "x86_64-linux";
       hostname = "MinecraftServer";
@@ -73,6 +81,13 @@ in
       username = "upiscium";
       modules = [
         ./ROGSTRIX/home.nix
+      ];
+    };
+    Zenbook = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./Zenbook/home.nix
       ];
     };
     MinecraftServer = mkHomeManagerConfiguration {
