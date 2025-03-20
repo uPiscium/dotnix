@@ -12,6 +12,7 @@
       ../common
       ./asusctl.nix
       ./desktop.nix
+      ./network.nix
       ./steam.nix
       ./wireguard.nix
     ]
