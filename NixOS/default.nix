@@ -12,7 +12,7 @@ let
   mkHomeManagerConfiguration =
     { system, username, modules }:
     inputs.home-manager.lib.homeManagerConfiguration {
-      pkgs = import inputs.nixpkgs {
+      pkgs = import inputs.nixpkgs{
         inherit system;
         config = {
           allowUnfree = true;

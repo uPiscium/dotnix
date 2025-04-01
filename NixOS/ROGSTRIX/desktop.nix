@@ -1,4 +1,4 @@
-{inputs, pkgs, ...}: {
+{ inputs, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     sddm-chili-theme
   ];

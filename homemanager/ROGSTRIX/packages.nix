@@ -8,6 +8,7 @@
     jetbrains-toolbox
     jetbrains.rider
     libreoffice-fresh
+    modrinth-app
     parsec-bin
     unityhub
     zoom
