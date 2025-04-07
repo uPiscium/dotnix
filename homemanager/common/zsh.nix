@@ -80,6 +80,14 @@
       if [ -d ~/.ssh/private_key ]; then
         ssh-add ~/.ssh/private_key/* > /dev/null;
       fi
+      # if ~/secrets exists, source its directory files
+      if [ -d ~/secrets ]; then
+          for f in ~/secrets/*; do
+              if [ -r "$f" ]; then
+                  source "$f"
+              fi
+          done
+      fi
     '';
   };
 
