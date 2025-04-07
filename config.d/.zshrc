@@ -31,6 +31,16 @@ source ~/.zshrc.local
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=100000
+
+# if ~/secrets exists, source its directory files
+if [ -d ~/secrets ]; then
+    for f in ~/secrets/*; do
+        if [ -r "$f" ]; then
+            source "$f"
+        fi
+    done
+fi
+
 setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 #eval "$(keychain --eval --quiet --noask id_ed25519)"
