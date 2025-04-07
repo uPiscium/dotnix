@@ -1,16 +1,15 @@
 return {
 	"goolord/alpha-nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
+	dependencies = {
+		{ "nvim-tree/nvim-web-devicons" },
+		{ "3rd/image.nvim", opts = true, lazy = false },
+	},
 	config = function()
 		local alpha = require("alpha")
 		vim.api.nvim_set_hl(0, "CustomAlphaHeader", { fg = "#00ff00", bold = true })
 		vim.api.nvim_set_hl(0, "CustomAlphaFooter", { fg = "#999999", bold = true })
 		local dashboard = require("alpha.themes.dashboard")
-		dashboard.section.header.val = {}
-		dashboard.section.header.opts.hl = "CustomAlphaHeader"
-		dashboard.section.buttons.val = {}
-		dashboard.section.footer.opts.hl = "CustomAlphaFooter"
-		dashboard.section.footer.val = {
+		local asciiArt = {
 			[[                               @@@@@@@@@@@@@@@@@@@@@@@@@@@%*=-::.... ....::-=*%@@@@@@@@@@@@@@@@@@@@@@@@@%-                               ]],
 			[[                               @@@@@@@@@@@@@@@@@@@@@@%+:                         :+%@@@@@@@@@@@@@@@@@@@=                                 ]],
 			[[                               @@@@@@@@@@@@@@@@@@@+:.     .:=*#%%@@@@@@@%%#*=:.     .:+@@@@@@@@@@@@@@+.                                  ]],
@@ -53,8 +52,35 @@ return {
 			[[       .;oc        'coo;.      @@#.                 .:+%@@@@@@@@@@@%.%@@@@@@@@@@@@+:.                                                    ]],
 			[[         .'         .,.        %:                         :=*%%@@@@%.%@@@@%%*=:                                                          ]],
 		}
+		local api = require("image")
+		local image = api.from_file(vim.fn.expand("$HOME/dotnix/config.d/nvim/Logo.png"), {
+			x = math.floor(vim.api.nvim_win_get_width(0) / 2) - 50,
+			y = 10,
+			width = 100,
+		})
 
+		dashboard.section.header.val = {}
+		dashboard.section.header.opts.hl = "CustomAlphaHeader"
+		dashboard.section.buttons.val = {}
+		dashboard.section.footer.opts.hl = "CustomAlphaFooter"
 		dashboard.config.opts.noautocmd = true
+
+		if image ~= nil then
+			dashboard.section.header.val = asciiArt
+		else
+			vim.api.nvim_create_autocmd({ "User" }, {
+				callback = function()
+					image:render()
+				end,
+				pattern = "AlphaReady",
+			})
+			vim.api.nvim_create_autocmd({ "BufEnter" }, {
+				callback = function()
+					image:clear()
+				end,
+				pattern = { "*" },
+			})
+		end
 
 		vim.cmd([[
         autocmd User AlphaReady echo 'Ready!'
