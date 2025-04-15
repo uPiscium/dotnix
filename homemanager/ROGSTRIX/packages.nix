@@ -25,6 +25,7 @@
     htop
     jdk17
     nyancat
+    mise
     mono
     power-profiles-daemon
     python311
