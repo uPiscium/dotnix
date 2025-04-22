@@ -1,5 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    bambu-studio
     discord
     gdlauncher-carbon
     gpu-screen-recorder
@@ -17,7 +18,10 @@
     clangStdenv
     cmake
     docker-compose
-    dotnetCorePackages.sdk_9_0-bin
+    # dotnet-sdk-wrapped
+    dotnet-sdk_8
+    # dotnetCorePackages.sdk_8_0-bin
+    flex
     gcc
     gdb
     go
