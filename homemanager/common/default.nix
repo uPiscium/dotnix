@@ -2,6 +2,7 @@
   imports = [
     ./direnv.nix
     ./git.nix
+    ./gtk.nix
     ./neovim.nix
     ./packages.nix
     ./terminal.nix
