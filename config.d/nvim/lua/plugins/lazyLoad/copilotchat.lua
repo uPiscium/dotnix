@@ -17,10 +17,15 @@ return {
 		},
 		{ "nvim-lua/plenary.nvim" },
 	},
-	build = function()
-		vim.defer_fn(function()
-			vim.cmd("UpdateRemotePlugins")
-			vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
-		end, 3000)
-	end,
+	opts = {
+		model = "gemini-2.5-pro-preview-03-25",
+		debug = true,
+	},
+  build = "make tiktoken",
+	-- build = function()
+	-- 	vim.defer_fn(function()
+	-- 		vim.cmd("UpdateRemotePlugins")
+	-- 		vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
+	-- 	end, 3000)
+	-- end,
 }

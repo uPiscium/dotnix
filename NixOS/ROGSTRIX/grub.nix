@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   boot.loader = {
     systemd-boot.enable = false;
@@ -10,8 +10,8 @@
       devices = [ "nodev" ];
       enable = true;
       efiSupport = true;
-      version = 2;
       useOSProber = true;
+      theme = pkgs.sleek-grub-theme;
     };
   };
 }
