@@ -10,6 +10,7 @@
   };
 
   users.users."upiscium".openssh.authorizedKeys.keyFiles = [
-    ../ROGSTRIX.pub
+    ../pubkeys/ROGSTRIX.pub
+    ../pubkeys/Zenbook.pub
   ];
 }
