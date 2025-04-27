@@ -24,6 +24,7 @@
     flex
     gcc
     gdb
+    ggshield
     go
     grim
     htop
