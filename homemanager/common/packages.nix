@@ -1,11 +1,13 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    imagemagick
     bottom
+    cifs-utils
     fastfetch
     ffmpeg
     fzf
+    imagemagick
     less
+    nfs-utils
     nettools
     nmap
     ripgrep

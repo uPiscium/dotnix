@@ -8,7 +8,6 @@
       ./i18n.nix
       ./keymap.nix
       ./network.nix
-      ./samba.nix
       ./services.nix
       ./sudoers.nix
       ./toolbox.nix
