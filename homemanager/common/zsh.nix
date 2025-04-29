@@ -88,6 +88,8 @@
               fi
           done
       fi
+
+      export GRIM_DEFAULT_DIR="$HOME/Pictures/screenshots";
     '';
   };
 
