@@ -7,6 +7,7 @@
     fzf
     imagemagick
     less
+    obsidian
     nfs-utils
     nettools
     nmap
