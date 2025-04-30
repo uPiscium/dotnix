@@ -35,6 +35,7 @@
     power-profiles-daemon
     python311
     rustup
+    samba
     sl
     slurp
     swappy
