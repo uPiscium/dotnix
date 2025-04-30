@@ -3,7 +3,6 @@
     ./browser.nix
     ./gtk.nix
     ./hyprland.nix
-    ./nas.nix
     ./packages.nix
   ];
 
