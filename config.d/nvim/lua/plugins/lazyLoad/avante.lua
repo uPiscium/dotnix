@@ -4,9 +4,12 @@ return {
 	lazy = false,
 	version = false, -- set this if you want to always pull the latest change
 	opts = {
-		provider = "gemini",
-		auto_suggestions_provider = "gemini",
-		-- cursor_applying_provider = nil,
+		provider = "copilot",
+		auto_suggestions_provider = "copilot",
+		copilot = {
+			model = "claude-3.7-sonnet",
+		},
+		cursor_applying_provider = nil,
 		behaviour = {
 			auto_apply_diff_after_generation = false,
 			auto_suggestions = false,
@@ -37,9 +40,34 @@ return {
 				floating = false,
 			},
 		},
+		---- The below configurations are for the mcphub.nvim plugin
+		system_prompt = function()
+			local hub = require("mcphub").get_hub_instance()
+			if not hub then
+				return
+			end
+			return hub:get_active_servers_prompt()
+		end,
+		custom_tools = function()
+			return {
+				require("mcphub.extensions.avante").mcp_tool(),
+			}
+		end,
+		disabled_tools = {
+			"list_files",
+			"search_files",
+			"read_file",
+			"create_file",
+			"rename_file",
+			"delete_file",
+			"create_dir",
+			"rename_dir",
+			"delete_dir",
+			"bash",
+		},
 	},
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-	-- build = "make",
+	build = "make",
 	-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
 	dependencies = {
 		"stevearc/dressing.nvim",
@@ -48,7 +76,7 @@ return {
 		--- The below dependencies are optional,
 		"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
 		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-		-- "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
+		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
 		"zbirenbaum/copilot.lua", -- for providers='copilot'
 		{
 			-- support for image pasting
