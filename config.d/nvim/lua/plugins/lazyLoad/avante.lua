@@ -40,19 +40,6 @@ return {
 				floating = false,
 			},
 		},
-		---- The below configurations are for the mcphub.nvim plugin
-		system_prompt = function()
-			local hub = require("mcphub").get_hub_instance()
-			if not hub then
-				return
-			end
-			return hub:get_active_servers_prompt()
-		end,
-		custom_tools = function()
-			return {
-				require("mcphub.extensions.avante").mcp_tool(),
-			}
-		end,
 		disabled_tools = {
 			"list_files",
 			"search_files",
