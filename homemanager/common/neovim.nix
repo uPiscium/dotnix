@@ -5,6 +5,7 @@
 
     extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
+      bun
       deno
       gnumake
       nodejs
