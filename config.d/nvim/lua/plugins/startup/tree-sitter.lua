@@ -26,7 +26,7 @@ return {
           "tsx",
           "typescript",
           "yaml",
-          "markdown",
+          -- "markdown",
           "cmake",
           "xml",
           "git_config",

@@ -22,7 +22,6 @@
       efm-langserver
       haskell-language-server
       haskellPackages.lsp
-      luajit
       lua-language-server
       nil
       nixpkgs-fmt
@@ -31,7 +30,6 @@
       nodePackages.prettier
       pyright
       python311Packages.debugpy
-      readline
       ruff
       rust-analyzer
       glsl_analyzer

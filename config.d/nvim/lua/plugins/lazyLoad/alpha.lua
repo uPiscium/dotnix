@@ -2,7 +2,7 @@ return {
 	"goolord/alpha-nvim",
 	dependencies = {
 		{ "nvim-tree/nvim-web-devicons" },
-		{ "3rd/image.nvim", opts = true, lazy = false },
+		-- { "3rd/image.nvim", opts = true, lazy = false },
 	},
 	config = function()
 		local alpha = require("alpha")
@@ -60,12 +60,13 @@ return {
 			[[ ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ]],
 			[[ ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ]],
 		}
-		local api = require("image")
-		local image = api.from_file(vim.fn.expand("$HOME/dotnix/config.d/nvim/Logo.png"), {
-			x = math.floor(vim.api.nvim_win_get_width(0) / 2) - 28,
-			y = 10,
-			width = 100,
-		})
+		-- local api = require("image")
+		-- local image = api.from_file(vim.fn.expand("$HOME/dotnix/config.d/nvim/Logo.png"), {
+		-- 	x = math.floor(vim.api.nvim_win_get_width(0) / 2) - 28,
+		-- 	y = 10,
+		-- 	width = 100,
+		-- })
+		local image = nil
 
 		dashboard.section.header.val = headerAscii
 		dashboard.section.header.opts.hl = "CustomAlphaHeader"
@@ -78,18 +79,19 @@ return {
 			vim.api.nvim_create_autocmd({ "User" }, {
 				callback = function()
 					image:render()
-          -- dashboard.section.header.val = {}
+					-- dashboard.section.header.val = {}
 				end,
 				pattern = "AlphaReady",
 			})
 			vim.api.nvim_create_autocmd({ "BufEnter" }, {
 				callback = function()
 					image:clear()
-          -- dashboard.section.header.val = asciiArt
+					-- dashboard.section.header.val = asciiArt
 				end,
 				pattern = { "*" },
 			})
 		else
+      dashboard.section.footer.val = asciiArt
 		end
 
 		vim.cmd([[
