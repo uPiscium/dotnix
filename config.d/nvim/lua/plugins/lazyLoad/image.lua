@@ -6,6 +6,12 @@ return {
 	},
 	lazy = false,
 	opts = {
+    rocks = {
+      enabled = false,
+      hererocks = {
+        enabled = false
+      },
+    },
 		integrations = {
 			markdown = {
 				enabled = false,

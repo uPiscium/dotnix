@@ -31,6 +31,7 @@
       nodePackages.prettier
       pyright
       python311Packages.debugpy
+      readline
       ruff
       rust-analyzer
       glsl_analyzer
