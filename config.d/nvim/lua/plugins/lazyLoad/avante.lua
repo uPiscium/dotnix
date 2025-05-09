@@ -40,6 +40,10 @@ return {
 				floating = false,
 			},
 		},
+		web_search_engine = {
+			provider = "google", -- tavily, serpapi, searchapi, google, kagi, brave, or searxng
+			proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
+		},
 		---- The below configurations are for the mcphub.nvim plugin
 		system_prompt = function()
 			local hub = require("mcphub").get_hub_instance()
