@@ -12,7 +12,7 @@
       ../common
       ./asusctl.nix
       ./desktop.nix
-      ./grub.nix
+      # ./grub.nix
       ./network.nix
       ./steam.nix
       ./wireguard.nix
