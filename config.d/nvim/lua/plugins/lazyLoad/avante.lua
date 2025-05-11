@@ -4,10 +4,16 @@ return {
 	lazy = false,
 	version = false, -- set this if you want to always pull the latest change
 	opts = {
-		provider = "copilot",
-		auto_suggestions_provider = "copilot",
-		copilot = {
-			model = "claude-3.5-sonnet",
+		-- provider = "copilot",
+		-- auto_suggestions_provider = "copilot",
+		-- copilot = {
+		-- 	model = "claude-3.5-sonnet",
+		-- },
+		provider = "ollama",
+		auto_suggestions_provider = "ollama",
+		ollama = {
+			endpoint = "http://192.168.11.90:11434", -- Note that there is no /v1 at the end.
+			model = "qwen3:14b",
 		},
 		cursor_applying_provider = nil,
 		behaviour = {
