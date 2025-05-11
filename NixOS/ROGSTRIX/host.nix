@@ -49,8 +49,8 @@
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
