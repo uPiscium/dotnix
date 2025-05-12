@@ -1,0 +1,65 @@
+return {
+	-- "olimorris/codecompanion.nvim",
+	-- config = function()
+	-- 	require("codecompanion").setup({
+	-- 		adapters = {
+	-- 			qwen3 = function()
+	-- 				return require("codecompanion.adapters").extend("ollama", {
+	-- 					name = "qwen3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+	-- 					schema = {
+	-- 						model = {
+	-- 							default = "qwen3:14b",
+	-- 						},
+	-- 						num_ctx = {
+	-- 							default = 16384,
+	-- 						},
+	-- 						num_predict = {
+	-- 							default = -1,
+	-- 						},
+	-- 						env = {
+	-- 							url = "https://192.168.11.90:11434",
+	-- 							-- api_key = "your_api_key_here",
+	-- 						},
+	-- 						headers = {
+	-- 							["Content-Type"] = "application/json",
+	-- 							-- ["Authorization"] = "Bearer ${api_key}",
+	-- 						},
+	-- 						parameters = {
+	-- 							sync = true,
+	-- 						},
+	-- 					},
+	-- 				})
+	-- 			end,
+	-- 		},
+	-- 		strategies = {
+	-- 			chat = {
+	-- 				adapter = "anthropic",
+	-- 			},
+	-- 			inline = {
+	-- 				adapter = "copilot",
+	-- 			},
+	-- 			cmd = {
+	-- 				adapter = "deepseek",
+	-- 			},
+	-- 		},
+	-- 	})
+	-- end,
+	-- opts = {
+	-- 	allow_insecure = true,
+	-- 	extensions = {
+	-- 		mcphub = {
+	-- 			callback = "mcphub.extensions.codecompanion",
+	-- 			opts = {
+	-- 				make_vars = true,
+	-- 				make_slash_commands = true,
+	-- 				show_result_in_chat = true,
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
+	-- dependencies = {
+	-- 	"nvim-lua/plenary.nvim",
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	"ravitemer/mcphub.nvim",
+	-- },
+}

@@ -18,7 +18,7 @@ return {
 		cursor_applying_provider = nil,
 		behaviour = {
 			auto_apply_diff_after_generation = false,
-			auto_suggestions = false,
+			auto_suggestions = true,
 			enable_cursor_planning_mode = true,
 			enable_token_counting = true,
 			minimize_diff = true,
