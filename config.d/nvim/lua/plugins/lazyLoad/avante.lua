@@ -13,12 +13,12 @@ return {
 		auto_suggestions_provider = "ollama",
 		ollama = {
 			endpoint = "http://192.168.11.90:11434", -- Note that there is no /v1 at the end.
-			model = "qwen3:14b",
+			model = "qwen3:30b",
 		},
 		cursor_applying_provider = nil,
 		behaviour = {
-			auto_apply_diff_after_generation = false,
-			auto_suggestions = true,
+			auto_apply_diff_after_generation = true,
+			auto_suggestions = false,
 			enable_cursor_planning_mode = true,
 			enable_token_counting = true,
 			minimize_diff = true,

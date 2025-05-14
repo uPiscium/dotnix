@@ -1,11 +1,42 @@
 return {
 	-- "olimorris/codecompanion.nvim",
+	-- keys = {
+	-- 	{
+	-- 		"<Space>cf",
+	-- 		":CodeCompanion<CR>",
+	-- 		mode = { "n", "v" },
+	-- 		silent = true,
+	-- 	},
+	-- 	{
+	-- 		"<Space>cc",
+	-- 		":CodeCompanionChat<CR>",
+	-- 		mode = { "n", "v" },
+	-- 		silent = true,
+	-- 	},
+	-- 	{
+	-- 		"<Space>ca",
+	-- 		":CodeCompanionAction<CR>",
+	-- 		mode = { "n", "v" },
+	-- 		silent = true,
+	-- 	},
+	-- },
 	-- config = function()
 	-- 	require("codecompanion").setup({
 	-- 		adapters = {
-	-- 			qwen3 = function()
+	-- 			ollama_remote = function()
 	-- 				return require("codecompanion.adapters").extend("ollama", {
-	-- 					name = "qwen3", -- Give this adapter a different name to differentiate it from the default ollama adapter
+	-- 					name = "ollama_remote",
+	-- 					env = {
+	-- 						url = "http://192.168.11.90:11434",
+	-- 						-- api_key = "API_KEY",
+	-- 					},
+	-- 					headers = {
+	-- 						-- ["Content-Type"] = "application/json",
+	-- 						-- ["Authorization"] = "Bearer ${api_key}",
+	-- 					},
+	-- 					parameters = {
+	-- 						sync = true,
+	-- 					},
 	-- 					schema = {
 	-- 						model = {
 	-- 							default = "qwen3:14b",
@@ -16,30 +47,19 @@ return {
 	-- 						num_predict = {
 	-- 							default = -1,
 	-- 						},
-	-- 						env = {
-	-- 							url = "https://192.168.11.90:11434",
-	-- 							-- api_key = "your_api_key_here",
-	-- 						},
-	-- 						headers = {
-	-- 							["Content-Type"] = "application/json",
-	-- 							-- ["Authorization"] = "Bearer ${api_key}",
-	-- 						},
-	-- 						parameters = {
-	-- 							sync = true,
-	-- 						},
 	-- 					},
 	-- 				})
 	-- 			end,
 	-- 		},
 	-- 		strategies = {
 	-- 			chat = {
-	-- 				adapter = "anthropic",
+	-- 				adapter = "ollama_remote",
 	-- 			},
 	-- 			inline = {
-	-- 				adapter = "copilot",
+	-- 				adapter = "ollama_remote",
 	-- 			},
-	-- 			cmd = {
-	-- 				adapter = "deepseek",
+	-- 			agent = {
+	-- 				adapter = "ollama_remote",
 	-- 			},
 	-- 		},
 	-- 	})

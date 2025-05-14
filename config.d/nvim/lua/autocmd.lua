@@ -13,30 +13,30 @@
 -- })
 
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
-  pattern = "*",
-  command = "startinsert",
+	pattern = "*",
+	command = "startinsert",
 })
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = { "*.typ", "*.tex", "*.md" },
-  command = "silent! %s/。/. /g | silent! %s/、/, /g",
+	pattern = { "*.typ", "*.tex", "*.md" },
+	command = "silent! %s/。/. /g | silent! %s/、/, /g",
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = vim.api.nvim_create_augroup("UserLspConfig", {}),
-  callback = function(ev)
-    -- 保存時に自動フォーマット
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      pattern = { "*.rs", "*.cpp", "*.hpp", "*.py", "*.ts" },
-      callback = function()
-        vim.lsp.buf.format({
-          buffer = ev.buf,
-          filter = function(f_client)
-            return f_client.name ~= "null-ls"
-          end,
-          async = false,
-        })
-      end,
-    })
-  end,
+	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+	callback = function(ev)
+		-- 保存時に自動フォーマット
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			pattern = { "*.rs", "*.cpp", "*.hpp", "*.py", "*.ts" },
+			callback = function()
+				vim.lsp.buf.format({
+					buffer = ev.buf,
+					filter = function(f_client)
+						return f_client.name ~= "null-ls"
+					end,
+					async = false,
+				})
+			end,
+		})
+	end,
 })
