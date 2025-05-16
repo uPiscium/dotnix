@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
     ../../homemanager/common
-    ../../homemanager/WireGuardServer
+    ../../homemanager/NetworkServer
   ];
 }
