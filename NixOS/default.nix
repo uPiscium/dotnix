@@ -67,10 +67,10 @@ in
     };
     WireGuardServer = mkNixosSystem {
       system = "x86_64-linux";
-      hostname = "WireGuardServer";
+      hostname = "NetworkServer";
       username = "upiscium";
       modules = [
-        ./WireGuardServer/host.nix
+        ./NetworkServer/host.nix
       ];
     };
   };
@@ -101,7 +101,7 @@ in
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
-        ./WireGuardServer/home.nix
+        ./NetworkServer/home.nix
       ];
     };
   };
