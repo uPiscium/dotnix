@@ -1,13 +1,14 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     bambu-studio
+    code-cursor
     discord
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    # jetbrains.rider
+    jetbrains.rider
     libreoffice-fresh
     modrinth-app
     parsec-bin

@@ -4,14 +4,20 @@ return {
 	lazy = false,
 	version = false, -- set this if you want to always pull the latest change
 	opts = {
-		provider = "copilot",
-		auto_suggestions_provider = "copilot",
-		copilot = {
-			model = "claude-3.7-sonnet",
+		-- provider = "copilot",
+		-- auto_suggestions_provider = "copilot",
+		-- copilot = {
+		-- 	model = "claude-3.5-sonnet",
+		-- },
+		provider = "ollama",
+		auto_suggestions_provider = "ollama",
+		ollama = {
+			endpoint = "http://192.168.11.90:11434", -- Note that there is no /v1 at the end.
+			model = "qwen3:30b",
 		},
 		cursor_applying_provider = nil,
 		behaviour = {
-			auto_apply_diff_after_generation = false,
+			auto_apply_diff_after_generation = true,
 			auto_suggestions = false,
 			enable_cursor_planning_mode = true,
 			enable_token_counting = true,
@@ -39,6 +45,10 @@ return {
 			ask = {
 				floating = false,
 			},
+		},
+		web_search_engine = {
+			provider = "google", -- tavily, serpapi, searchapi, google, kagi, brave, or searxng
+			proxy = nil, -- proxy support, e.g., http://127.0.0.1:7890
 		},
 		---- The below configurations are for the mcphub.nvim plugin
 		system_prompt = function()
@@ -77,7 +87,7 @@ return {
 		"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
 		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
 		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-		"zbirenbaum/copilot.lua", -- for providers='copilot'
+		-- "zbirenbaum/copilot.lua", -- for providers='copilot'
 		{
 			-- support for image pasting
 			"HakonHarnes/img-clip.nvim",

@@ -8,7 +8,7 @@
     fzf
     imagemagick
     less
-lua
+    lua
     obsidian
     nfs-utils
     nettools
