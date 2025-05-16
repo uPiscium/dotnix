@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{...}: {
   networking.useDHCP = false;
   networking.interfaces.eno1 = {
     useDHCP = false;
@@ -10,5 +10,5 @@
     ];
   };
   networking.defaultGateway = "192.168.11.1";
-  networking.nameservers = ["8.8.8.8"];
+  networking.nameservers = [ "127.0.0.1" ];
 }
