@@ -18,7 +18,6 @@
       "/desktop.iruma/192.168.11.90"
       "/network.iruma/192.168.11.100"
       "/nas.iruma/192.168.11.120"
-      "/nextcloud.iruma/192.168.11.120:40000"
       "/minecraft.iruma/192.168.11.130"
     ];
   };
