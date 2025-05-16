@@ -9,14 +9,17 @@
     port = 53;
     listen-address = "192.168.11.100";
     no-dhcp-interface = "eno1";
-    server = "8.8.8.8";
+    server = [
+      "8.8.8.8"
+      "8.8.4.4"
+    ];
     domain = "iruma";
-    address = {
-      "desktop.iruma" = "192.168.11.90";
-      "network.iruma" = "192.168.11.100";
-      "nas.iruma" = "192.168.11.120";
-      "minecraft.iruma" = "192.168.11.130";
-    };
+    address = [
+      "/desktop.iruma/192.168.11.90"
+      "/network.iruma/192.168.11.100"
+      "/nas.iruma/192.168.11.120"
+      "/minecraft.iruma/192.168.11.130"
+    ];
   };
 }
 
