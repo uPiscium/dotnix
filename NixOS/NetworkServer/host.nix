@@ -10,10 +10,10 @@
       # Include the results of the hardware scan.
       ./hardware.nix
       ../common
+      ./dns.nix
       ./ipfix.nix
       ./network.nix
       ./ssh.nix
-      # ./unbound.nix
       ./wireguard.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
