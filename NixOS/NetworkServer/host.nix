@@ -13,7 +13,7 @@
       ./ipfix.nix
       ./network.nix
       ./ssh.nix
-      ./unbound.nix
+      # ./unbound.nix
       ./wireguard.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [

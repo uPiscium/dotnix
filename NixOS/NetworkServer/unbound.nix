@@ -1,6 +1,6 @@
 { ... }: {
-  networking.firewall.allowedTCPPorts = [ 5335 ];
-  networking.firewall.allowedUDPPorts = [ 5335 ];
+  networking.firewall.allowedTCPPorts = [ 53 ];
+  networking.firewall.allowedUDPPorts = [ 53 ];
 
   services.unbound = {
     enable = true;
@@ -9,7 +9,7 @@
         # When only using Unbound as DNS, make sure to replace 127.0.0.1 with your ip address
         # When using Unbound in combination with pi-hole or Adguard, leave 127.0.0.1, and point Adguard to 127.0.0.1:PORT
         interface = [ "192.168.11.100" ];
-        port = 5335;
+        port = 53;
         access-control = [
           "127.0.0.1/32 allow"
           "192.168.11.0/24 allow"
