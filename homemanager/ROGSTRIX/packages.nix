@@ -6,11 +6,11 @@
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
+    haskellPackages.matlab
     hexedit
     jetbrains-toolbox
     jetbrains.rider
     libreoffice-fresh
-    matlab
     modrinth-app
     parsec-bin
     unityhub
