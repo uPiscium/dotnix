@@ -10,6 +10,7 @@
     jetbrains-toolbox
     jetbrains.rider
     libreoffice-fresh
+    matlab
     modrinth-app
     parsec-bin
     unityhub
