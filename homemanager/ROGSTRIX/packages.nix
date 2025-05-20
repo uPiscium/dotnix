@@ -6,7 +6,6 @@
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
-    haskellPackages.matlab
     hexedit
     jetbrains-toolbox
     jetbrains.rider
