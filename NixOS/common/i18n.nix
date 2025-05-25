@@ -17,6 +17,7 @@
   environment.systemPackages = with pkgs; [
     skktools
     mozcdic-ut-skk-jisyo
+    ibus
   ];
 
   environment.variables = {

@@ -3,6 +3,7 @@
     enable = true;
     viAlias = true;
 
+    extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
       deno
       gnumake
@@ -51,6 +52,10 @@
 
   home.file.".config/nvim" = {
     source = ../../config.d/nvim;
+    recursive = true;
+  };
+  home.file.".config/mcphub" = {
+    source = ../../config.d/mcphub;
     recursive = true;
   };
 }

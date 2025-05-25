@@ -14,7 +14,7 @@
         {
           publicKey = "rj2Fy53+fondOM1dZ9trbNaXAVEM438UAcC6ni6beQM=";
           allowedIPs = [ "10.0.0.0/24" "192.168.11.0/24" ];
-          endpoint = "uPiscium.f5.si:30000";
+          endpoint = "upiscium.f5.si:30000";
           persistentKeepalive = 25;
         }
       ];

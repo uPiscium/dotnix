@@ -26,7 +26,7 @@
       peers = [
         {
           # ROGSTRIX
-          publicKey = "3HSsRWsAsRR568ZqxePeJ/jriPcudhRVdtAciWR6tkg=";
+          publicKey = "3DsO9S1f6ubU/b2WGWZMPlL4ApzGKwGPFeFod3r73m4=";
           allowedIPs = [ "10.0.0.2/32" ];
         }
         {

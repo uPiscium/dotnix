@@ -33,7 +33,7 @@
       }
     ];
 
-    initExtra = ''
+    initContent = ''
       zstyle ':completion:*' completer _complete _correct
       zstyle ':completion:*' menu select
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
@@ -69,6 +69,17 @@
         fi
       }
 
+      function mountNAS() {
+        echo -ne "\033[1;32mMount NAS? (Y/n)\033[0m";
+        read answer;
+        if [ "$answer" = "n" ]; then
+          echo "Skipped mounting NAS.";
+        else
+          sudo mount -t cifs -o username=upiscium //192.168.11.120/share ~/share;
+          echo "Mounted NAS.";
+        fi
+      }
+
       if [ -n "$\{commands[fzf-share]\}" ]; then
         source "$(fzf-share)/key-bindings.zsh"
         source "$(fzf-share)/completion.zsh"
@@ -80,6 +91,16 @@
       if [ -d ~/.ssh/private_key ]; then
         ssh-add ~/.ssh/private_key/* > /dev/null;
       fi
+      # if ~/secrets exists, source its directory files
+      if [ -d ~/secrets ]; then
+          for f in ~/secrets/*; do
+              if [ -r "$f" ]; then
+                  source "$f"
+              fi
+          done
+      fi
+
+      export GRIM_DEFAULT_DIR="$HOME/Pictures/screenshots";
     '';
   };
 

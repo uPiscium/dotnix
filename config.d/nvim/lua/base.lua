@@ -40,3 +40,4 @@ opt.pumblend = 7
 opt.list = true
 opt.cursorline = true
 opt.completeopt = "menu,menuone,noselect"
+-- opt.rocks.hererocks = false

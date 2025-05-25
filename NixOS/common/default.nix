@@ -4,7 +4,6 @@
       # Include the results of the hardware scan.
       ./audio.nix
       ./bluetooth.nix
-      ./flatpak.nix
       ./i18n.nix
       ./keymap.nix
       ./network.nix

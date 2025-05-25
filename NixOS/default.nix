@@ -12,7 +12,7 @@ let
   mkHomeManagerConfiguration =
     { system, username, modules }:
     inputs.home-manager.lib.homeManagerConfiguration {
-      pkgs = import inputs.nixpkgs {
+      pkgs = import inputs.nixpkgs{
         inherit system;
         config = {
           allowUnfree = true;
@@ -65,12 +65,12 @@ in
         ./MinecraftServer/host.nix
       ];
     };
-    WireGuardServer = mkNixosSystem {
+    NetworkServer = mkNixosSystem {
       system = "x86_64-linux";
-      hostname = "WireGuardServer";
+      hostname = "NetworkServer";
       username = "upiscium";
       modules = [
-        ./WireGuardServer/host.nix
+        ./NetworkServer/host.nix
       ];
     };
   };
@@ -97,11 +97,11 @@ in
         ./MinecraftServer/home.nix
       ];
     };
-    WireGuardServer = mkHomeManagerConfiguration {
+    NetworkServer = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
-        ./WireGuardServer/home.nix
+        ./NetworkServer/home.nix
       ];
     };
   };

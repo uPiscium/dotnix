@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    arduino-ide
-    blender
+    bambu-studio
+    code-cursor
     discord
     gdlauncher-carbon
     gpu-screen-recorder
@@ -10,6 +10,7 @@
     jetbrains-toolbox
     jetbrains.rider
     libreoffice-fresh
+    modrinth-app
     parsec-bin
     unityhub
     zoom
@@ -17,28 +18,28 @@
     clang-tools
     clangStdenv
     cmake
-    # cpupower
     docker-compose
-    # dotnetCorePackages.runtime_9_0-bin
-    dotnetCorePackages.sdk_9_0-bin
+    # dotnet-sdk-wrapped
+    dotnet-sdk_8
+    # dotnetCorePackages.sdk_8_0-bin
+    flex
     gcc
     gdb
+    ggshield
     go
     grim
     htop
     jdk17
     nyancat
+    mise
     mono
-    ollama-cuda
     power-profiles-daemon
     python311
-    realvnc-vnc-viewer
     rustup
+    samba
     sl
     slurp
     swappy
-    tdf
-    tmux
     termpdfpy
     typst
     uv
