@@ -40,8 +40,8 @@
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "　{ifname}: {signalStrength}%",
-        "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
+        "format-wifi": "　{essid}: {signalStrength}%",
+        "format-ethernet": "  {essid}: {ipaddr}/{cidr}",
         "format-disconnected": "⚠"
     },
     "pulseaudio": {
