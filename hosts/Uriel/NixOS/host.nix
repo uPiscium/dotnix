@@ -15,6 +15,7 @@
       ./netbird.nix
 
       ../../common/NixOS
+      ../../module/NixOS/grub.nix
       ../../module/NixOS/ssh.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [

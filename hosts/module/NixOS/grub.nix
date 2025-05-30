@@ -9,6 +9,7 @@
     grub = {
       devices = [ "nodev" ];
       enable = true;
+      zfsSupport = true;
       efiSupport = true;
       useOSProber = true;
       theme = pkgs.sleek-grub-theme;
