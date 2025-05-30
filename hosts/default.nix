@@ -50,6 +50,15 @@ in
         ./Michael/NixOS/host.nix
       ];
     };
+    Ramiel = mkNixosSystem {
+      # ROGSTRIX
+      system = "x86_64-linux";
+      hostname = "Ramiel";
+      username = "upiscium";
+      modules = [
+        ./Ramiel/NixOS/host.nix
+      ];
+    };
     Sariel = mkNixosSystem {
       # Zenbook
       system = "x86_64-linux";
@@ -76,6 +85,13 @@ in
       username = "upiscium";
       modules = [
         ./Michael/NixOS/home.nix
+      ];
+    };
+    Ramiel = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./Ramiel/NixOS/home.nix
       ];
     };
     Sariel = mkHomeManagerConfiguration {
