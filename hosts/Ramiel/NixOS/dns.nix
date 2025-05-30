@@ -16,9 +16,10 @@
     domain = "iruma.arc";
     address = [
       "/zadkiel.iruma.arc/192.168.11.90"
-      "/gabriel.iruma.arc/192.168.11.80"
-      "/metatron.iruma.arc/192.168.11.81"
-      "/raphael.iruma.arc/192.168.11.82"
+      # Proxmox servers
+      "/gabriel.iruma.arc/192.168.11.114"
+      "/metatron.iruma.arc/192.168.11.114"
+      "/raphael.iruma.arc/192.168.11.114"
 
       "/uriel.iruma.arc/192.168.11.112"
       "/ramiel.iruma.arc/192.168.11.113"
