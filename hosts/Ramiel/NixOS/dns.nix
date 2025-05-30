@@ -13,12 +13,12 @@
       "8.8.8.8"
       "8.8.4.4"
     ];
-    domain = "iruma";
+    domain = "iruma.arc";
     address = [
-      "/desktop.iruma/192.168.11.90"
-      "/network.iruma/192.168.11.128"
-      "/nas.iruma/192.168.11.192"
-      "/minecraft.iruma/192.168.11.129"
+      "/desktop.iruma.arc/192.168.11.90"
+      "/wireguard.iruma.arc/192.168.11.128"
+      "/dns.iruma.arc/192.168.11.129"
+      "/nas.iruma.arc/192.168.11.192"
     ];
   };
 }
