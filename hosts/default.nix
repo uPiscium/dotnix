@@ -51,12 +51,21 @@ in
       ];
     };
     Ramiel = mkNixosSystem {
-      # ROGSTRIX
+      # Dnsmasq Server
       system = "x86_64-linux";
       hostname = "Ramiel";
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/host.nix
+      ];
+    };
+    Sandalphon = mkNixosSystem {
+      # Nginx NAPT Server
+      system = "x86_64-linux";
+      hostname = "Sandalphon";
+      username = "upiscium";
+      modules = [
+        ./Sandalphon/NixOS/host.nix
       ];
     };
     Sariel = mkNixosSystem {
@@ -69,7 +78,7 @@ in
       ];
     };
     Uriel = mkNixosSystem {
-      # Netbird Server
+      # WireGuard Server
       system = "x86_64-linux";
       hostname = "Uriel";
       username = "upiscium";
@@ -92,6 +101,13 @@ in
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/home.nix
+      ];
+    };
+    Sandalphon = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      username = "upiscium";
+      modules = [
+        ./Sandalphon/NixOS/home.nix
       ];
     };
     Sariel = mkHomeManagerConfiguration {
