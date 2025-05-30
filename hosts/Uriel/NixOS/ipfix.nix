@@ -1,6 +1,6 @@
-{...}: {
+{ ... }: {
   networking.useDHCP = false;
-  networking.interfaces.eno1 = {
+  networking.interfaces.vmbr0 = {
     useDHCP = false;
     ipv4.addresses = [
       {
