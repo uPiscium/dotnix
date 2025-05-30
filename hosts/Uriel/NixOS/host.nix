@@ -12,7 +12,7 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./wireguard.nix
+      ./netbird.nix
 
       ../../common/NixOS
       ../../module/NixOS/ssh.nix
