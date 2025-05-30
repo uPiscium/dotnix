@@ -12,7 +12,7 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./netbird.nix
+      ./wireguard.nix
 
       ../../common/NixOS
       ../../module/NixOS/proxmox.nix
