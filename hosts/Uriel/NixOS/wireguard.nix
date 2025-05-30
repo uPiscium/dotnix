@@ -34,6 +34,11 @@
           publicKey = "RSd+ou+GdtSou2X5QrcfbfhKhalTIbDEM5zjH5zOb38=";
           allowedIPs = [ "10.0.0.3/32" ];
         }
+        {
+          # Sariel
+          publicKey = "8hPUCGGjjRDhWBBnrbUq2Q9SPLBcoOmmM8vcnmaHjD0=";
+          allowedIPs = [ "10.0.0.4/32" ];
+        }
       ];
     };
   };
