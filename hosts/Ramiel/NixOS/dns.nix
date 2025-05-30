@@ -15,8 +15,10 @@
     ];
     domain = "iruma.arc";
     address = [
+      "/gabriel.iruma.arc/192.168.11.80"
+      "/metatron.iruma.arc/192.168.11.81"
+      "/raphael.iruma.arc/192.168.11.82"
       "/desktop.iruma.arc/192.168.11.90"
-      "/ollama.iruma.arc/192.168.11.90"
       "/wireguard.iruma.arc/192.168.11.128"
       "/dns.iruma.arc/192.168.11.129"
       "/nas.iruma.arc/192.168.11.192"
