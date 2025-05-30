@@ -8,7 +8,7 @@
   networking.wireguard.enable = true;
   networking.wireguard.interfaces = {
     wg0 = {
-      ips = [ "100.0.0.1/24" ];
+      ips = [ "10.0.0.1/24" ];
       listenPort = 30000;
       mtu = 1420;
 
@@ -27,12 +27,12 @@
         {
           # Michael
           publicKey = "3DsO9S1f6ubU/b2WGWZMPlL4ApzGKwGPFeFod3r73m4=";
-          allowedIPs = [ "100.0.0.2/32" ];
+          allowedIPs = [ "10.0.0.2/32" ];
         }
         {
           # ROGphone6
           publicKey = "RSd+ou+GdtSou2X5QrcfbfhKhalTIbDEM5zjH5zOb38=";
-          allowedIPs = [ "100.0.0.3/32" ];
+          allowedIPs = [ "10.0.0.3/32" ];
         }
       ];
     };
