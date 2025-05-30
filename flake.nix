@@ -1,7 +1,6 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-# nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     xremap.url = "github:xremap/nix-flake";
     home-manager = {
@@ -12,7 +11,7 @@
   };
 
   outputs = inputs: {
-    nixosConfigurations = (import ./NixOS inputs).nixos;
-    homeConfigurations = (import ./NixOS inputs).home-manager;
+    nixosConfigurations = (import ./hosts inputs).nixos;
+    homeConfigurations = (import ./hosts inputs).home-manager;
   };
 }
