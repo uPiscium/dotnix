@@ -15,7 +15,7 @@
       ./netbird.nix
 
       ../../common/NixOS
-      ../../module/NixOS/grub.nix
+      ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
@@ -25,7 +25,7 @@
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
 
