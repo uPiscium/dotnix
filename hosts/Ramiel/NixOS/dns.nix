@@ -5,10 +5,10 @@
 
   services.dnsmasq.enable = true;
   services.dnsmasq.settings = {
-    interface = "eno1";
+    interface = "ens18";
     port = 53;
     listen-address = "192.168.11.128";
-    no-dhcp-interface = "eno1";
+    no-dhcp-interface = "ens18";
     server = [
       "8.8.8.8"
       "8.8.4.4"
