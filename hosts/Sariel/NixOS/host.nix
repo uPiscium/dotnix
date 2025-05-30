@@ -15,7 +15,7 @@
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
       ../../module/NixOS/network.nix
-      ../../module/NixOS/stream.nix
+      ../../module/NixOS/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel
