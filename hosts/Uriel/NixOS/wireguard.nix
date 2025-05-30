@@ -21,7 +21,7 @@
         ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -o eno1 -j MASQUERADE
       '';
 
-      privateKeyFile = "/home/upiscium/WireGuard/Server.key";
+      privateKeyFile = "/home/upiscium/WireGuard/Uriel.key";
 
       peers = [
         {
