@@ -8,13 +8,14 @@
   imports =
     [
       # Include the results of the hardware scan.
+      ./firewall.nix
       ./hardware.nix
-      ../common
       ./dns.nix
       ./ipfix.nix
-      ./network.nix
-      ./ssh.nix
       ./wireguard.nix
+
+      ../common
+      ../module/ssh.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd

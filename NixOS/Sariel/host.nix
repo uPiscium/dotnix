@@ -10,16 +10,21 @@
       # Include the results of the hardware scan.
       ./firewall.nix
       ./hardware.nix
-      ./ipfix.nix
-      ./ssh.nix
 
       ../common
-      ../module/ssh.nix
+      ../module/asusctl.nix
+      ../module/desktop.nix
+      ../module/network.nix
+      ../module/stream.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
-      common-cpu-amd
+      common-cpu-intel
       common-pc-ssd
     ]);
+
+  hardware.graphics = {
+    enable = true;
+  };
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
@@ -30,9 +35,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  services.xserver.displayManager.lightdm.enable = false;
-
-  # environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+  ];
 
 
   # This value determines the NixOS release from which the default
@@ -41,5 +46,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "24.11"; # Did you read the comment?
+  system.stateVersion = "25.05"; # Did you read the comment?
 }

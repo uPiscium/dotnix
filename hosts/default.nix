@@ -47,7 +47,7 @@ in
       hostname = "Michael";
       username = "upiscium";
       modules = [
-        ./Michael/host.nix
+        ./Michael/NixOS/host.nix
       ];
     };
     Sariel = mkNixosSystem {
@@ -56,7 +56,7 @@ in
       hostname = "Sariel";
       username = "upiscium";
       modules = [
-        ./Sariel/host.nix
+        ./Sariel/NixOS/host.nix
       ];
     };
     Uriel = mkNixosSystem {
@@ -65,23 +65,7 @@ in
       hostname = "Uriel";
       username = "upiscium";
       modules = [
-        ./Uriel/host.nix
-      ];
-    };
-    MinecraftServer = mkNixosSystem {
-      system = "x86_64-linux";
-      hostname = "MinecraftServer";
-      username = "upiscium";
-      modules = [
-        ./MinecraftServer/host.nix
-      ];
-    };
-    NetworkServer = mkNixosSystem {
-      system = "x86_64-linux";
-      hostname = "NetworkServer";
-      username = "upiscium";
-      modules = [
-        ./NetworkServer/host.nix
+        ./Uriel/NixOS/host.nix
       ];
     };
   };
@@ -91,35 +75,21 @@ in
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
-        ./Michael/home.nix
+        ./Michael/NixOS/home.nix
       ];
     };
     Sariel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
-        ./Sariel/home.nix
+        ./Sariel/NixOS/home.nix
       ];
     };
     Uriel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       username = "upiscium";
       modules = [
-        ./Uriel/home.nix
-      ];
-    };
-    MinecraftServer = mkHomeManagerConfiguration {
-      system = "x86_64-linux";
-      username = "upiscium";
-      modules = [
-        ./MinecraftServer/home.nix
-      ];
-    };
-    NetworkServer = mkHomeManagerConfiguration {
-      system = "x86_64-linux";
-      username = "upiscium";
-      modules = [
-        ./NetworkServer/home.nix
+        ./Uriel/NixOS/home.nix
       ];
     };
   };
