@@ -5,20 +5,23 @@
 
   services.dnsmasq.enable = true;
   services.dnsmasq.settings = {
-    interface = "eno1";
+    interface = "ens18";
     port = 53;
     listen-address = "192.168.11.128";
-    no-dhcp-interface = "eno1";
+    no-dhcp-interface = "ens18";
     server = [
       "8.8.8.8"
       "8.8.4.4"
     ];
-    domain = "iruma";
+    domain = "iruma.arc";
     address = [
-      "/desktop.iruma/192.168.11.90"
-      "/network.iruma/192.168.11.128"
-      "/nas.iruma/192.168.11.192"
-      "/minecraft.iruma/192.168.11.129"
+      "/gabriel.iruma.arc/192.168.11.80"
+      "/metatron.iruma.arc/192.168.11.81"
+      "/raphael.iruma.arc/192.168.11.82"
+      "/desktop.iruma.arc/192.168.11.90"
+      "/wireguard.iruma.arc/192.168.11.128"
+      "/dns.iruma.arc/192.168.11.129"
+      "/nas.iruma.arc/192.168.11.192"
     ];
   };
 }
