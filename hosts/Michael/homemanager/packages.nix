@@ -8,7 +8,7 @@
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    jetbrains.rider
+    # jetbrains.rider
     libreoffice-fresh
     modrinth-app
     parsec-bin
