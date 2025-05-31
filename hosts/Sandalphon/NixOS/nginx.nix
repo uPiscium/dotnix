@@ -5,7 +5,7 @@
       forceSSL = false; # allow HTTP access
       locations."/" = {
         proxyPass = "http://192.168.11.90:3000";
-        # proxyWebsockets = true; # allow WebSocket
+        proxyWebsockets = true; # allow WebSocket
       };
     };
     virtualHosts."gabriel.iruma.arc" = {
@@ -14,7 +14,7 @@
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "https://192.168.11.80:8006";
-        # proxyWebsockets = true;
+        proxyWebsockets = true;
       };
     };
     virtualHosts."metatron.iruma.arc" = {
@@ -23,7 +23,7 @@
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "https://192.168.11.82:8006";
-        # proxyWebsockets = true;
+        proxyWebsockets = true;
       };
     };
     virtualHosts."raphael.iruma.arc" = {
@@ -32,7 +32,7 @@
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "https://192.168.11.81:8006";
-        # proxyWebsockets = true;
+        proxyWebsockets = true;
       };
     };
   };
