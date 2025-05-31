@@ -8,8 +8,8 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./dns.nix
       ./firewall.nix
+
       ./hardware.nix
       ./ipfix.nix
 
