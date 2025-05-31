@@ -9,21 +9,27 @@
       };
     };
     virtualHosts."gabriel.iruma.arc" = {
-      forceSSL = false;
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "http://192.168.11.80:8006";
         proxyWebsockets = true;
       };
     };
     virtualHosts."metatron.iruma.arc" = {
-      forceSSL = false;
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "http://192.168.11.82:8006";
         proxyWebsockets = true;
       };
     };
     virtualHosts."raphael.iruma.arc" = {
-      forceSSL = false;
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
         proxyPass = "http://192.168.11.81:8006";
         proxyWebsockets = true;
@@ -31,5 +37,5 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
