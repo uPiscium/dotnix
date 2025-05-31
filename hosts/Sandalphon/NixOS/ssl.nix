@@ -31,8 +31,9 @@
       fi
 
       # Install the generated certificates
-      install -m 600 certs/proxy.key /etc/ssl/proxy.key
+      install -m 640 certs/proxy.key /etc/ssl/proxy.key
       install -m 644 certs/proxy.crt /etc/ssl/proxy.crt
+      chown root:nginx /etc/ssl/proxy.key
     '';
     serviceConfig.Type = "oneshot";
   };
