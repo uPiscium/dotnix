@@ -10,12 +10,13 @@
       # Include the results of the hardware scan.
       ./firewall.nix
       ./hardware.nix
+      ./wireguard.nix
 
       ../../common/NixOS
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
       ../../module/NixOS/network.nix
-      ../../module/NixOS/stream.nix
+      ../../module/NixOS/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel

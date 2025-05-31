@@ -15,13 +15,23 @@
     ];
     domain = "iruma.arc";
     address = [
-      "/gabriel.iruma.arc/192.168.11.80"
-      "/metatron.iruma.arc/192.168.11.81"
-      "/raphael.iruma.arc/192.168.11.82"
-      "/desktop.iruma.arc/192.168.11.90"
-      "/wireguard.iruma.arc/192.168.11.128"
-      "/dns.iruma.arc/192.168.11.129"
-      "/nas.iruma.arc/192.168.11.192"
+      "/zadkiel.iruma.arc/192.168.11.90"
+      # Proxmox servers
+      "/gabriel.iruma.arc/192.168.11.114"
+      "/metatron.iruma.arc/192.168.11.114"
+      "/raphael.iruma.arc/192.168.11.114"
+
+      "/uriel.iruma.arc/192.168.11.112"
+      "/ramiel.iruma.arc/192.168.11.113"
+      "/sandalphon.iruma.arc/192.168.11.114"
+
+      "/desktop.iruma.arc/192.168.11.90" # Zadkiel
+      "/wireguard.iruma.arc/192.168.11.128" # Uriel
+      "/dns.iruma.arc/192.168.11.129" # Ramiel
+      "/nginx.iruma.arc/192.168.11.129" # Sandalphon
+
+      # Services
+      "/ollama.iruma.arc/192.168.11.114"
     ];
   };
 }
