@@ -1,8 +1,13 @@
-{ ... }: {
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [
+    openssl
+  ];
+
   # This module generates a local CA and server certificates for use with a proxy.
   systemd.services.generate-certs = {
     description = "Generate local CA and server certificates";
     wantedBy = [ "multi-user.target" ];
+    path = with pkgs; [ openssl coreutils ];
     script = ''
       mkdir -p /var/ca/{certs,private}
       cd /var/ca

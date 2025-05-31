@@ -15,12 +15,15 @@
     ];
     domain = "iruma.arc";
     address = [
+      # Main desktop
       "/zadkiel.iruma.arc/192.168.11.90"
+
       # Proxmox servers
       "/gabriel.iruma.arc/192.168.11.114"
       "/metatron.iruma.arc/192.168.11.114"
       "/raphael.iruma.arc/192.168.11.114"
 
+      # Gabriel VMs
       "/uriel.iruma.arc/192.168.11.112"
       "/ramiel.iruma.arc/192.168.11.113"
       "/sandalphon.iruma.arc/192.168.11.114"
