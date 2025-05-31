@@ -13,7 +13,7 @@
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
-        proxyPass = "http://192.168.11.80:8006";
+        proxyPass = "https://192.168.11.80:8006";
         proxyWebsockets = true;
       };
     };
@@ -22,7 +22,7 @@
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
-        proxyPass = "http://192.168.11.82:8006";
+        proxyPass = "https://192.168.11.82:8006";
         proxyWebsockets = true;
       };
     };
@@ -31,11 +31,9 @@
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
       locations."/" = {
-        proxyPass = "http://192.168.11.81:8006";
+        proxyPass = "https://192.168.11.81:8006";
         proxyWebsockets = true;
       };
     };
   };
-
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
