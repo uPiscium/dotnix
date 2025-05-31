@@ -1,8 +1,4 @@
 { ... }: {
-  networking.firewall = {
-    allowedUDPPorts = [ 30000 ];
-  };
-
   networking.wireguard.enable = true;
   networking.wireguard.interfaces = {
     wg0 = {
