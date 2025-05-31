@@ -41,6 +41,15 @@ let
 in
 {
   nixos = {
+    Azrael = mkNixosSystem {
+      # Ollama Server
+      system = "x86_64-linux";
+      hostname = "Azrael";
+      username = "upiscium";
+      modules = [
+        ./Azrael/NixOS/host.nix
+      ];
+    };
     Michael = mkNixosSystem {
       # ROGSTRIX
       system = "x86_64-linux";
@@ -89,6 +98,14 @@ in
   };
 
   home-manager = {
+    Azrael = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      hostname = "Azrael";
+      username = "upiscium";
+      modules = [
+        ./Azrael/NixOS/home.nix
+      ];
+    };
     Michael = mkHomeManagerConfiguration {
       system = "x86_64-linux";
       hostname = "Michael";
