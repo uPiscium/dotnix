@@ -12,6 +12,7 @@
       ./hardware.nix
       ./ipfix.nix
       ./nginx.nix
+      ./ssl.nix
 
       ../../common/NixOS
       ../../module/NixOS/proxmox.nix
