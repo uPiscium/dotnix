@@ -9,9 +9,9 @@
     [
       # Include the results of the hardware scan.
       ./firewall.nix
-
       ./hardware.nix
       ./ipfix.nix
+
 
       ../../common/NixOS
       ../../module/NixOS/proxmox.nix
