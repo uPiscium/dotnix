@@ -36,7 +36,7 @@
         }
         {
           # Sariel
-          publicKey = "8hPUCGGjjRDhWBBnrbUq2Q9SPLBcoOmmM8vcnmaHjD0=";
+          publicKey = "Dyt4tHHZyhaNXUxSgMUq9JDeTey9OaRoLqFJXBlysiU=";
           allowedIPs = [ "10.0.0.4/32" ];
         }
       ];
