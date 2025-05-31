@@ -1,10 +1,10 @@
 { ... }: {
   imports = [
-    ./gtk.nix
+    ./hyprland.nix
     ./packages.nix
 
     ../../module/homemanager/browser.nix
-    ../../module/homemanager/hyprland.nix
+    ../../module/homemanager/gtk.nix
   ];
 
   # home = rec {

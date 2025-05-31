@@ -10,7 +10,7 @@ let
     };
 
   mkHomeManagerConfiguration =
-    { system, username, modules }:
+    { system, hostname, username, modules }:
     inputs.home-manager.lib.homeManagerConfiguration {
       pkgs = import inputs.nixpkgs {
         inherit system;
@@ -91,6 +91,7 @@ in
   home-manager = {
     Michael = mkHomeManagerConfiguration {
       system = "x86_64-linux";
+      hostname = "Michael";
       username = "upiscium";
       modules = [
         ./Michael/NixOS/home.nix
@@ -98,6 +99,7 @@ in
     };
     Ramiel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
+      hostname = "Ramiel";
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/home.nix
@@ -105,6 +107,7 @@ in
     };
     Sandalphon = mkHomeManagerConfiguration {
       system = "x86_64-linux";
+      hostname = "Sandalphon";
       username = "upiscium";
       modules = [
         ./Sandalphon/NixOS/home.nix
@@ -112,6 +115,7 @@ in
     };
     Sariel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
+      hostname = "Sariel";
       username = "upiscium";
       modules = [
         ./Sariel/NixOS/home.nix
@@ -119,6 +123,7 @@ in
     };
     Uriel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
+      hostname = "Uriel";
       username = "upiscium";
       modules = [
         ./Uriel/NixOS/home.nix

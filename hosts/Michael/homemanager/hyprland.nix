@@ -17,22 +17,22 @@
   ];
 
   home.file.".config/hypr/" = {
-    source = ../../config.d/hypr;
+    source = ../config.d/hypr;
     recursive = true;
   };
 
   home.file.".config/anyrun/" = {
-    source = ../../config.d/anyrun;
+    source = ../config.d/anyrun;
     recursive = true;
   };
 
   home.file.".config/waybar" = {
-    source = ../../config.d/waybar;
+    source = ../config.d/waybar;
     recursive = true;
   };
 
   home.file.".config/wlogout" = {
-    source = ../../config.d/waybar;
+    source = ../config.d/wlogout;
     recursive = true;
   };
 
