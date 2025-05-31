@@ -1,13 +1,8 @@
 { ... }: {
-  networking.firewall = {
-    allowedUDPPorts = [ 30000 ];
-  };
-
   networking.wireguard.enable = true;
   networking.wireguard.interfaces = {
     wg0 = {
       ips = [ "10.0.0.2/24" ];
-      listenPort = 30000;
       mtu = 1420;
       privateKeyFile = "/home/upiscium/WireGuard/Michael.key";
       peers = [
