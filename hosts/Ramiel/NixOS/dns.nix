@@ -28,13 +28,15 @@
       "/ramiel.iruma.arc/192.168.11.113"
       "/sandalphon.iruma.arc/192.168.11.114"
 
+      # Services
+      "/ollama.iruma.arc/192.168.11.114"
+
+      # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
       "/wireguard.iruma.arc/192.168.11.128" # Uriel
       "/dns.iruma.arc/192.168.11.129" # Ramiel
       "/nginx.iruma.arc/192.168.11.129" # Sandalphon
 
-      # Services
-      "/ollama.iruma.arc/192.168.11.114"
     ];
   };
 }
