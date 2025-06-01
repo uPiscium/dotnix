@@ -11,9 +11,9 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
+      ./nvidia.nix
 
       ../../common/NixOS
-      ../../module/NixOS/nvidia.nix
       ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]

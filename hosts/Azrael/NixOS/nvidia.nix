@@ -5,9 +5,6 @@
 
   hardware.nvidia-container-toolkit.enable = true;
 
-  # virtualisation.docker.enableNvidia = true;
-  # virtualisation.containers.cdi.dynamic.nvidia.enable = true;
-
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.graphics = {
@@ -26,16 +23,4 @@
       nvidiaBusId = "PCI:0:10:0";
     };
   };
-
-  # environment.etc."docker/daemon.json".text = ''
-  #   {
-  #     "default-runtime": "nvidia",
-  #     "runtimes": {
-  #       "nvidia": {
-  #         "path": "nvidia-container-runtime",
-  #         "runtime-args": []
-  #       }
-  #     }
-  #   }
-  # '';
 }
