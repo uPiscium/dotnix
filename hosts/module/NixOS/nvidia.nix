@@ -1,13 +1,14 @@
 { pkgs, config, ... }: {
   environment.systemPackages = with pkgs; [
     nvtopPackages.full
-    nvidia-container-toolkit
   ];
 
   hardware.opengl.enable = true;
   hardware.opengl.driSupport32Bit = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
-  virtualisation.docker.enableNvidia = true;
+  # virtualisation.docker.enableNvidia = true;
+  # virtualisation.containers.cdi.dynamic.nvidia.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -26,4 +27,16 @@
       nvidiaBusId = "PCI:0:10:0";
     };
   };
+
+  # environment.etc."docker/daemon.json".text = ''
+  #   {
+  #     "default-runtime": "nvidia",
+  #     "runtimes": {
+  #       "nvidia": {
+  #         "path": "nvidia-container-runtime",
+  #         "runtime-args": []
+  #       }
+  #     }
+  #   }
+  # '';
 }
