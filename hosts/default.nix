@@ -68,13 +68,13 @@ in
         ./Ramiel/NixOS/host.nix
       ];
     };
-    Sahaqiel = mkNixosSystem {
+    Sahaquiel = mkNixosSystem {
       # GPU Server
       system = "x86_64-linux";
-      hostname = "Sahaqiel";
+      hostname = "Sahaquiel";
       username = "upiscium";
       modules = [
-        ./Sahaqiel/NixOS/host.nix
+        ./Sahaquiel/NixOS/host.nix
       ];
     };
     Sandalphon = mkNixosSystem {
@@ -131,12 +131,12 @@ in
         ./Ramiel/NixOS/home.nix
       ];
     };
-    Sahaqiel = mkHomeManagerConfiguration {
+    Sahaquiel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
-      hostname = "Sahaqiel";
+      hostname = "Sahaquiel";
       username = "upiscium";
       modules = [
-        ./Sahaqiel/NixOS/home.nix
+        ./Sahaquiel/NixOS/home.nix
       ];
     };
     Sandalphon = mkHomeManagerConfiguration {
