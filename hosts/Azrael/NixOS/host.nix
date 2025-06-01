@@ -13,6 +13,7 @@
       ./ipfix.nix
 
       ../../common/NixOS
+      ../../module/NixOS/nvidia.nix
       ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]
@@ -22,21 +23,6 @@
       common-pc-ssd
     ]);
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.graphics = {
-    enable = true;
-  };
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime = {
-      nvidiaBusId = "PCI:0:10:0";
-    };
-  };
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -48,13 +34,7 @@
 
   services.xserver.displayManager.lightdm.enable = false;
 
-  environment.systemPackages = with pkgs; [
-    nvtopPackages.full
-    wireguard-tools
-  ];
-
   # environment.systemPackages = with pkgs; [ ];
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

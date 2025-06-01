@@ -1,5 +1,3 @@
 { pkgs, ... }: {
-  home.packages = with pkgs; [
-    nvidia-container-toolkit
-  ];
+  home.packages = with pkgs; [ ];
 }
