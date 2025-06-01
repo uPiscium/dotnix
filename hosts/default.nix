@@ -68,6 +68,15 @@ in
         ./Ramiel/NixOS/host.nix
       ];
     };
+    Sahaqiel = mkNixosSystem {
+      # GPU Server
+      system = "x86_64-linux";
+      hostname = "Sahaqiel";
+      username = "upiscium";
+      modules = [
+        ./Sahaqiel/NixOS/host.nix
+      ];
+    };
     Sandalphon = mkNixosSystem {
       # Nginx NAPT Server
       system = "x86_64-linux";
@@ -120,6 +129,14 @@ in
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/home.nix
+      ];
+    };
+    Sahaqiel = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      hostname = "Sahaqiel";
+      username = "upiscium";
+      modules = [
+        ./Sahaqiel/NixOS/home.nix
       ];
     };
     Sandalphon = mkHomeManagerConfiguration {
