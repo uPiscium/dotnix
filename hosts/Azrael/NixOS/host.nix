@@ -18,32 +18,31 @@
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
-      # common-gpu-nvidia
       common-pc-ssd
     ]);
 
-  # services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-  # hardware.graphics = {
-  #   enable = true;
-  # };
+  hardware.graphics = {
+    enable = true;
+  };
 
-  # hardware.nvidia = {
-  #   modesetting.enable = true;
-  #   powerManagement.enable = false;
-  #   powerManagement.finegrained = false;
-  #   open = false;
-  #   nvidiaSettings = true;
-  #   package = config.boot.kernelPackages.nvidiaPackages.stable;
-  #   # prime = {
-  #   #   offload = {
-  #   #     enable = true;
-  #   #     enableOffloadCmd = true;
-  #   #   };
-  #   #   # intelBusId = "PCI:1:0:0";
-  #   #   nvidiaBusId = "PCI:0:2:0";
-  #   # };
-  # };
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    # prime = {
+    #   offload = {
+    #     enable = true;
+    #     enableOffloadCmd = true;
+    #   };
+    #   intelBusId = "PCI:1:0:0";
+    #   nvidiaBusId = "PCI:0:2:0";
+    # };
+  };
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   # boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -54,6 +53,11 @@
   nixpkgs.config.allowUnfree = true;
 
   services.xserver.displayManager.lightdm.enable = false;
+
+  environment.systemPackages = with pkgs; [
+    nvtopPackages.full
+    wireguard-tools
+  ];
 
   # environment.systemPackages = with pkgs; [ ];
 
