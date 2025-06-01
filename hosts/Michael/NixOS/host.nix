@@ -28,6 +28,7 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   hardware.nvidia = {
@@ -46,6 +47,8 @@
       nvidiaBusId = "PCI:0:2:0";
     };
   };
+
+  hardware.nvidia-container-toolkit.enable = true;
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;

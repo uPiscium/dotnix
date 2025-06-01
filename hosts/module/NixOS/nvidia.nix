@@ -3,8 +3,6 @@
     nvtopPackages.full
   ];
 
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
   hardware.nvidia-container-toolkit.enable = true;
 
   # virtualisation.docker.enableNvidia = true;
@@ -14,6 +12,7 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
   };
 
   hardware.nvidia = {
