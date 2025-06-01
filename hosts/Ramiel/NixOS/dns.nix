@@ -31,15 +31,19 @@
       "/ramiel.iruma.arc/192.168.11.113"
       "/sandalphon.iruma.arc/192.168.11.114"
 
+      # Raphael VMs
+      "/sahaquiel.iruma.arc/192.168.11.128"
+
       # Services
       "/ollama.iruma.arc/192.168.11.114"
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
-      "/wireguard.iruma.arc/192.168.11.128" # Uriel
-      "/dns.iruma.arc/192.168.11.129" # Ramiel
-      "/nginx.iruma.arc/192.168.11.129" # Sandalphon
-
+      "/gpu-serverA.iruma.arc/192.168.11.100" # Azrael
+      "/wireguard.iruma.arc/192.168.11.112" # Uriel
+      "/dns.iruma.arc/192.168.11.113" # Ramiel
+      "/nginx.iruma.arc/192.168.11.114" # Sandalphon
+      "/gpu-serverB.iruma.arc/192.168.11.128" # Sahaquiel
     ];
   };
 }
