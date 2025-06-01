@@ -24,6 +24,9 @@
       "/raphael.iruma.arc/192.168.11.114"
 
       # Gabriel VMs
+      "/azrael.iruma.arc/192.168.11.100"
+
+      # Metatron VMs
       "/uriel.iruma.arc/192.168.11.112"
       "/ramiel.iruma.arc/192.168.11.113"
       "/sandalphon.iruma.arc/192.168.11.114"
