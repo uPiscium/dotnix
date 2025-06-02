@@ -1,6 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   services.ollama = {
-    enable = true;
-    openFirewall = true;
-  };
+    enable = true; acceleration = "cuda"; package = pkgs.ollama.override { acceleration = "cuda"; }; };
 }
