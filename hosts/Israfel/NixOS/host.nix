@@ -11,6 +11,7 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
+      ./nas.nix
 
       ../../common/NixOS
       ../../module/NixOS/proxmox.nix
