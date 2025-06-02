@@ -20,7 +20,7 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
-      nvidiaBusId = "PCI:0:10:0";
+      nvidiaBusId = "PCI:1:0:0";
     };
   };
 }
