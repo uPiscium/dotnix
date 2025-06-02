@@ -25,6 +25,7 @@
 
       # Gabriel VMs
       "/azrael.iruma.arc/192.168.11.100"
+      "/israfel.iruma.arc/192.168.11.101"
 
       # Metatron VMs
       "/uriel.iruma.arc/192.168.11.112"
@@ -40,11 +41,12 @@
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
-      "/gpu-serverA.iruma.arc/192.168.11.100" # Azrael
+      "/gpu-server-A.iruma.arc/192.168.11.100" # Azrael
+      "/nas.iruma.arc/192.168.11.101" # Israfel
       "/wireguard.iruma.arc/192.168.11.112" # Uriel
       "/dns.iruma.arc/192.168.11.113" # Ramiel
       "/nginx.iruma.arc/192.168.11.114" # Sandalphon
-      "/gpu-serverB.iruma.arc/192.168.11.128" # Sahaquiel
+      "/gpu-server-B.iruma.arc/192.168.11.128" # Sahaquiel
     ];
   };
 }
