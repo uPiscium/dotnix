@@ -34,8 +34,9 @@
       # Raphael VMs
       "/sahaquiel.iruma.arc/192.168.11.128"
 
-      # Services
+      # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
+      "/qwen3.iruma.arc/192.168.11.114"
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
