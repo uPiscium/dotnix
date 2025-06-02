@@ -20,7 +20,6 @@
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
-      # common-gpu-nvidia
       common-pc-ssd
     ]);
 
