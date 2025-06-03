@@ -42,6 +42,7 @@
     swappy
     termpdfpy
     typst
+    unzip
     uv
     vlc
     wayland-scanner
