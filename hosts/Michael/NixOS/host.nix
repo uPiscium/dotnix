@@ -52,7 +52,8 @@
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  boot.kernelPackages = pkgs.linuxPackages_6_1; # NVIDIA driver is not compatible with 6.6 yet
+  # boot.kernelPackages = pkgs.linuxPackages_6_1; # NVIDIA driver is not compatible with 6.6 yet
+  boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest kernel for better hardware support
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
