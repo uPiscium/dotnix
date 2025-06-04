@@ -25,7 +25,6 @@
 
       # Gabriel VMs
       "/azrael.iruma.arc/192.168.11.100"
-      "/israfel.iruma.arc/192.168.11.101"
 
       # Metatron VMs
       "/uriel.iruma.arc/192.168.11.112"
@@ -33,7 +32,8 @@
       "/sandalphon.iruma.arc/192.168.11.114"
 
       # Raphael VMs
-      "/sahaquiel.iruma.arc/192.168.11.128"
+      "/israfel.iruma.arc/192.168.11.128"
+      "/sahaquiel.iruma.arc/192.168.11.129"
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
@@ -41,12 +41,14 @@
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
-      "/gpu-server-A.iruma.arc/192.168.11.100" # Azrael
+      "/gpu-server.iruma.arc/192.168.11.100" # Azrael
       "/nas.iruma.arc/192.168.11.101" # Israfel
       "/wireguard.iruma.arc/192.168.11.112" # Uriel
       "/dns.iruma.arc/192.168.11.113" # Ramiel
       "/nginx.iruma.arc/192.168.11.114" # Sandalphon
-      "/gpu-server-B.iruma.arc/192.168.11.128" # Sahaquiel
+      "/nextcloud.iruma.arc/192.168.11.129" # Israfel
+      "/nas.iruma.arc/192.168.11.129" # Israfel
+      "/gitlab.iruma.arc/192.168.11.129" # Sahaquiel
     ];
   };
 }
