@@ -46,8 +46,8 @@
       "/wireguard.iruma.arc/192.168.11.112" # Uriel
       "/dns.iruma.arc/192.168.11.113" # Ramiel
       "/nginx.iruma.arc/192.168.11.114" # Sandalphon
-      "/nextcloud.iruma.arc/192.168.11.129" # Israfel
-      "/nas.iruma.arc/192.168.11.129" # Israfel
+      "/nextcloud.iruma.arc/192.168.11.128" # Israfel
+      "/nas.iruma.arc/192.168.11.128" # Israfel
       "/gitlab.iruma.arc/192.168.11.129" # Sahaquiel
     ];
   };
