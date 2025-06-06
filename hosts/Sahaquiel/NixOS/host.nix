@@ -9,9 +9,9 @@
     [
       # Include the results of the hardware scan.
       ./firewall.nix
+      ./gitlab.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nvidia.nix
 
       ../../common/NixOS
       ../../module/NixOS/proxmox.nix
