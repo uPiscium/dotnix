@@ -78,7 +78,7 @@ in
       ];
     };
     Sahaquiel = mkNixosSystem {
-      # GPU Server
+      # GitLab Server
       system = "x86_64-linux";
       hostname = "Sahaquiel";
       username = "upiscium";
