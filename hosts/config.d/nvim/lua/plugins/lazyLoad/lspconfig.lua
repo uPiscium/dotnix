@@ -44,6 +44,8 @@ return {
 			"lua_ls",
 			"mdx_analyzer",
 			"ruff",
+			"pyright",
+			-- "jedi_language_server",
 			"stylelint_lsp",
 			"tailwindcss",
 			"taplo",
@@ -134,13 +136,8 @@ return {
 					},
 				})
 			elseif server_name == "ruff" then
-				lspconfig.ruff_lsp.setup({
+				lspconfig.ruff.setup({
 					capabilities = default_opts.capabilities,
-					settings = {
-						ruff = {
-							args = { "--line-length", "88" },
-						},
-					},
 				})
 			end
 			lspconfig[server_name].setup(vim.tbl_deep_extend("force", default_opts, opts))

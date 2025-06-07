@@ -29,7 +29,8 @@
       nodePackages.eslint
       nodePackages.prettier
       pyright
-      python311Packages.debugpy
+      python312Packages.debugpy
+      # python312Packages.jedi-language-server
       ruff
       rust-analyzer
       glsl_analyzer
