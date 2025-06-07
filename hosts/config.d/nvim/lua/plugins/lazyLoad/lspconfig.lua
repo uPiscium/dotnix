@@ -43,7 +43,7 @@ return {
 			"nil_ls",
 			"lua_ls",
 			"mdx_analyzer",
-			"pyright",
+			"ruff",
 			"stylelint_lsp",
 			"tailwindcss",
 			"taplo",
