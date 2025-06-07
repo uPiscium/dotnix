@@ -69,6 +69,7 @@ return {
 					require("cmp_nvim_lsp").default_capabilities()
 				),
 			}
+
 			local opts = {}
 			if server_name == "denols" then
 				-- INFO: Neccessary for avoiding conflict with other js severs
@@ -119,6 +120,28 @@ return {
 					exportPdf = "onType",
 					formatterMode = "typstyle",
 				}
+			elseif server_name == "pyright" then
+				lspconfig.pyright.setup({
+					capabilities = default_opts.capabilities,
+					settings = {
+						python = {
+							analysis = {
+								typeCheckingMode = "on",
+								autoSearchPaths = true,
+								useLibraryCodeForTypes = true,
+							},
+						},
+					},
+				})
+			elseif server_name == "ruff" then
+				lspconfig.ruff_lsp.setup({
+					capabilities = default_opts.capabilities,
+					settings = {
+						ruff = {
+							args = { "--line-length", "88" },
+						},
+					},
+				})
 			end
 			lspconfig[server_name].setup(vim.tbl_deep_extend("force", default_opts, opts))
 		end
