@@ -2,16 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		{ "folke/neoconf.nvim" },
-		-- {
-		-- 	"williamboman/mason.nvim",
-		-- 	enabled = not vim.fn.executable("home-manager"),
-		-- 	event = "VeryLazy",
-		-- },
-		-- {
-		-- 	"williamboman/mason-lspconfig.nvim",
-		-- 	enabled = not vim.fn.executable("home-manager"), -- home-manager がある場合のみ
-		-- 	cmd = { "LspInstall", "LspUninstall" },
-		-- },
 		{
 			"b0o/schemastore.nvim",
 			ft = { "json", "yaml", "toml" },
@@ -44,8 +34,8 @@ return {
 			"lua_ls",
 			"mdx_analyzer",
 			"ruff",
-			"pyright",
-			-- "jedi_language_server",
+			-- "pyright",
+			"jedi_language_server",
 			"stylelint_lsp",
 			"tailwindcss",
 			"taplo",
