@@ -4,7 +4,10 @@
   ];
 
   virtualisation.docker.rootless.daemon.settings.features.cdi = true;
-  hardware.nvidia-container-toolkit.enable = true;
+  hardware.nvidia-container-toolkit = {
+    enable = true;
+    # no-cgroups = true;
+  };
 
   services.xserver.videoDrivers = [ "nvidia" "modesetting" ];
 
