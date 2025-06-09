@@ -10,7 +10,6 @@
       ./services.nix
       ./sudoers.nix
       ./toolbox.nix
-      ./virtualize.nix
       ./xsetting.nix
     ];
 

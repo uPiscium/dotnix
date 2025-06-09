@@ -2,16 +2,6 @@ return {
 	"neovim/nvim-lspconfig",
 	dependencies = {
 		{ "folke/neoconf.nvim" },
-		-- {
-		-- 	"williamboman/mason.nvim",
-		-- 	enabled = not vim.fn.executable("home-manager"),
-		-- 	event = "VeryLazy",
-		-- },
-		-- {
-		-- 	"williamboman/mason-lspconfig.nvim",
-		-- 	enabled = not vim.fn.executable("home-manager"), -- home-manager がある場合のみ
-		-- 	cmd = { "LspInstall", "LspUninstall" },
-		-- },
 		{
 			"b0o/schemastore.nvim",
 			ft = { "json", "yaml", "toml" },
@@ -30,7 +20,6 @@ return {
 			"clangd",
 			"cmake",
 			"cssls",
-			"cssls",
 			"denols",
 			"docker_compose_language_service",
 			"dockerls",
@@ -44,8 +33,9 @@ return {
 			"nil_ls",
 			"lua_ls",
 			"mdx_analyzer",
-			"pyright",
-			"pyright",
+			"ruff",
+			-- "pyright",
+			"jedi_language_server",
 			"stylelint_lsp",
 			"tailwindcss",
 			"taplo",
@@ -71,6 +61,7 @@ return {
 					require("cmp_nvim_lsp").default_capabilities()
 				),
 			}
+
 			local opts = {}
 			if server_name == "denols" then
 				-- INFO: Neccessary for avoiding conflict with other js severs
@@ -121,6 +112,23 @@ return {
 					exportPdf = "onType",
 					formatterMode = "typstyle",
 				}
+			elseif server_name == "pyright" then
+				lspconfig.pyright.setup({
+					capabilities = default_opts.capabilities,
+					settings = {
+						python = {
+							analysis = {
+								typeCheckingMode = "on",
+								autoSearchPaths = true,
+								useLibraryCodeForTypes = true,
+							},
+						},
+					},
+				})
+			elseif server_name == "ruff" then
+				lspconfig.ruff.setup({
+					capabilities = default_opts.capabilities,
+				})
 			end
 			lspconfig[server_name].setup(vim.tbl_deep_extend("force", default_opts, opts))
 		end
