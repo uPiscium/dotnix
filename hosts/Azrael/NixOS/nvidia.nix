@@ -1,15 +1,12 @@
 { pkgs, config, ... }: {
   environment.systemPackages = with pkgs; [
     nvtopPackages.full
+    nvidia-container-toolkit
   ];
 
-  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
-  hardware.nvidia-container-toolkit = {
-    enable = true;
-    # no-cgroups = true;
-  };
-
-  services.xserver.videoDrivers = [ "nvidia" "modesetting" ];
+  # virtualisation.docker.rootless.daemon.settings.features.cdi = true;
+  hardware.nvidia-container-toolkit.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.graphics = {
     enable = true;
