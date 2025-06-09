@@ -3,9 +3,13 @@
     nvtopPackages.full
   ];
 
-  hardware.nvidia-container-toolkit.enable = true;
+  virtualisation.docker.rootless.daemon.settings.features.cdi = true;
+  hardware.nvidia-container-toolkit = {
+    enable = true;
+    # no-cgroups = true;
+  };
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver.videoDrivers = [ "nvidia" "modesetting" ];
 
   hardware.graphics = {
     enable = true;
@@ -19,8 +23,5 @@
     open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime = {
-      nvidiaBusId = "PCI:0:10:0";
-    };
   };
 }
