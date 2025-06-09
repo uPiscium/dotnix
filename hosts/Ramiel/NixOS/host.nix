@@ -14,7 +14,7 @@
       ./ipfix.nix
 
       ../../common/NixOS
-      ../../common/NixOS/docker/rootless.nix
+      ../../module/NixOS/docker/rootless.nix
       ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]
