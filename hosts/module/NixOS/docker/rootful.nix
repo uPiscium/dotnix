@@ -2,10 +2,7 @@
   virtualisation = {
     docker = {
       enable = true;
-      rootless = {
-        enable = false;
-        setSocketVariable = true;
-      };
+      rootless.enable = false;
     };
   };
 }
