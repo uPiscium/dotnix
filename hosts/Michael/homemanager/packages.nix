@@ -47,6 +47,7 @@
     vlc
     wayland-scanner
     wine
+    wireshark
     yt-dlp
   ];
 }
