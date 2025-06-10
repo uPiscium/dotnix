@@ -25,6 +25,7 @@
 
       # Gabriel VMs
       "/azrael.iruma.arc/192.168.11.100"
+      "/sahaquiel.iruma.arc/192.168.11.101"
 
       # Metatron VMs
       "/uriel.iruma.arc/192.168.11.112"
@@ -33,7 +34,6 @@
 
       # Raphael VMs
       "/israfel.iruma.arc/192.168.11.128"
-      "/sahaquiel.iruma.arc/192.168.11.129"
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
