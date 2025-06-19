@@ -1,6 +1,5 @@
 { ... }: {
   imports = [
-    ./hyprland.nix
     ./packages.nix
 
     ../../module/homemanager/browser.nix
