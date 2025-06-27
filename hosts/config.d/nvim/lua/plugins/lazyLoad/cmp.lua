@@ -44,13 +44,21 @@ return {
 				["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
 				["<Tab>"] = cmp.config.disable,
 			}),
+			performance = {
+				-- It is recommended to increase the timeout duration due to
+				-- the typically slower response speed of LLMs compared to
+				-- other completion sources. This is not needed when you only
+				-- need manual completion.
+				fetching_timeout = 2000,
+			},
 			sources = cmp.config.sources({
+				{ name = "minuet" },
 				{ name = "nvim_lsp" },
 				-- { name = 'vsnip' }, -- For vsnip users.
 				{ name = "luasnip" }, -- For luasnip users.
 				-- { name = 'ultisnips' }, -- For ultisnips users.
 				-- { name = 'snippy' }, -- For snippy users.
-        -- {name = "codecompanion"}
+				-- {name = "codecompanion"}
 			}, {
 				{ name = "buffer" },
 			}),
