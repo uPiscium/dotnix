@@ -8,20 +8,17 @@
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    # jetbrains.rider
+    jetbrains.rider
     libreoffice-fresh
     modrinth-app
+    nemo-with-extensions
     parsec-bin
     unityhub
     zoom
 
     clang-tools
     clangStdenv
-    cmake
     docker-compose
-    # dotnet-sdk-wrapped
-    dotnet-sdk_8
-    # dotnetCorePackages.sdk_8_0-bin
     flex
     gcc
     gdb
@@ -35,8 +32,6 @@
     mono
     power-profiles-daemon
     python311
-    rustup
-    samba
     sl
     slurp
     swappy

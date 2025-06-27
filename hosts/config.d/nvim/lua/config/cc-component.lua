@@ -2,9 +2,10 @@
 local active_requests = {}
 local spinner_index = 1
 local spinner_symbols = {
-  " ", "  ", "   ", "    ",
-  "     ", "      ",
-  "       ", "        ",
+  "G", "Ge", "Gen", "Gene", "Gener", "Genera", "Generat", "Generati",
+  "Generatin", "Generating", "Generating.", "Generating..",
+  "Generating...", "Generating....", "Generating.....",
+  "Generating......",
 }
 local spinner_symbols_len = #spinner_symbols
 

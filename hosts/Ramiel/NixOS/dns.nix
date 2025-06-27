@@ -36,10 +36,12 @@
       # Raphael VMs
       "/israfel.iruma.arc/192.168.11.128"
       "/nathaniel.iruma.arc/192.168.11.129"
+      "/haniel.iruma.arc/192.168.11.130"
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
       "/qwen3.iruma.arc/192.168.11.114"
+      "/pdf-translator.iruma.arc/192.168.11.114"
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
@@ -53,6 +55,7 @@
       "/nextcloud.iruma.arc/192.168.11.128" # Israfel
       "/nas.iruma.arc/192.168.11.128" # Israfel
       "/apache.iruma.arc/192.168.11.129" # Nathaniel
+      "/container-runnner.iruma.arc/192.168.11.130" # Haniel
     ];
   };
 }
