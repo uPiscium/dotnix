@@ -49,5 +49,14 @@
         proxyWebsockets = true;
       };
     };
+    virtualHosts."zadkiel.iruma.arc" = {
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
+      locations."/" = {
+        proxyPass = "https://192.168.11.83:8006";
+        proxyWebsockets = true;
+      };
+    };
   };
 }
