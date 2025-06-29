@@ -13,7 +13,7 @@
     modrinth-app
     nemo-with-extensions
     parsec-bin
-    unityhub
+    # unityhub
     zoom
 
     clang-tools
@@ -22,7 +22,7 @@
     flex
     gcc
     gdb
-    ggshield
+    # ggshield
     go
     grim
     htop
