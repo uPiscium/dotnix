@@ -50,13 +50,13 @@ in
         ./Azrael/NixOS/host.nix
       ];
     };
-    Israfel = mkNixosSystem {
-      # NAS
+    Esriel = mkNixosSystem {
+      # Whatever
       system = "x86_64-linux";
-      hostname = "Israfel";
+      hostname = "Esriel";
       username = "upiscium";
       modules = [
-        ./Israfel/NixOS/host.nix
+        ./Esriel/NixOS/host.nix
       ];
     };
     Michael = mkNixosSystem {
@@ -124,12 +124,12 @@ in
         ./Azrael/NixOS/home.nix
       ];
     };
-    Israfel = mkHomeManagerConfiguration {
+    Esriel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
-      hostname = "Israfel";
+      hostname = "Esriel";
       username = "upiscium";
       modules = [
-        ./Israfel/NixOS/home.nix
+        ./Esriel/NixOS/home.nix
       ];
     };
     Michael = mkHomeManagerConfiguration {
