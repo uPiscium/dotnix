@@ -13,6 +13,7 @@
 
       ../../common/NixOS
       ../../module/NixOS/network.nix
+      ../../module/NixOS/proxmox.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel
