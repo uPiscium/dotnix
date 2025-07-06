@@ -6,7 +6,7 @@
     hexedit
     libreoffice-fresh
     parsec-bin
-    unityhub
+    # unityhub
     zoom
 
     clang-tools
