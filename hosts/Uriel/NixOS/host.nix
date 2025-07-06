@@ -14,6 +14,7 @@
       ./wireguard.nix
 
       ../../common/NixOS
+      ../../module/NixOS/docker/rootless.nix
       ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]

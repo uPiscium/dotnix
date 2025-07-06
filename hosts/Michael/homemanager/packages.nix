@@ -8,24 +8,21 @@
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    # jetbrains.rider
+    jetbrains.rider
     libreoffice-fresh
     modrinth-app
+    nemo-with-extensions
     parsec-bin
-    unityhub
+    # unityhub
     zoom
 
     clang-tools
     clangStdenv
-    cmake
     docker-compose
-    # dotnet-sdk-wrapped
-    dotnet-sdk_8
-    # dotnetCorePackages.sdk_8_0-bin
     flex
     gcc
     gdb
-    ggshield
+    # ggshield
     go
     grim
     htop
@@ -35,8 +32,6 @@
     mono
     power-profiles-daemon
     python311
-    rustup
-    samba
     sl
     slurp
     swappy
@@ -47,6 +42,7 @@
     vlc
     wayland-scanner
     wine
+    wireshark
     yt-dlp
   ];
 }

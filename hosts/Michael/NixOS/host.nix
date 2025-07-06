@@ -15,6 +15,7 @@
       ../../common/NixOS
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
+      ../../module/NixOS/docker/rootful.nix
       ../../module/NixOS/network.nix
       ../../module/NixOS/steam.nix
     ]
@@ -48,7 +49,7 @@
     };
   };
 
-  hardware.nvidia-container-toolkit.enable = true;
+  # hardware.nvidia-container-toolkit.enable = true;
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;

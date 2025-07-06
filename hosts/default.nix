@@ -19,7 +19,7 @@ let
         };
       };
       extraSpecialArgs = {
-        inherit inputs username;
+        inherit inputs username hostname;
         pkgs-stable = import inputs.nixpkgs-stable {
           inherit system;
           config = {
@@ -50,13 +50,13 @@ in
         ./Azrael/NixOS/host.nix
       ];
     };
-    Israfel = mkNixosSystem {
-      # NAS
+    Esriel = mkNixosSystem {
+      # Whatever
       system = "x86_64-linux";
-      hostname = "Israfel";
+      hostname = "Esriel";
       username = "upiscium";
       modules = [
-        ./Israfel/NixOS/host.nix
+        ./Esriel/NixOS/host.nix
       ];
     };
     Michael = mkNixosSystem {
@@ -75,6 +75,15 @@ in
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/host.nix
+      ];
+    };
+    Sahaquiel = mkNixosSystem {
+      # GPU Server
+      system = "x86_64-linux";
+      hostname = "Sahaquiel";
+      username = "upiscium";
+      modules = [
+        ./Sahaquiel/NixOS/host.nix
       ];
     };
     Sandalphon = mkNixosSystem {
@@ -115,12 +124,12 @@ in
         ./Azrael/NixOS/home.nix
       ];
     };
-    Israfel = mkHomeManagerConfiguration {
+    Esriel = mkHomeManagerConfiguration {
       system = "x86_64-linux";
-      hostname = "Israfel";
+      hostname = "Esriel";
       username = "upiscium";
       modules = [
-        ./Israfel/NixOS/home.nix
+        ./Esriel/NixOS/home.nix
       ];
     };
     Michael = mkHomeManagerConfiguration {
@@ -137,6 +146,14 @@ in
       username = "upiscium";
       modules = [
         ./Ramiel/NixOS/home.nix
+      ];
+    };
+    Sahaquiel = mkHomeManagerConfiguration {
+      system = "x86_64-linux";
+      hostname = "Sahaquiel";
+      username = "upiscium";
+      modules = [
+        ./Sahaquiel/NixOS/home.nix
       ];
     };
     Sandalphon = mkHomeManagerConfiguration {
