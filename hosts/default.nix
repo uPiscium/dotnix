@@ -19,7 +19,7 @@ let
         };
       };
       extraSpecialArgs = {
-        inherit inputs username;
+        inherit inputs username hostname;
         pkgs-stable = import inputs.nixpkgs-stable {
           inherit system;
           config = {
