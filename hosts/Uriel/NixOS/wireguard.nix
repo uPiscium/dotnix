@@ -5,21 +5,20 @@
     internalInterfaces = [ "wg0" ];
   };
 
-  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
   networking.wireguard.enable = true;
-  networking.wireguard.interfaces = {
+  networking.wg-quick.interfaces = {
     wg0 = {
-      ips = [ "10.0.0.1/24" ];
+      address = [ "10.0.0.1/24" ];
       listenPort = 30000;
       mtu = 1420;
 
-      postSetup = ''
+      postUp = ''
         ${pkgs.iptables}/bin/iptables -A FORWARD -i wg0 -j ACCEPT;
-        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o ens18 -j MASQUERADE
+        ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -o ens18 -j MASQUERADE
       '';
-      postShutdown = ''
+      postDown = ''
         ${pkgs.iptables}/bin/iptables -D FORWARD -i wg0 -j ACCEPT;
-        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s 10.0.0.0/24 -o ens18 -j MASQUERADE
+        ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -o ens18 -j MASQUERADE
       '';
 
       privateKeyFile = "/home/upiscium/WireGuard/Uriel.key";
@@ -39,6 +38,11 @@
           # Sariel
           publicKey = "Dyt4tHHZyhaNXUxSgMUq9JDeTey9OaRoLqFJXBlysiU=";
           allowedIPs = [ "10.0.0.4/32" ];
+        }
+        {
+          # Ramiel
+          publicKey = "lq7idsKzezSFbSXPGgJCJM13E483yQjjHMvsTIr5bUs=";
+          allowedIPs = [ "10.0.0.5/32" ];
         }
       ];
     };
