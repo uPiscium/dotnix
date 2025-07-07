@@ -12,6 +12,7 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
+      ./wireguard.nix
 
       ../../common/NixOS
       ../../module/NixOS/docker/rootless.nix
