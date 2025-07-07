@@ -7,7 +7,7 @@
   services.dnsmasq.settings = {
     interface = "ens18";
     port = 53;
-    listen-address = "192.168.11.113";
+    listen-address = ["192.168.11.113" "10.0.0.5"];
     no-dhcp-interface = "ens18";
     server = [
       "8.8.8.8"
