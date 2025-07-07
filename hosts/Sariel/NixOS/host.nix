@@ -16,7 +16,6 @@
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
       ../../module/NixOS/docker/rootless.nix
-      ../../module/NixOS/network.nix
       ../../module/NixOS/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
