@@ -97,7 +97,7 @@ return {
 	end,
 	opts = {
 		allow_insecure = true,
-		language = "Japanese",
+		language = "japanese",
 		extensions = {
 			mcphub = {
 				callback = "mcphub.extensions.codecompanion",

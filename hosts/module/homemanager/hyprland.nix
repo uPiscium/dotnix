@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, hostname, ... }: {
   home.packages = with pkgs; [
     anyrun
     brightnessctl
@@ -17,7 +17,7 @@
   ];
 
   home.file.".config/hypr/" = {
-    source = ../../config.d/hypr;
+    source = ../../config.d/hypr/${hostname};
     recursive = true;
   };
 

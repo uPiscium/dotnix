@@ -24,7 +24,7 @@
     # GTK_IM_MODULE = "fcitx";
     QT_IM_MODULE = "fcitx";
     XMODIFIERS = "@im=fcitx";
-    GLFW_IM_MODULE = "ibus";
+    GLFW_IM_MODULE = "fcitx";
   };
 
   i18n.inputMethod = {

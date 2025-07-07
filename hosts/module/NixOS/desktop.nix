@@ -6,8 +6,8 @@
 
   programs.hyprland = {
     enable = true;
-    # withUWSM = true;
-    withUWSM = false;
+    withUWSM = true;
+    # withUWSM = false;
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
