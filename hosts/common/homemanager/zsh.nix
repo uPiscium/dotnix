@@ -86,6 +86,7 @@
       fi
 
       export ZSH_CUSTOM="$HOME/.config/.zsh";
+      export XDG_RUNTIME_DIR="/run/user/$(id -u)"
       export LD_LIBRARY_PATH="/run/opengl-driver/lib:/run/opengl-driver-32/lib:$LD_LIBRARY_PATH";
 
       if [ -d ~/.ssh/private_key ]; then

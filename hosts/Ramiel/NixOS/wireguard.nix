@@ -1,16 +1,15 @@
 { ... }: {
   networking.wireguard.enable = true;
-  networking.wg-quick.interfaces = {
+  networking.wireguard.interfaces = {
     wg0 = {
-      address = [ "10.0.0.2/32" ];
-      dns = [ "10.0.0.5/32" ];
+      ips = [ "10.0.0.5/24" ];
       mtu = 1420;
-      privateKeyFile = "/home/upiscium/WireGuard/Michael.key";
+      privateKeyFile = "/home/upiscium/WireGuard/Ramiel.key";
       peers = [
         {
           publicKey = "rj2Fy53+fondOM1dZ9trbNaXAVEM438UAcC6ni6beQM=";
           allowedIPs = [ "0.0.0.0/0" ];
-          endpoint = "upiscium.f5.si:30000";
+          endpoint = "192.168.11.112:30000";
           persistentKeepalive = 25;
         }
       ];

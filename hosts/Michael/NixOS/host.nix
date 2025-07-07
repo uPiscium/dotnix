@@ -16,7 +16,6 @@
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
       ../../module/NixOS/docker/rootful.nix
-      ../../module/NixOS/network.nix
       ../../module/NixOS/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
@@ -53,7 +52,6 @@
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  # boot.kernelPackages = pkgs.linuxPackages_6_1; # NVIDIA driver is not compatible with 6.6 yet
   boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest kernel for better hardware support
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

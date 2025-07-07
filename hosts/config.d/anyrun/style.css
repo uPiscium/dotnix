@@ -12,20 +12,20 @@
 }
 
 #match.activatable {
-  border-radius: 16px;
-  padding: 0.3rem 0.9rem;
+  border-radius: 8px;
+  padding: 0.1rem 0.1rem;
   margin-top: 0.01rem;
 }
 #match.activatable:first-child {
-  margin-top: 0.7rem;
+  margin-top: 0.1rem;
 }
 #match.activatable:last-child {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.1rem;
 }
 
 #plugin:hover #match.activatable {
-  border-radius: 10px;
-  padding: 0.3rem;
+  border-radius: 5px;
+  padding: 0.1rem;
   margin-top: 0.01rem;
   margin-bottom: 0;
 }
@@ -37,11 +37,11 @@
 }
 
 #entry {
-  background: #0b0f10;
-  border: 1px solid #0b0f10;
-  border-radius: 16px;
-  margin: 0.5rem;
-  padding: 0.3rem 1rem;
+  background: #000000;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  margin: 0.05rem;
+  padding: 0.01rem 0.8rem;
 }
 
 list > #plugin {
@@ -55,14 +55,14 @@ list > #plugin:last-child {
   margin-bottom: 0.3rem;
 }
 list > #plugin:hover {
-  padding: 0.6rem;
+  padding: 0.3rem;
 }
 
 box#main {
-  background: #0b0f10;
+  background: #000000;
   box-shadow:
-    inset 0 0 0 1px #0b0f10,
-    0 0 0 1px #0b0f10;
-  border-radius: 24px;
-  padding: 0.3rem;
+    inset 0 0 0 1px #000000,
+    0 0 0 1px #000000;
+  border-radius: 12px;
+  padding: 0.4rem;
 }

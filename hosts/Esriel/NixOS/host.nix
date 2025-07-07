@@ -11,11 +11,8 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nvidia.nix
-      ./ollama.nix
 
       ../../common/NixOS
-      # ../../module/NixOS/docker/rootful.nix
       ../../module/NixOS/proxmox.nix
       ../../module/NixOS/ssh.nix
     ]

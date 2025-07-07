@@ -3,6 +3,7 @@
     bambu-studio
     code-cursor
     discord
+    webcord
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
@@ -13,7 +14,7 @@
     modrinth-app
     nemo-with-extensions
     parsec-bin
-    unityhub
+    # unityhub
     zoom
 
     clang-tools
@@ -22,7 +23,6 @@
     flex
     gcc
     gdb
-    ggshield
     go
     grim
     htop
