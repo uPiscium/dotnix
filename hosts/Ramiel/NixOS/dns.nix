@@ -15,11 +15,18 @@
     ];
     domain = "iruma.arc";
     address = [
+      # Proxmox webUI endpoint
+      "/proxmox.iruma.arc/192.168.11.114"
+      "/proxmox-gabriel.iruma.arc/192.168.11.114"
+      "/proxmox-metatron.iruma.arc/192.168.11.114"
+      "/proxmox-raphael.iruma.arc/192.168.11.114"
+      "/proxmox-zadkiel.iruma.arc/192.168.11.114"
+
       # Proxmox servers
-      "/gabriel.iruma.arc/192.168.11.114"
-      "/metatron.iruma.arc/192.168.11.114"
-      "/raphael.iruma.arc/192.168.11.114"
-      "/zadkiel.iruma.arc/192.168.11.114"
+      "/gabriel.iruma.arc/192.168.11.80"
+      "/metatron.iruma.arc/192.168.11.82"
+      "/raphael.iruma.arc/192.168.11.81"
+      "/zadkiel.iruma.arc/192.168.11.83"
 
       # Gabriel VMs
       "/azrael.iruma.arc/192.168.11.100"
@@ -35,6 +42,9 @@
       "/israfel.iruma.arc/192.168.11.128"
       "/nathaniel.iruma.arc/192.168.11.129"
       "/haniel.iruma.arc/192.168.11.130"
+
+      # Zadkiel VMs
+      "/baraqiel.iruma.arc/192.168.11.144"
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
