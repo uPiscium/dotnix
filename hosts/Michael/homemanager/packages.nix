@@ -19,6 +19,7 @@
 
     clang-tools
     clangStdenv
+    dig
     docker-compose
     flex
     gcc
