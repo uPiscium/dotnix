@@ -5,6 +5,7 @@
     internalInterfaces = [ "wg0" ];
   };
 
+  boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
   networking.wireguard.enable = true;
   networking.wireguard.interfaces = {
     wg0 = {
