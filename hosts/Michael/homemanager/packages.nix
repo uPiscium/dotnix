@@ -13,7 +13,6 @@
     krita
     libreoffice-fresh
     modrinth-app
-    nemo-with-extensions
     parsec-bin
     # unityhub
     zoom

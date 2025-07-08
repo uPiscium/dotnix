@@ -8,6 +8,7 @@
     hyprpaper
     hyprpicker
     libnotify
+    nemo-with-extensions
     networkmanagerapplet
     playerctl
     swaynotificationcenter
@@ -27,7 +28,7 @@
   #   recursive = true;
   # };
 
-  home.file.".config/walker/" = {
+  home.file.".config/walker" = {
     source = ../../config.d/walker;
     recursive = true;
   };

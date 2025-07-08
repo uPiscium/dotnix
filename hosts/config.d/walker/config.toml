@@ -2,9 +2,9 @@ app_launch_prefix = ""
 terminal_title_flag = ""
 locale = ""
 close_when_open = false
-theme = "default"
+theme = "style"
 monitor = ""
-hotreload_theme = false
+hotreload_theme = true
 as_window = false
 timeout = 0
 disable_click_to_close = false
@@ -13,10 +13,10 @@ force_keyboard_focus = false
 [keys]
 accept_typeahead = ["tab"]
 trigger_labels = "lalt"
-next = ["down"]
-prev = ["up"]
+next = ["ctrl n"]
+prev = ["ctrl p"]
 close = ["esc"]
-remove_from_history = ["shift backspace"]
+remove_from_history = ["ctrl backspace"]
 resume_query = ["ctrl r"]
 toggle_exact_search = ["ctrl m"]
 
@@ -24,11 +24,11 @@ toggle_exact_search = ["ctrl m"]
 keep_open = "shift"
 alternate = "alt"
 
-[keys.ai]
-clear_session = ["ctrl x"]
-copy_last_response = ["ctrl c"]
-resume_session = ["ctrl r"]
-run_last_response = ["ctrl e"]
+# [keys.ai]
+# clear_session = ["ctrl x"]
+# copy_last_response = ["ctrl c"]
+# resume_session = ["ctrl r"]
+# run_last_response = ["ctrl e"]
 
 [events]
 on_activate = ""
@@ -39,8 +39,8 @@ on_query_change = ""
 
 [list]
 dynamic_sub = true
-keyboard_scroll_style = "emacs"
-max_entries = 50
+keyboard_scroll_style = "vim"
+max_entries = 10
 show_initial_entries = true
 single_click = true
 visibility_threshold = 20
@@ -93,20 +93,20 @@ show_sub_when_single = true
 name = "xdphpicker"
 switcher_only = true
 
-[builtins.ai]
-weight = 5
-placeholder = "AI"
-name = "ai"
-icon = "help-browser"
-switcher_only = true
-show_sub_when_single = true
+# [builtins.ai]
+# weight = 5
+# placeholder = "AI"
+# name = "ai"
+# icon = "help-browser"
+# switcher_only = true
+# show_sub_when_single = true
 
-[[builtins.ai.anthropic.prompts]]
-model = "claude-3-7-sonnet-20250219"
-temperature = 1
-max_tokens = 1_000
-label = "General Assistant"
-prompt = "You are a helpful general assistant. Keep your answers short and precise."
+# [[builtins.ai.anthropic.prompts]]
+# model = "claude-3-7-sonnet-20250219"
+# temperature = 1
+# max_tokens = 1_000
+# label = "General Assistant"
+# prompt = "You are a helpful general assistant. Keep your answers short and precise."
 
 [builtins.calc]
 require_number = true
