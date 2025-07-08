@@ -27,6 +27,11 @@
   #   recursive = true;
   # };
 
+  home.file.".config/walker/" = {
+    source = ../../config.d/walker;
+    recursive = true;
+  };
+
   home.file.".config/waybar" = {
     source = ../../config.d/waybar;
     recursive = true;
