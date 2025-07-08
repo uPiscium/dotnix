@@ -56,7 +56,6 @@
       "/gpu-1.iruma.arc/192.168.11.100" # Azrael
       "/gpu-2.iruma.arc/192.168.11.101" # Sahaquiel
       "/minecraft.iruma.arc/192.168.11.102" # Ariel
-      "/nas.iruma.arc/192.168.11.101" # Israfel
       "/wireguard.iruma.arc/192.168.11.112" # Uriel
       "/dns.iruma.arc/192.168.11.113" # Ramiel
       "/nginx.iruma.arc/192.168.11.114" # Sandalphon
