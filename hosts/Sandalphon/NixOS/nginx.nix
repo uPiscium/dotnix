@@ -22,16 +22,8 @@
         proxyWebsockets = true; # allow WebSocket
       };
     };
-    virtualHosts."gabriel.iruma.arc" = {
-      forceSSL = true;
-      sslCertificate = "/etc/ssl/proxy.crt";
-      sslCertificateKey = "/etc/ssl/proxy.key";
-      locations."/" = {
-        proxyPass = "https://192.168.11.80:8006";
-        proxyWebsockets = true;
-      };
-    };
-    virtualHosts."metatron.iruma.arc" = {
+
+    virtualHosts."proxmox.iruma.arc" = {
       forceSSL = true;
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
@@ -40,7 +32,25 @@
         proxyWebsockets = true;
       };
     };
-    virtualHosts."raphael.iruma.arc" = {
+    virtualHosts."proxmox-gabriel.iruma.arc" = {
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
+      locations."/" = {
+        proxyPass = "https://192.168.11.80:8006";
+        proxyWebsockets = true;
+      };
+    };
+    virtualHosts."proxmox-metatron.iruma.arc" = {
+      forceSSL = true;
+      sslCertificate = "/etc/ssl/proxy.crt";
+      sslCertificateKey = "/etc/ssl/proxy.key";
+      locations."/" = {
+        proxyPass = "https://192.168.11.82:8006";
+        proxyWebsockets = true;
+      };
+    };
+    virtualHosts."proxmox-raphael.iruma.arc" = {
       forceSSL = true;
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
@@ -49,7 +59,7 @@
         proxyWebsockets = true;
       };
     };
-    virtualHosts."zadkiel.iruma.arc" = {
+    virtualHosts."proxmox-zadkiel.iruma.arc" = {
       forceSSL = true;
       sslCertificate = "/etc/ssl/proxy.crt";
       sslCertificateKey = "/etc/ssl/proxy.key";
