@@ -10,6 +10,7 @@
     hexedit
     jetbrains-toolbox
     jetbrains.rider
+    krita
     libreoffice-fresh
     modrinth-app
     nemo-with-extensions

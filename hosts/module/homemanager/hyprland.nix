@@ -36,5 +36,9 @@
     recursive = true;
   };
 
+  home.file.".config/swaync" = {
+    source = ../../config.d/swaync;
+    recursive = true;
+  };
 }
 
