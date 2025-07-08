@@ -1,6 +1,6 @@
 { pkgs, hostname, ... }: {
   home.packages = with pkgs; [
-    anyrun
+    # anyrun
     brightnessctl
     grim
     hypridle
@@ -12,6 +12,7 @@
     playerctl
     swaynotificationcenter
     waybar
+    walker
     wl-clipboard
     wlogout
   ];
@@ -21,10 +22,10 @@
     recursive = true;
   };
 
-  home.file.".config/anyrun/" = {
-    source = ../../config.d/anyrun;
-    recursive = true;
-  };
+  # home.file.".config/anyrun/" = {
+  #   source = ../../config.d/anyrun;
+  #   recursive = true;
+  # };
 
   home.file.".config/waybar" = {
     source = ../../config.d/waybar;
