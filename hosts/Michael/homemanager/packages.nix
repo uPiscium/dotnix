@@ -15,6 +15,7 @@
     modrinth-app
     parsec-bin
     # unityhub
+    voicevox
     zoom
 
     clang-tools
