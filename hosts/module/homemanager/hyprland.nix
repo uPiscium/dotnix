@@ -10,6 +10,7 @@
     libnotify
     nemo-with-extensions
     networkmanagerapplet
+    nextcloud-client
     playerctl
     swaynotificationcenter
     waybar
