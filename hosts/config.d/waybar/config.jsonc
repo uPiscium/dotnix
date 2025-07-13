@@ -47,7 +47,7 @@
     "pulseaudio": {
         //"scroll-step": 1, h
         "format": "　{volume}%",
-        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth": "{icon} {volume}%",
         "format-muted": "󰖁",
         "format-icons": {
             "headphones": "",
