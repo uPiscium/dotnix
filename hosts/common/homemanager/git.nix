@@ -12,7 +12,7 @@
       a = "add";
       aa = "!sh ~/dotnix/scripts/addAll.sh";
       b = "branch";
-      bd = "push origin -d";
+      bd = "!sh ~/dotnix/scripts/deleteBranch.sh";
       c = "commit -m";
       cc = "rm -r --cached .";
       l = "!git fetch -p && git pull";
