@@ -8,7 +8,7 @@ if [ ! -f .gitignore ]; then
   echo -e "\033[1;31mNo .gitignore file found.\033[0m";
   echo -ne "\033[1;32mProceed? (y/N)\033[0m";
   read answer;
-  if [ "$answer" != "y" ]; then
+  if [ "$answer" != "n" ]; then
     echo -ne "\033[1;32mSkip .gitignore file.\033[0m";
   else
     exit 1;
