@@ -44,6 +44,11 @@
           publicKey = "lq7idsKzezSFbSXPGgJCJM13E483yQjjHMvsTIr5bUs=";
           allowedIPs = [ "10.0.0.5/32" ];
         }
+        {
+          # Zenfone12 Ultra
+          publicKey = "cU5bKv885WE2Zx3D+rz60RjSiFX5HYNwG5P5MUEI8Xs=";
+          allowedIPs = [ "10.0.0.6/32" ];
+        }
       ];
     };
   };
