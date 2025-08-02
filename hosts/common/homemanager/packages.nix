@@ -9,7 +9,6 @@
     imagemagick
     less
     lua
-    obsidian
     nfs-utils
     nettools
     nmap
