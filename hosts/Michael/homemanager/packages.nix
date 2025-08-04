@@ -7,15 +7,15 @@
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
-    # hexedit
-    # jetbrains-toolbox
-    # jetbrains.rider
-    # krita
+    hexedit
+    jetbrains-toolbox
+    jetbrains.rider
+    krita
     libreoffice-fresh
-    # modrinth-app
+    modrinth-app
     parsec-bin
-    # unityhub
-    # voicevox
+    unityhub
+    voicevox
     zoom
 
     clang-tools
