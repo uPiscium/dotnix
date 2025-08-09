@@ -7,7 +7,7 @@
   services.dnsmasq.settings = {
     interface = "ens18";
     port = 53;
-    listen-address = ["192.168.11.113" "10.0.0.5"];
+    listen-address = [ "192.168.11.113" "10.0.0.5" ];
     no-dhcp-interface = "ens18";
     server = [
       "8.8.8.8"
@@ -17,6 +17,7 @@
     address = [
       # Proxmox webUI endpoint
       "/proxmox.iruma.arc/192.168.11.114"
+      "/proxmox-main-node.iruma.arc/192.168.11.114"
       "/proxmox-gabriel.iruma.arc/192.168.11.114"
       "/proxmox-metatron.iruma.arc/192.168.11.114"
       "/proxmox-raphael.iruma.arc/192.168.11.114"
