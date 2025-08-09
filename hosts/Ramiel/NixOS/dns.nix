@@ -48,7 +48,6 @@
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
-      "/qwen3.iruma.arc/192.168.11.114"
       "/pdf-translator.iruma.arc/192.168.11.114"
 
       # Aliases
