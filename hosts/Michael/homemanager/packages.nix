@@ -1,12 +1,13 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    byobu
     discord
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    krita
+    # krita
     libreoffice-fresh
     # modrinth-app
     parsec-bin
