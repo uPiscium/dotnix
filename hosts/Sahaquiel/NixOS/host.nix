@@ -12,7 +12,7 @@
       ./hardware.nix
       ./ipfix.nix
       ./nvidia.nix
-      ./ollama.nix
+      # ./ollama.nix
 
       ../../common/NixOS
       ../../module/NixOS/docker/rootful.nix
