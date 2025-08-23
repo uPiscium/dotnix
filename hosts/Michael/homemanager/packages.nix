@@ -8,7 +8,7 @@
     jetbrains-toolbox
     krita
     libreoffice-fresh
-    modrinth-app
+    # modrinth-app
     parsec-bin
     unityhub
     voicevox
