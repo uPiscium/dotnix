@@ -67,6 +67,7 @@
 
   environment.systemPackages = with pkgs; [
     nvtopPackages.full
+    nvitop
     nvidia-docker
     nvidia-container-toolkit
     wireguard-tools

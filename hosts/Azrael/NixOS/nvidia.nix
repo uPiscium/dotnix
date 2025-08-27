@@ -1,5 +1,6 @@
 { pkgs, config, ... }: {
   environment.systemPackages = with pkgs; [
+    nvitop
     nvtopPackages.full
     nvidia-container-toolkit
   ];

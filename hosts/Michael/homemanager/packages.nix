@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    byobu
+    # byobu
     discord
     gdlauncher-carbon
     gpu-screen-recorder
