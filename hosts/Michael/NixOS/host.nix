@@ -10,13 +10,14 @@
       # Include the results of the hardware scan.
       ./firewall.nix
       ./hardware.nix
+      ./udev.nix
       ./wireguard.nix
 
       ../../common/NixOS
       ../../module/NixOS/asusctl.nix
       ../../module/NixOS/desktop.nix
       ../../module/NixOS/network.nix
-      ../../module/NixOS/docker/rootful.nix
+      ../../module/NixOS/docker/rootless.nix
       ../../module/NixOS/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
@@ -25,46 +26,52 @@
       common-pc-ssd
     ]);
 
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-    prime = {
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
-      intelBusId = "PCI:1:0:0";
-      nvidiaBusId = "PCI:0:2:0";
-    };
-  };
-
-  # hardware.nvidia-container-toolkit.enable = true;
-
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest kernel for better hardware support
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia-drm.fbdev=1"
+  ];
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+    allowUnfree = true;
+    pulseaudio = true;
+    nvidia.acceptLicense = true;
+  };
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    powerManagement.enable = true;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
+
+    prime = {
+      reverseSync.enable = false;
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:0:2:0";
+    };
+  };
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   environment.systemPackages = with pkgs; [
     nvtopPackages.full
+    nvitop
+    nvidia-docker
+    nvidia-container-toolkit
     wireguard-tools
   ];
-
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

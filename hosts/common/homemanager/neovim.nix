@@ -28,7 +28,7 @@
       nixpkgs-lint
       nodePackages.eslint
       nodePackages.prettier
-      # pyright
+      pyright
       python312Packages.debugpy
       python312Packages.jedi-language-server
       ruff

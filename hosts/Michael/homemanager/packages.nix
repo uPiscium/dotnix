@@ -1,18 +1,15 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # bambu-studio
-    # code-cursor
+    # byobu
     discord
-    # webcord
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    jetbrains.rider
-    krita
+    # krita
     libreoffice-fresh
-    modrinth-app
+    # modrinth-app
     parsec-bin
     unityhub
     voicevox

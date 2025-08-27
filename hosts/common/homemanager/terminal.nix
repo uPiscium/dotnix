@@ -1,9 +1,13 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     kitty
+    tmux
   ];
 
   programs.kitty = {
+    enable = true;
+  };
+  programs.tmux = {
     enable = true;
   };
 
