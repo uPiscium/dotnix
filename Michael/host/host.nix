@@ -13,12 +13,12 @@
       ./udev.nix
       ./wireguard.nix
 
-      ../../common/NixOS
-      ../../module/NixOS/asusctl.nix
-      ../../module/NixOS/desktop.nix
-      ../../module/NixOS/network.nix
-      ../../module/NixOS/docker/rootless.nix
-      ../../module/NixOS/steam.nix
+      ../../common/host
+      ../../module/host/asusctl.nix
+      ../../module/host/desktop.nix
+      ../../module/host/network.nix
+      ../../module/host/docker/rootless.nix
+      ../../module/host/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-intel
