@@ -108,6 +108,6 @@
   programs.starship.enable = true;
 
   home.file.".config/starship.toml" = {
-    source = ../../config.d/starship.toml;
+    source = ../../../config.d/starship.toml;
   };
 }

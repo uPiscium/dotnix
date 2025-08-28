@@ -1,0 +1,161 @@
+@define-color bg #000000;
+@define-color bg-green #00aa00;
+@define-color text #dd0000;
+
+* {
+  border: none;
+  border-radius: 0;
+  /* font-family: "CaskaydiaCove Nerd Font Mono"; */
+  font-size: 18px;
+  /* font-weight: bold; */
+  min-height: 0;
+}
+
+window#waybar {
+  background: @bg;
+  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
+  color: @text;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+  padding: 0 5px;
+  background: @bg;
+  color: @text;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+  background: @text;
+  color: @bg;
+  border-bottom: 3px solid #dd0000;
+}
+
+#workspaces button.urgent {
+  background-color: #dd0000;
+}
+
+#mode {
+  background: @bg;
+  border-bottom: 3px solid @text;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor {
+  padding: 0 10px;
+  margin: 0 5px;
+  color: #dd0000;
+}
+
+#clock {
+  background-color: @bg;
+  color: @text;
+  font-weight: bold;
+}
+
+#battery {
+  background-color: @bg;
+  color: @text;
+}
+
+/* #battery.charging { */
+/*   background-color: @bg-green; */
+/*   color: @text; */
+/* } */
+
+@keyframes blink {
+  to {
+    /* background-color: @bg; */
+    color: #ff0000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background: #ff0000;
+  color: @text;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#cpu {
+  background: @bg;
+  color: @text;
+}
+
+#memory {
+  background: @bg;
+  color: @text;
+}
+
+#backlight {
+  background: @bg;
+  color: @text;
+}
+
+#network {
+  background: @bg;
+  color: @text;
+}
+
+#network.disconnected {
+  background: @bg;
+  color: @text;
+}
+
+#pulseaudio {
+  background: @bg;
+  color: @text;
+}
+
+#pulseaudio.muted {
+  background: @bg;
+  color: @text;
+}
+
+#custom-media {
+  background: @bg;
+  color: @text;
+}
+
+.custom-spotify {
+  background: @bg;
+}
+
+.custom-vlc {
+  background: @bg;
+}
+
+#temperature {
+  background: @bg;
+}
+
+#temperature.critical {
+  background: #ff0000;
+}
+
+#tray {
+  background-color: @bg;
+  color: @text;
+}
+
+#idle_inhibitor {
+  background-color: @bg;
+}
+
+#idle_inhibitor.activated {
+  background-color: @bg;
+  color: @text;
+}
