@@ -12,9 +12,8 @@
       ./hardware.nix
       ./ipfix.nix
 
-      ../../common/NixOS
-      ../../module/NixOS/proxmox.nix
-      ../../module/NixOS/ssh.nix
+      ../../common/host
+      ../../module/host/proxmox.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
