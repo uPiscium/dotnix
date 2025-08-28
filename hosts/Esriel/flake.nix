@@ -5,7 +5,6 @@ let
 in
 {
   nixos = mkNixosSystem {
-    # Whatever
     system = "x86_64-linux";
     hostname = "Esriel";
     username = "upiscium";

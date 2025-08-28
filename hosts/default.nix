@@ -1,9 +1,14 @@
-{ inputs, ... }: {
+{ ... }:
+let
+  Esriel = builtins.getFlake ./Esriel;
+in
+{
   nixos = {
-    Esriel = (import ./Esriel/flake.nix { inherit inputs; }).nixos;
+    Esriel = Esriel.nixos;
   };
 
   home-manager = {
-    Esriel = (import ./Esriel/flake.nix { inherit inputs; }).home-manager;
+    Esriel = Esriel.home-manager;
   };
 }
+
