@@ -10,14 +10,14 @@
 
     aliases = {
       a = "add";
-      aa = "!sh ~/dotnix/scripts/addAll.sh";
+      aa = "!sh ~/dotnix/config.d/scripts/addAll.sh";
       b = "branch";
-      bd = "!sh ~/dotnix/scripts/deleteBranch.sh";
+      bd = "!sh ~/dotnix/config.d/scripts/deleteBranch.sh";
       c = "commit -m";
       cc = "rm -r --cached .";
       l = "!git fetch -p && git pull";
       m = "merge";
-      nb = "!sh ~/dotnix/scripts/newBranch.sh";
+      nb = "!sh ~/dotnix/config.d/scripts/newBranch.sh";
       p = "push";
       r = "reset";
       s = "status";

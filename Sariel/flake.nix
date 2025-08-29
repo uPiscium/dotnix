@@ -6,6 +6,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs:
@@ -16,7 +17,7 @@
     {
       nixosConfigurations.host = mkNixosSystem {
         system = "x86_64-linux";
-        hostname = "Esriel";
+        hostname = "Sariel";
         username = "upiscium";
         modules = [
           ./host
@@ -25,7 +26,7 @@
 
       homeConfigurations.home = mkHomeManagerConfiguration {
         system = "x86_64-linux";
-        hostname = "Esriel";
+        hostname = "Sariel";
         username = "upiscium";
         modules = [
           ./home

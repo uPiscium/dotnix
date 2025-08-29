@@ -16,7 +16,7 @@
     {
       nixosConfigurations.host = mkNixosSystem {
         system = "x86_64-linux";
-        hostname = "Esriel";
+        hostname = "Sahaqiel";
         username = "upiscium";
         modules = [
           ./host
@@ -25,7 +25,7 @@
 
       homeConfigurations.home = mkHomeManagerConfiguration {
         system = "x86_64-linux";
-        hostname = "Esriel";
+        hostname = "Sahaqiel";
         username = "upiscium";
         modules = [
           ./home
