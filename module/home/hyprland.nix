@@ -20,7 +20,7 @@
   ];
 
   home.file.".config/hypr/" = {
-    source = ../../../config.d/hypr/${hostname};
+    source = ../../config.d/hypr/${hostname};
     recursive = true;
   };
 
@@ -30,22 +30,22 @@
   # };
 
   home.file.".config/walker" = {
-    source = ../../../config.d/walker;
+    source = ../../config.d/walker;
     recursive = true;
   };
 
   home.file.".config/waybar" = {
-    source = ../../../config.d/waybar;
+    source = ../../config.d/waybar;
     recursive = true;
   };
 
   home.file.".config/wlogout" = {
-    source = ../../../config.d/wlogout;
+    source = ../../config.d/wlogout;
     recursive = true;
   };
 
   home.file.".config/swaync" = {
-    source = ../../../config.d/swaync;
+    source = ../../config.d/swaync;
     recursive = true;
   };
 }

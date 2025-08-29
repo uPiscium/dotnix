@@ -16,7 +16,6 @@
       ../../common/host
       ../../module/host/asusctl.nix
       ../../module/host/desktop.nix
-      ../../module/host/network.nix
       ../../module/host/docker/rootless.nix
       ../../module/host/steam.nix
     ]
