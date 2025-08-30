@@ -5,13 +5,13 @@ export STATUS_FILE="$XDG_RUNTIME_DIR/VPN.status"
 enable_keyboard() {
     printf "true" >"$STATUS_FILE"
     notify-send -u normal "Enabling VPN"
-    hyprctl keyword '$WIREGUARD_ENABLED' "true" -r
+    sudo systemctl start wg-quick-wg0.service
 }
 
 disable_keyboard() {
     printf "false" >"$STATUS_FILE"
     notify-send -u normal "Disabling VPN"
-    hyprctl keyword '$WIREGUARD_ENABLED' "false" -r
+    sudo systemctl stop wg-quick-wg0.service
 }
 
 if ! [ -f "$STATUS_FILE" ]; then
