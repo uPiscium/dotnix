@@ -1,6 +1,6 @@
 { ... }: {
   imports = [
-    ../../common/homemanager
+    ../../common/home
     ./packages.nix
   ];
 }

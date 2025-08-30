@@ -3,9 +3,9 @@
     ./hyprland.nix
     ./packages.nix
 
-    ../../common/homemanager
-    ../../module/homemanager/browser.nix
-    ../../module/homemanager/hyprland.nix
-    ../../module/homemanager/gtk.nix
+    ../../common/home
+    ../../module/home/browser.nix
+    ../../module/home/hyprland.nix
+    ../../module/home/gtk.nix
   ];
 }
