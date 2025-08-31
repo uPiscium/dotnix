@@ -1,4 +1,4 @@
-{ ... }: {
+{ lib, ... }: {
   # services.dnsmasq.enable = true;
   # services.dnsmasq.settings = {
   #   interface = "ens18";
@@ -58,7 +58,7 @@
   #   ];
   # };
 
-  services.resolved = {
+  services.resolved = lib.mkForce {
     enable = false;
   };
 
