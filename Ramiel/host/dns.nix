@@ -17,7 +17,6 @@
     address = [
       # Proxmox webUI endpoint
       "/proxmox.iruma.arc/192.168.11.114"
-      "/proxmox-main-node.iruma.arc/192.168.11.114"
       "/proxmox-gabriel.iruma.arc/192.168.11.114"
       "/proxmox-metatron.iruma.arc/192.168.11.114"
       "/proxmox-raphael.iruma.arc/192.168.11.114"
@@ -31,7 +30,6 @@
 
       # Gabriel VMs
       "/azrael.iruma.arc/192.168.11.100"
-      "/sahaquiel.iruma.arc/192.168.11.101"
       "/ariel.iruma.arc/192.168.11.102"
 
       # Metatron VMs
@@ -49,12 +47,10 @@
 
       # Services (Connect to Nginx in Sandalphon)
       "/ollama.iruma.arc/192.168.11.114"
-      "/pdf-translator.iruma.arc/192.168.11.114"
 
       # Aliases
       "/desktop.iruma.arc/192.168.11.90" # Zadkiel
       "/gpu-1.iruma.arc/192.168.11.100" # Azrael
-      "/gpu-2.iruma.arc/192.168.11.101" # Sahaquiel
       "/minecraft.iruma.arc/192.168.11.102" # Ariel
       "/wireguard.iruma.arc/192.168.11.112" # Uriel
       "/dns.iruma.arc/192.168.11.113" # Ramiel
