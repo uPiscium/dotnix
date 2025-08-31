@@ -84,9 +84,9 @@
         harden-dnssec-stripped = true;
 
 
-      local-zone = [
-        { name = "iruma.arc."; type = "static"; }
-      ];
+        local-zone = [
+          "\"iruma.arc.\" static"
+        ];
         local-data = [
           # Proxmox webUI endpoint
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""
