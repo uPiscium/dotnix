@@ -58,6 +58,10 @@
   #   ];
   # };
 
+  services.resolvd = {
+    enable = false;
+  };
+
   services.unbound = {
     enable = true;
     settings = {
