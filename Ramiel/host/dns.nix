@@ -58,7 +58,7 @@
   #   ];
   # };
 
-  services.resolvd = {
+  services.resolved = {
     enable = false;
   };
 
