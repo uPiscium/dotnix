@@ -83,6 +83,10 @@
         harden-glue = true;
         harden-dnssec-stripped = true;
 
+
+      local-zone = [
+        { name = "iruma.arc."; type = "static"; }
+      ];
         local-data = [
           # Proxmox webUI endpoint
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""
@@ -139,10 +143,6 @@
           "1.0.0.1@853#cloudflare-dns.com"
         ];
       };
-
-      local-zone = [
-        { name = "iruma.arc."; type = "static"; }
-      ];
     };
   };
 }
