@@ -12,7 +12,7 @@
     # modrinth-app
     parsec-bin
     unityhub
-    voicevox
+    # voicevox
     zoom
 
     clang-tools
@@ -26,12 +26,12 @@
     grim
     htop
     jdk17
-    nyancat
+    # nyancat
     mise
     mono
     power-profiles-daemon
-    python311
-    sl
+    python312
+    # sl
     slurp
     swappy
     termpdfpy
@@ -40,7 +40,7 @@
     uv
     vlc
     wayland-scanner
-    wine
+    # wine
     wireshark
     yt-dlp
   ];
