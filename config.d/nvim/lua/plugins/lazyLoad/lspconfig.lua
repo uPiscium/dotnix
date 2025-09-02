@@ -20,7 +20,7 @@ return {
 			"biome",
 			"clangd",
 			"cmake",
-			"csharpls",
+			"csharp_ls",
 			"cssls",
 			"denols",
 			"docker_compose_language_service",

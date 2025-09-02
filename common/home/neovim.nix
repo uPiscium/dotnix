@@ -42,6 +42,7 @@
       stylua
       tailwindcss-language-server
       taplo
+      terraform-ls
       texlab
       tinymist
       typescript-language-server

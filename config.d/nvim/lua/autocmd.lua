@@ -3,14 +3,10 @@
 --   command = "set shiftwidth=2",
 -- })
 
--- vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
---   pattern = { "*.cpp", "*.hpp", "*.rs"},
---   command = "set shiftwidth=4",
--- })
--- vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
---   pattern = { "*.py" },
---   command = "set shiftwidth=4",
--- })
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+	pattern = { "*.cpp", "*.hpp", "*.rs", "*.py", "*.tf", "*.tfvars" },
+	command = "set shiftwidth=4",
+})
 
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
 	pattern = "*",
@@ -27,7 +23,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)
 		-- 保存時に自動フォーマット
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			pattern = { "*.rs", "*.cpp", "*.hpp", "*.py", "*.ts" },
+			pattern = { "*.rs", "*.cpp", "*.hpp", "*.py", "*.ts", "*.tf" },
 			callback = function()
 				vim.lsp.buf.format({
 					buffer = ev.buf,
