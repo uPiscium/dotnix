@@ -15,13 +15,16 @@
       bd = "!sh ~/dotnix/config.d/scripts/deleteBranch.sh";
       c = "commit -m";
       cc = "rm -r --cached .";
+      ch = "checkout";
+      cb = "checkout -b";
       l = "!git fetch -p && git pull";
       m = "merge";
-      nb = "!sh ~/dotnix/config.d/scripts/newBranch.sh";
       p = "push";
       r = "reset";
       s = "status";
       w = "switch";
+      wc = "switch -c";
+      wd = "switch -d";
     };
 
     ignores = [ ];
