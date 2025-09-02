@@ -5,7 +5,7 @@
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	pattern = { "*.cpp", "*.hpp", "*.rs", "*.py", "*.tf", "*.tfvars" },
-	command = "set shiftwidth=4",
+	command = "set shiftwidth=2",
 })
 
 vim.api.nvim_create_autocmd({ "TermOpen" }, {
