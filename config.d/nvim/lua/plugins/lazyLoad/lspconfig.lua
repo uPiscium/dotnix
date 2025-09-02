@@ -15,11 +15,12 @@ return {
 		local lspconfig = require("lspconfig")
 		local server_list = {
 			"astro",
+			"ansiblels",
 			"bashls",
 			"biome",
 			"clangd",
 			"cmake",
-      -- "csharpls",
+			"csharpls",
 			"cssls",
 			"denols",
 			"docker_compose_language_service",
@@ -29,19 +30,20 @@ return {
 			"graphql",
 			"glsl_analyzer",
 			"html",
+			"jedi_language_server",
 			"jsonls",
 			"lemminx",
-			"nil_ls",
 			"lua_ls",
+			"matlab_ls",
 			"mdx_analyzer",
-			"ruff",
+			"nil_ls",
 			-- "pyright",
-			"jedi_language_server",
+			"ruff",
 			"stylelint_lsp",
 			"tailwindcss",
 			"taplo",
+			"terraformls",
 			"texlab",
-			"matlab_ls",
 			"tinymist",
 			"vimls",
 			"yamlls",
@@ -64,7 +66,35 @@ return {
 			}
 
 			local opts = {}
-			if server_name == "denols" then
+			if server_name == "ansiblels" then
+				opts = {
+					filetypes = { "yaml", "yml", "ansible" },
+					root_dir = lspconfig.util.root_pattern("ansible.cfg", ".git"),
+					settings = {
+						ansible = {
+							ansible = {
+								path = "ansible", -- 実行ファイルのパス
+							},
+							executionEnvironment = {
+								enabled = false, -- コンテナ環境を使わない場合
+							},
+							validation = {
+								enabled = true,
+								lint = {
+									enabled = true,
+									path = "ansible-lint",
+								},
+							},
+						},
+					},
+				}
+			elseif server_name == "csharp_ls" then
+				opts = {
+					cmd = { "csharp-ls" },
+					filetypes = { "cs" },
+					root_dir = lspconfig.util.root_pattern("*.csproj", ".git"),
+				}
+			elseif server_name == "denols" then
 				-- INFO: Neccessary for avoiding conflict with other js severs
 				opts = {
 					root_dir = lspconfig.util.root_pattern("deno.json"),
@@ -89,14 +119,41 @@ return {
 						command = "EslintFixAll",
 					})
 				end
-			elseif server_name == "stylelint_lsp" then
-				opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
 			elseif server_name == "jsonls" then
 				opts.settings = {
 					json = {
 						schemas = require("schemastore").json.schemas(),
 						validate = true,
 					},
+				}
+				-- elseif server_name == "pyright" then
+				-- 	lspconfig.pyright.setup({
+				-- 		capabilities = default_opts.capabilities,
+				-- 		settings = {
+				-- 			python = {
+				-- 				analysis = {
+				-- 					typeCheckingMode = "on",
+				-- 					autoSearchPaths = true,
+				-- 					useLibraryCodeForTypes = true,
+				-- 				},
+				-- 			},
+				-- 		},
+				-- 	})
+			elseif server_name == "ruff" then
+				lspconfig.ruff.setup({
+					capabilities = default_opts.capabilities,
+				})
+			elseif server_name == "stylelint_lsp" then
+				opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
+			elseif server_name == "terraformls" then
+				opts = {
+					filetypes = { "terraform", "tf", "hcl" },
+					root_dir = lspconfig.util.root_pattern(".terraform", ".git", "*.tf"),
+				}
+			elseif server_name == "tinymist" then
+				opts.settings = {
+					exportPdf = "onType",
+					formatterMode = "typstyle",
 				}
 			elseif server_name == "yamlls" then
 				opts.settings = {
@@ -108,28 +165,6 @@ return {
 						schemas = require("schemastore").yaml.schemas(),
 					},
 				}
-			elseif server_name == "tinymist" then
-				opts.settings = {
-					exportPdf = "onType",
-					formatterMode = "typstyle",
-				}
-			elseif server_name == "pyright" then
-				lspconfig.pyright.setup({
-					capabilities = default_opts.capabilities,
-					settings = {
-						python = {
-							analysis = {
-								typeCheckingMode = "on",
-								autoSearchPaths = true,
-								useLibraryCodeForTypes = true,
-							},
-						},
-					},
-				})
-			elseif server_name == "ruff" then
-				lspconfig.ruff.setup({
-					capabilities = default_opts.capabilities,
-				})
 			end
 			lspconfig[server_name].setup(vim.tbl_deep_extend("force", default_opts, opts))
 		end

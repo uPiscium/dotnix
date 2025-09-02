@@ -5,14 +5,17 @@
 
     extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
+      # Executables
+      ansible
       deno
       gnumake
       nodejs
       tree-sitter
       imagemagick
-      deno
       nodejs-slim
       tree-sitter
+
+      # LSP and formatters
       bash-language-server
       clang-tools
       cmake-language-server
@@ -28,8 +31,8 @@
       nixpkgs-lint
       nodePackages.eslint
       nodePackages.prettier
-      pyright
-      python312Packages.debugpy
+      # pyright
+      # python312Packages.debugpy
       python312Packages.jedi-language-server
       ruff
       rust-analyzer
