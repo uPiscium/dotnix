@@ -37,7 +37,7 @@ return {
 			"matlab_ls",
 			"mdx_analyzer",
 			"nil_ls",
-			-- "pyright",
+			"pyright",
 			"ruff",
 			"stylelint_lsp",
 			"tailwindcss",
@@ -126,19 +126,19 @@ return {
 						validate = true,
 					},
 				}
-				-- elseif server_name == "pyright" then
-				-- 	lspconfig.pyright.setup({
-				-- 		capabilities = default_opts.capabilities,
-				-- 		settings = {
-				-- 			python = {
-				-- 				analysis = {
-				-- 					typeCheckingMode = "on",
-				-- 					autoSearchPaths = true,
-				-- 					useLibraryCodeForTypes = true,
-				-- 				},
-				-- 			},
-				-- 		},
-				-- 	})
+			elseif server_name == "pyright" then
+				lspconfig.pyright.setup({
+					capabilities = default_opts.capabilities,
+					settings = {
+						python = {
+							analysis = {
+								typeCheckingMode = "on",
+								autoSearchPaths = true,
+								useLibraryCodeForTypes = true,
+							},
+						},
+					},
+				})
 			elseif server_name == "ruff" then
 				lspconfig.ruff.setup({
 					capabilities = default_opts.capabilities,
