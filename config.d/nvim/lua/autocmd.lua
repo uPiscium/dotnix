@@ -4,7 +4,7 @@
 -- })
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-	pattern = { "*.cpp", "*.hpp", "*.rs", "*.py", "*.tf", "*.tfvars" },
+	pattern = { "*.py", "*.tf", "*.tfvars" },
 	command = "set shiftwidth=4",
 })
 

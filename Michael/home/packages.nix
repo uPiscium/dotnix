@@ -7,7 +7,7 @@
     gpu-screen-recorder-gtk
     hexedit
     jetbrains-toolbox
-    # krita
+    krita
     libreoffice-fresh
     # modrinth-app
     parsec-bin
