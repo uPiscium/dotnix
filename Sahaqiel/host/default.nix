@@ -11,7 +11,6 @@
       ./hardware.nix
       ./ipfix.nix
       ./nvidia.nix
-      ./ollama.nix
 
       ../../common/host
       ../../module/host/proxmox.nix
