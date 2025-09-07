@@ -54,6 +54,7 @@
 
           # Zadkiel VMs
           "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
+          "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
 
           # Services
           "\"ollama.iruma.arc. IN A 192.168.11.114\""
