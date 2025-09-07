@@ -9,6 +9,9 @@
   hardware.nvidia-container-toolkit.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  virtualisation.docker.enableOnBoot = true;
+  virtualisation.docker.enableNvidia = true;
+
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
