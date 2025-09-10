@@ -68,5 +68,15 @@
   security.acme = {
     acceptTerms = true;
     defaults.email = "upisciumnas@gmail.com";
+    certs."iruma.arc" = {
+      dnsProvider = "cloudflare";
+      extraDomains = [
+        "ollama.iruma.arc"
+        "proxmox.iruma.arc"
+      ];
+      credentialFiles = {
+        cloudflare = "/etc/ssl/cloudflare.ini";
+      };
+    };
   };
 }
