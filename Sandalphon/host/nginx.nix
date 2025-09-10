@@ -64,4 +64,9 @@
       };
     };
   };
+
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "upisciumnas@gmail.com";
+  };
 }
