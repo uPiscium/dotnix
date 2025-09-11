@@ -16,11 +16,9 @@
     };
 
     virtualHosts."nas.iruma.arc" = {
-      forceSSL = true;
-      sslCertificate = "/etc/ssl/proxy.crt";
-      sslCertificateKey = "/etc/ssl/proxy.key";
+      forceSSL = false;
       locations."/" = {
-        proxyPass = "https://192.168.11.128:3670";
+        proxyPass = "http://192.168.11.128:3670";
       };
     };
 
