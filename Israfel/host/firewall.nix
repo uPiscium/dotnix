@@ -1,5 +1,5 @@
 { ... }: {
   networking.firewall = {
-    allowedTCPPorts = [ 20000 30000 ];
+    allowedTCPPorts = [ 20000 30000 3306 ];
   };
 }
