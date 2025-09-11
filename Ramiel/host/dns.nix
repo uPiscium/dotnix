@@ -44,7 +44,7 @@
           "\"sandalphon.iruma.arc. IN A 192.168.11.114\""
 
           # Raphael VMs
-          "\"israfel.iruma.arc. IN A 192.168.11.128\""
+          "\"esriel.iruma.arc. IN A 192.168.11.128\""
           "\"nathaniel.iruma.arc. IN A 192.168.11.129\""
           "\"haniel.iruma.arc. IN A 192.168.11.130\""
 
@@ -58,11 +58,10 @@
 
           # Aliases
           "\"desktop.iruma.arc. IN A 192.168.11.90\""
-          "\"gpu-1.iruma.arc. IN A 192.168.11.100\""
-          "\"minecraft.iruma.arc. IN A 192.168.11.102\""
           "\"wireguard.iruma.arc. IN A 192.168.11.112\""
           "\"dns.iruma.arc. IN A 192.168.11.113\""
           "\"nginx.iruma.arc. IN A 192.168.11.114\""
+          "\"vault.iruma.arc. IN A 192.168.11.128\""
         ];
       };
 
