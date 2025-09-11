@@ -27,10 +27,6 @@
         local-data = [
           # Proxmox webUI endpoint
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-gabriel.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-metatron.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-raphael.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-zadkiel.iruma.arc. IN A 192.168.11.114\""
 
           # Proxmox servers
           "\"gabriel.iruma.arc. IN A 192.168.11.80\""
@@ -58,6 +54,7 @@
 
           # Services
           "\"ollama.iruma.arc. IN A 192.168.11.114\""
+          "\"nas.iruma.arc. IN A 192.168.11.114\""
 
           # Aliases
           "\"desktop.iruma.arc. IN A 192.168.11.90\""
@@ -66,10 +63,6 @@
           "\"wireguard.iruma.arc. IN A 192.168.11.112\""
           "\"dns.iruma.arc. IN A 192.168.11.113\""
           "\"nginx.iruma.arc. IN A 192.168.11.114\""
-          "\"nextcloud.iruma.arc. IN A 192.168.11.128\""
-          "\"nas.iruma.arc. IN A 192.168.11.128\""
-          "\"apache.iruma.arc. IN A 192.168.11.129\""
-          "\"container-runnner.iruma.arc. IN A 192.168.11.130\""
         ];
       };
 
