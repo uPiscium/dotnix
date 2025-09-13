@@ -6,9 +6,7 @@
     recommendedOptimisation = true;
 
     virtualHosts."ollama.iruma.arc" = {
-      forceSSL = true;
-      sslCertificate = "/etc/ssl/proxy.crt";
-      sslCertificateKey = "/etc/ssl/proxy.key";
+      forceSSL = false;
       locations."/" = {
         proxyPass = "http://192.168.11.100:3000";
         proxyWebsockets = true; # allow WebSocket
@@ -16,11 +14,9 @@
     };
 
     virtualHosts."nas.iruma.arc" = {
-      forceSSL = true;
-      sslCertificate = "/etc/ssl/proxy.crt";
-      sslCertificateKey = "/etc/ssl/proxy.key";
+      forceSSL = false;
       locations."/" = {
-        proxyPass = "http://192.168.11.128:30000";
+        proxyPass = "http://192.168.11.128:3670";
       };
     };
 
