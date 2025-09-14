@@ -17,10 +17,6 @@
     { device = "/dev/disk/by-uuid/b23b346b-f3df-4a45-bdce-1406082df313";
       fsType = "ext4";
     };
-  fileSystems."/home/upiscium/NAS" =
-    { device = "/dev/disk/by-uuid/c47cae52-34d5-45ee-a8ae-54a9eb65cbec";
-      fsType = "ext4";
-    };
 
   swapDevices = [ ];
 
