@@ -36,6 +36,7 @@
 
           # Gabriel VMs
           "\"azrael.iruma.arc. IN A 192.168.11.100\""
+          "\"haniel.iruma.arc. IN A 192.168.11.101\""
           "\"ariel.iruma.arc. IN A 192.168.11.102\""
 
           # Metatron VMs
