@@ -6,7 +6,7 @@
     extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
       # Executables
-      ansible
+      # ansible
       deno
       gnumake
       nodejs
