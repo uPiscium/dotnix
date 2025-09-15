@@ -27,10 +27,6 @@
         local-data = [
           # Proxmox webUI endpoint
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-gabriel.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-metatron.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-raphael.iruma.arc. IN A 192.168.11.114\""
-          "\"proxmox-zadkiel.iruma.arc. IN A 192.168.11.114\""
 
           # Proxmox servers
           "\"gabriel.iruma.arc. IN A 192.168.11.80\""
@@ -48,9 +44,10 @@
           "\"sandalphon.iruma.arc. IN A 192.168.11.114\""
 
           # Raphael VMs
-          "\"israfel.iruma.arc. IN A 192.168.11.128\""
-          "\"nathaniel.iruma.arc. IN A 192.168.11.129\""
-          "\"haniel.iruma.arc. IN A 192.168.11.130\""
+          "\"esriel.iruma.arc. IN A 192.168.11.128\""
+          "\"israfel.iruma.arc. IN A 192.168.11.129\""
+          # "\"nathaniel.iruma.arc. IN A 192.168.11.129\""
+          # "\"haniel.iruma.arc. IN A 192.168.11.130\""
 
           # Zadkiel VMs
           "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
@@ -58,18 +55,14 @@
 
           # Services
           "\"ollama.iruma.arc. IN A 192.168.11.114\""
+          "\"nas.iruma.arc. IN A 192.168.11.114\""
 
           # Aliases
           "\"desktop.iruma.arc. IN A 192.168.11.90\""
-          "\"gpu-1.iruma.arc. IN A 192.168.11.100\""
-          "\"minecraft.iruma.arc. IN A 192.168.11.102\""
           "\"wireguard.iruma.arc. IN A 192.168.11.112\""
           "\"dns.iruma.arc. IN A 192.168.11.113\""
           "\"nginx.iruma.arc. IN A 192.168.11.114\""
-          "\"nextcloud.iruma.arc. IN A 192.168.11.128\""
-          "\"nas.iruma.arc. IN A 192.168.11.128\""
-          "\"apache.iruma.arc. IN A 192.168.11.129\""
-          "\"container-runnner.iruma.arc. IN A 192.168.11.130\""
+          "\"vault.iruma.arc. IN A 192.168.11.128\""
         ];
       };
 

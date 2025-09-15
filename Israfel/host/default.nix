@@ -11,8 +11,6 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nginx.nix
-      ./ssl.nix
 
       ../../common/host
       ../../module/host/docker/rootless.nix

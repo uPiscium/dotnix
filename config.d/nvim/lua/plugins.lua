@@ -14,8 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- setup lazy.nivm ==========================================================
 
--- vim.g.mapleader = ' ' -- make sure to set `mapleader` before lazy so your mappings are correct
-
 require("lazy").setup({
   { import = "plugins/startup" },
   { import = "plugins/lazyLoad", lazy = true }
