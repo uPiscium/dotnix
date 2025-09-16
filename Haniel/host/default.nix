@@ -7,18 +7,17 @@
 {
   imports =
     [
+      # Include the results of the hardware scan.
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nvidia.nix
-      # ./ollama.nix
 
       ../../common/host
+      ../../module/host/docker/rootless.nix
       ../../module/host/proxmox.nix
-      # ../../module/NixOS/docker/rootful.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
-      common-cpu-amd
+      common-cpu-intel
       common-pc-ssd
     ]);
 
@@ -30,9 +29,11 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
   services.xserver.displayManager.lightdm.enable = false;
 
   # environment.systemPackages = with pkgs; [ ];
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

@@ -1,7 +1,7 @@
 { ... }: {
   networking.firewall = {
-    allowedTCPPorts = [ 20000 11434 3000 ];
-    allowedUDPPorts = [ 11434 3000 ];
+    allowedTCPPorts = [ 20000 8004 8005 ];
+    allowedUDPPorts = [ ];
   };
 }
 
