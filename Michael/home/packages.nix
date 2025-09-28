@@ -1,18 +1,15 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    # byobu
     discord
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
-    hexedit
     jetbrains-toolbox
-    krita
     libreoffice-fresh
-    # modrinth-app
     parsec-bin
     unityhub
     # voicevox
+    vscode
     zoom
 
     clang-tools
@@ -22,25 +19,17 @@
     flex
     gcc
     gdb
-    go
     grim
-    htop
     jdk17
-    # nyancat
     mise
-    mono
     power-profiles-daemon
-    python312
-    # sl
     slurp
     swappy
     termpdfpy
     typst
     unzip
-    uv
     vlc
     wayland-scanner
-    # wine
     wireshark
     yt-dlp
   ];

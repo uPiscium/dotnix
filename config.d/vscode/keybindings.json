@@ -1,0 +1,27 @@
+[
+  { "key": "hj", "command": "extension.vim_escape", "when": "editorTextFocus && vim.active && vim.mode == 'Insert'" },
+  { "key": "ctrl+b h", "command": "workbench.action.previousEditor" },
+  { "key": "ctrl+b l", "command": "workbench.action.nextEditor" },
+  { "key": "ctrl+b d", "command": "workbench.action.closeActiveEditor" },
+  { "key": "ctrl+a", "command": "editor.action.selectAll" },
+
+  { "key": "space e", "command": "workbench.view.explorer" },
+
+  { "key": "space f", "command": "workbench.action.quickOpen" },
+  { "key": "space g", "command": "workbench.action.findInFiles" },
+  { "key": "space o", "command": "workbench.action.openRecent" },
+  { "key": "space r", "command": "workbench.action.findInFiles" },
+
+  { "key": "g n", "command": "editor.action.rename" },
+  { "key": "g m", "command": "editor.action.formatDocument" },
+  { "key": "g d", "command": "editor.action.revealDefinition" },
+  { "key": "g t", "command": "editor.action.goToTypeDefinition" },
+  { "key": "g e", "command": "editor.action.marker.next" },
+  { "key": "g E", "command": "editor.action.marker.prev" },
+
+  { "key": "ctrl+m d", "command": "markdown.showPreviewToSide" },
+
+  { "key": "space th", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "space tv", "command": "workbench.action.terminal.toggleTerminal" },
+  { "key": "space tf", "command": "workbench.action.terminal.toggleTerminal" },
+]

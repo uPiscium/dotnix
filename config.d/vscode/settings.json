@@ -1,0 +1,9 @@
+{
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "editor.fontSize": 12,
+  "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-vscode/init.lua",
+  "workbench.startupEditor": "none"
+}
