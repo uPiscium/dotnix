@@ -25,9 +25,6 @@
           "\"iruma.arc.\" static"
         ];
         local-data = [
-          # Proxmox webUI endpoint
-          "\"proxmox.iruma.arc. IN A 192.168.11.114\""
-
           # Proxmox servers
           "\"gabriel.iruma.arc. IN A 192.168.11.80\""
           "\"metatron.iruma.arc. IN A 192.168.11.82\""
@@ -55,6 +52,7 @@
           "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
 
           # Services
+          "\"proxmox.iruma.arc. IN A 192.168.11.114\""
           "\"ollama.iruma.arc. IN A 192.168.11.114\""
           "\"nas.iruma.arc. IN A 192.168.11.114\""
 
@@ -62,7 +60,7 @@
           "\"desktop.iruma.arc. IN A 192.168.11.90\""
           "\"wireguard.iruma.arc. IN A 192.168.11.112\""
           "\"dns.iruma.arc. IN A 192.168.11.113\""
-          "\"nginx.iruma.arc. IN A 192.168.11.114\""
+          "\"nginx.iruma.arc. IN A 192.168.11.113\""
           "\"vault.iruma.arc. IN A 192.168.11.128\""
         ];
       };
