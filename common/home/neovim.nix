@@ -21,7 +21,7 @@
       cmake-language-server
       matlab-language-server
       csharp-ls
-      dockerfile-language-server-nodejs
+      dockerfile-language-server
       efm-langserver
       haskell-language-server
       haskellPackages.lsp
