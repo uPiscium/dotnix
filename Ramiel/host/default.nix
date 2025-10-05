@@ -12,8 +12,6 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nginx.nix
-      ./ssl.nix
       ./wireguard.nix
 
       ../../common/host
