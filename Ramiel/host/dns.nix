@@ -55,8 +55,8 @@
           "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
 
           # Services
-          "\"ollama.iruma.arc. IN A 192.168.11.114\""
-          "\"nas.iruma.arc. IN A 192.168.11.114\""
+          # "\"ollama.iruma.arc. IN A 192.168.11.114\""
+          # "\"nas.iruma.arc. IN A 192.168.11.114\""
 
           # Aliases
           "\"desktop.iruma.arc. IN A 192.168.11.90\""
