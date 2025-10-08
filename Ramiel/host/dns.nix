@@ -45,7 +45,7 @@
           "\"esriel.iruma.arc. IN A 192.168.11.128\""
           "\"israfel.iruma.arc. IN A 192.168.11.129\""
           "\"haniel.iruma.arc. IN A 192.168.11.130\""
-          # "\"nathaniel.iruma.arc. IN A 192.168.11.131\""
+          "\"nathaniel.iruma.arc. IN A 192.168.11.131\""
 
           # Zadkiel VMs
           "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
