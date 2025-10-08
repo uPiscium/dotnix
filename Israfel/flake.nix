@@ -12,12 +12,14 @@
     let
       mkNixosSystem = (import ../utils.nix { inherit inputs; }).mkNixosSystem;
       mkHomeManagerConfiguration = (import ../utils.nix { inherit inputs; }).mkHomeManagerConfiguration;
+      hostname = "Israfel";
+      username = "upiscium";
     in
     {
       nixosConfigurations.host = mkNixosSystem {
         system = "x86_64-linux";
-        hostname = "Israfel";
-        username = "upiscium";
+        hostname = hostname;
+        username = username;
         modules = [
           ./host
         ];
@@ -25,8 +27,8 @@
 
       homeConfigurations.home = mkHomeManagerConfiguration {
         system = "x86_64-linux";
-        hostname = "Israfel";
-        username = "upiscium";
+        hostname = hostname;
+        username = username;
         modules = [
           ./home
         ];
