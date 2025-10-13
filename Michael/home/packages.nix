@@ -11,7 +11,7 @@
     unityhub
     # voicevox
     vscode
-    zoom
+    zoom-us
 
     clang-tools
     clangStdenv
