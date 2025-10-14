@@ -11,7 +11,7 @@
     aliases = {
       a = "add";
       aa = "!sh ~/dotnix/config.d/scripts/addAll.sh";
-      b = "branch -a";
+      b = "branch";
       bd = "!sh ~/dotnix/config.d/scripts/deleteBranch.sh";
       c = "commit -m";
       cc = "rm -r --cached .";
