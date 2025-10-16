@@ -1,7 +1,6 @@
 { inputs, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    sddm-chili-theme
-    sddm-sugar-dark
+    sddm-astronaut
   ];
 
   programs.hyprland = {
@@ -13,7 +12,7 @@
 
   services.displayManager.sddm = {
     enable = true;
-    theme = "sugar-dark";
+    theme = "astronaut";
     wayland.enable = true;
   };
 }

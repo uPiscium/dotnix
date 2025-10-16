@@ -5,5 +5,33 @@
   "editor.fontFamily": "CaskaydiaCove Nerd Font Mono",
   "editor.fontSize": 12,
   "vscode-neovim.neovimInitVimPaths.linux": "~/.config/nvim-vscode/init.lua",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "vim.leader": " ",
+  "vim.useCtrlKeys": true,
+  "vim.handleKeys": {
+    "<C-w>": false,
+    "<C-b>": false
+  },
+  "whichkey.showIcons": true,
+  "whichkey.delay": 0,
+  "whichkey.bindings": [
+    {
+      "key": "e",
+      "name": "Explorer Toggle",
+      "type": "command",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "t",
+      "name": "Terminal",
+      "bindings": [
+        {
+          "key": "f",
+          "name": "Toggle Terminal",
+          "type": "command",
+          "command": "workbench.action.terminal.toggleTerminal"
+        }
+      ]
+    }
+  ]
 }

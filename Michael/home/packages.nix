@@ -6,11 +6,12 @@
     gpu-screen-recorder-gtk
     jetbrains-toolbox
     libreoffice-fresh
+    obsidian
     parsec-bin
     unityhub
     # voicevox
     vscode
-    zoom
+    zoom-us
 
     clang-tools
     clangStdenv

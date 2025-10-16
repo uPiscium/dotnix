@@ -69,16 +69,16 @@
       #   fi
       # }
 
-      # function mountNAS() {
-      #   echo -ne "\033[1;32mMount NAS? (Y/n)\033[0m";
-      #   read answer;
-      #   if [ "$answer" = "n" ]; then
-      #     echo "Skipped mounting NAS.";
-      #   else
-      #     sudo mount -t cifs -o username=upiscium //192.168.11.120/share ~/share;
-      #     echo "Mounted NAS.";
-      #   fi
-      # }
+      function mountNAS() {
+        echo -ne "\033[1;32mMount NAS? (Y/n)\033[0m";
+        read answer;
+        if [ "$answer" = "n" ]; then
+          echo "Skipped mounting NAS.";
+        else
+          sudo mount -t cifs -o username=upiscium //esriel.iruma.arc/NAS ~/NAS;
+          echo "Mounted NAS.";
+        fi
+      }
 
       if [ -n "$\{commands[fzf-share]\}" ]; then
         source "$(fzf-share)/key-bindings.zsh"
