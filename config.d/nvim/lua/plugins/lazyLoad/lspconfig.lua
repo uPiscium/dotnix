@@ -15,7 +15,6 @@ return {
 		local lspconfig = require("lspconfig")
 		local server_list = {
 			"astro",
-			"ansiblels",
 			"bashls",
 			"biome",
 			"clangd",
@@ -66,29 +65,7 @@ return {
 			}
 
 			local opts = {}
-			if server_name == "ansiblels" then
-				opts = {
-					filetypes = { "yaml", "yml", "ansible" },
-					root_dir = lspconfig.util.root_pattern("ansible.cfg", ".git"),
-					settings = {
-						ansible = {
-							ansible = {
-								path = "ansible", -- 実行ファイルのパス
-							},
-							executionEnvironment = {
-								enabled = false, -- コンテナ環境を使わない場合
-							},
-							validation = {
-								enabled = true,
-								lint = {
-									enabled = true,
-									path = "ansible-lint",
-								},
-							},
-						},
-					},
-				}
-			elseif server_name == "csharp_ls" then
+			if server_name == "csharp_ls" then
 				opts = {
 					cmd = { "csharp-ls" },
 					filetypes = { "cs" },
