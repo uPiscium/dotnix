@@ -30,6 +30,7 @@
           "\"metatron.iruma.arc. IN A 192.168.11.82\""
           "\"raphael.iruma.arc. IN A 192.168.11.81\""
           "\"zadkiel.iruma.arc. IN A 192.168.11.83\""
+          "\"lucifer.iruma.arc. IN A 192.168.11.84\""
 
           # Gabriel VMs
           "\"azrael.iruma.arc. IN A 192.168.11.100\""
@@ -44,12 +45,14 @@
           # Raphael VMs
           "\"esriel.iruma.arc. IN A 192.168.11.128\""
           "\"israfel.iruma.arc. IN A 192.168.11.129\""
-          # "\"nathaniel.iruma.arc. IN A 192.168.11.129\""
-          # "\"haniel.iruma.arc. IN A 192.168.11.130\""
+          "\"haniel.iruma.arc. IN A 192.168.11.130\""
+          "\"nathaniel.iruma.arc. IN A 192.168.11.131\""
 
           # Zadkiel VMs
           "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
-          "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
+
+          # Lucifer VMs
+          "\"sahaqiel.iruma.arc. IN A 192.168.11.160\""
 
           # Services
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""

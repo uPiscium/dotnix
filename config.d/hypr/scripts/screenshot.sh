@@ -5,7 +5,7 @@ if [ $# -ne 1 ]; then
 fi
 
 NOW=$(date +%Y-%m-%d_%H-%M-%S)
-SCREENSHOT_DIR="$HOME/Medias/screenshots"
+SCREENSHOT_DIR="$HOME/Pictures/screenshots"
 SCREENSHOT_NAME="screenshot_$NOW.png"
 SCREENSHOT_PATH="$SCREENSHOT_DIR/$SCREENSHOT_NAME"
 
