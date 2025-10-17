@@ -27,10 +27,10 @@
         local-data = [
           # Proxmox servers
           "\"gabriel.iruma.arc. IN A 192.168.11.80\""
+          "\"lucifer.iruma.arc. IN A 192.168.11.84\""
           "\"metatron.iruma.arc. IN A 192.168.11.82\""
           "\"raphael.iruma.arc. IN A 192.168.11.81\""
           "\"zadkiel.iruma.arc. IN A 192.168.11.83\""
-          "\"lucifer.iruma.arc. IN A 192.168.11.84\""
 
           # Gabriel VMs
           "\"azrael.iruma.arc. IN A 192.168.11.100\""
@@ -42,6 +42,7 @@
           "\"uriel.iruma.arc. IN A 192.168.11.112\""
           "\"ramiel.iruma.arc. IN A 192.168.11.113\""
           "\"sandalphon.iruma.arc. IN A 192.168.11.114\""
+          "\"armaros.iruma.arc. IN A 192.168.11.115\""
 
           # Raphael VMs
           "\"esriel.iruma.arc. IN A 192.168.11.128\""
