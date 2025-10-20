@@ -4,7 +4,7 @@
 
     ../../module/home/browser.nix
     ../../module/home/gtk.nix
-    ../../module/home/hyprland.nix
+    ../../module/home/wayfire.nix
 
     ./packages.nix
   ];
@@ -15,13 +15,13 @@
     # export LIBVA_DRIVER_NAME=nvidia
   '';
 
-  home.file.".config/Code/User" = {
-    source = ../../config.d/vscode;
-    recursive = true;
-  };
+  # home.file.".config/Code/User" = {
+  #   source = ../../config.d/vscode;
+  #   recursive = true;
+  # };
 
-  home.file.".config/nvim-vscode" = {
-    source = ../../config.d/nvim-vscode;
-    recursive = true;
-  };
+  # home.file.".config/nvim-vscode" = {
+  #   source = ../../config.d/nvim-vscode;
+  #   recursive = true;
+  # };
 }

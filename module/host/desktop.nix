@@ -10,6 +10,15 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
+  programs.wayfire = {
+    enable = true;
+plugins = with pkgs.wayfirePlugins; [
+    wcm
+    wf-shell
+    wayfire-plugins-extra
+  ];
+  };
+
   services.displayManager.sddm = {
     enable = true;
     theme = "astronaut";
