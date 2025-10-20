@@ -10,7 +10,6 @@
     imagemagick
     less
     lua
-    nfs-utils
     nettools
     nmap
     ripgrep

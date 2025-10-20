@@ -59,6 +59,7 @@
     source = ../../config.d/nvim;
     recursive = true;
   };
+
   home.file.".config/mcphub" = {
     source = ../../config.d/mcphub;
     recursive = true;

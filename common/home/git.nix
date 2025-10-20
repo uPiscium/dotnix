@@ -10,9 +10,9 @@
 
     aliases = {
       a = "add";
-      aa = "!sh ~/dotnix/config.d/scripts/addAll.sh";
+      aa = "!sh ~/dotnix/resources/scripts/addAll.sh";
       b = "branch";
-      bd = "!sh ~/dotnix/config.d/scripts/deleteBranch.sh";
+      bd = "!sh ~/dotnix/resources/scripts/deleteBranch.sh";
       c = "commit -m";
       cc = "rm -r --cached .";
       ch = "checkout";
@@ -31,7 +31,11 @@
 
     extraConfig = {
       push = { autoSetupRemote = true; };
+      pull = { rebase = false; };
       init = { defaultBranch = "main"; };
+      credential = { helper = "store"; };
+      fetch = { prune = true; };
+      user = { email = "upiscium@gmail.com"; name = "uPiscium"; };
     };
   };
 

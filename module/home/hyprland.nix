@@ -1,6 +1,5 @@
 { pkgs, hostname, ... }: {
   home.packages = with pkgs; [
-    # anyrun
     brightnessctl
     grim
     hypridle
@@ -10,27 +9,41 @@
     libnotify
     nemo-with-extensions
     networkmanagerapplet
-    nextcloud-client
     playerctl
     swaynotificationcenter
     waybar
-    walker
+    wofi
     wl-clipboard
     wlogout
   ];
 
-  home.file.".config/hypr/" = {
-    source = ../../config.d/hypr/${hostname};
+  home.file.".config/hypr/hypridle.conf" = {
+    source = ../../config.d/hypr/hypridle.conf;
+  };
+
+  home.file.".config/hypr/hyprland.conf" = {
+    source = ../../config.d/hypr/hyprland.conf;
+  };
+
+  home.file.".config/hypr/hyprlock.conf" = {
+    source = ../../config.d/hypr/hyprlock.conf;
+  };
+
+  home.file.".config/hypr/hyprpaper.conf" = {
+    source = ../../config.d/hypr/hyprpaper.conf;
+  };
+
+  home.file.".config/hypr/platform.conf" = {
+    source = ../../config.d/hypr/platforms/${hostname}.conf;
+  };
+
+  home.file.".config/ly" = {
+    source = ../../config.d/ly;
     recursive = true;
   };
 
-  # home.file.".config/anyrun/" = {
-  #   source = ../../config.d/anyrun;
-  #   recursive = true;
-  # };
-
-  home.file.".config/walker" = {
-    source = ../../config.d/walker;
+  home.file.".config/swaync" = {
+    source = ../../config.d/swaync;
     recursive = true;
   };
 
@@ -44,8 +57,8 @@
     recursive = true;
   };
 
-  home.file.".config/swaync" = {
-    source = ../../config.d/swaync;
+  home.file.".config/wofi" = {
+    source = ../../config.d/wofi;
     recursive = true;
   };
 }

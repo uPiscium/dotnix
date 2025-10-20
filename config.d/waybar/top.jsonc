@@ -1,0 +1,87 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "modules-left": [
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "battery",
+    "backlight"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "network"
+  ],
+
+  "hyprland/workspaces": {
+    "format": "{name}{icon}",
+    "disable-scroll": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "active": ""
+    }
+  },
+
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 1
+  },
+
+  "memory": {
+    "format": "  {}%",
+    "interval": 1
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "interval": 30,
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "interval": 1
+  },
+
+  "network": {
+    "format-wifi": " {essid}: {ipaddr}/{cidr}: {signalStrength}%",
+    "format-ethernet": " {essid}: {ipaddr}/{cidr}",
+    "format-disconnected": " disconnected",
+    "tooltip": true
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "　{volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "headphones": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    }
+  },
+
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󱩎", "󱩏", "󱩐", "󱩑", "󱩒", "󱩓", "󱩔", "󱩕", "󱩖", "󰛨"]
+  }
+}

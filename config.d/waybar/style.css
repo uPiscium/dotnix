@@ -1,88 +1,77 @@
-@define-color bg #000000;
-@define-color bg-green #00aa00;
-@define-color text #dd0000;
-
 * {
-  border: none;
-  border-radius: 0;
-  /* font-family: "CaskaydiaCove Nerd Font Mono"; */
+  font-family: "CaskaydiaCove Nerd Font Mono";
   font-size: 18px;
-  /* font-weight: bold; */
   min-height: 0;
 }
 
+/* Top bar */
 window#waybar {
-  background: @bg;
-  /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-  color: @text;
+  background: #000000;
+  animation: fadein 1s ease-out;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button {
-  padding: 0 5px;
-  background: @bg;
-  color: @text;
-  border-bottom: 3px solid transparent;
+/* Bottom bar */
+window#waybar.bottom {
+  background: #000000;
+  animation: fadein 1s ease-out;
 }
 
-#workspaces button.focused {
-  background: @text;
-  color: @bg;
-  border-bottom: 3px solid #dd0000;
-}
-
-#workspaces button.urgent {
-  background-color: #dd0000;
-}
-
-#mode {
-  background: @bg;
-  border-bottom: 3px solid @text;
-}
-
-#clock,
-#battery,
+/* common */
+#workspaces,
 #cpu,
 #memory,
-#temperature,
-#backlight,
+#battery,
 #network,
-#pulseaudio,
-#custom-media,
+#clock,
 #tray,
-#mode,
-#idle_inhibitor {
-  padding: 0 10px;
-  margin: 0 5px;
-  color: #dd0000;
-}
-
-#clock {
-  background-color: @bg;
-  color: @text;
+#window,
+#pulseaudio,
+#backlight {
+  padding: 0 8px;
+  margin: 0 4px;
+  border-radius: 6px;
+  background: #000000;
   font-weight: bold;
+  color: #ff0000;
+  text-shadow: 0 0 4px #ff5555;
+  transition:
+    background 0.3s,
+    box-shadow 0.3s;
 }
 
-#battery {
-  background-color: @bg;
-  color: @text;
+#cpu:hover,
+#memory:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#clock:hover,
+#tray:hover {
+  background: #440000;
 }
 
-/* #battery.charging { */
-/*   background-color: @bg-green; */
-/*   color: @text; */
-/* } */
-
-@keyframes blink {
-  to {
-    /* background-color: @bg; */
-    color: #ff0000;
-  }
+#workspaces button {
+  color: #ff0000;
+  background-color: #000000;
+  text-shadow: 0 0 4px #ff5555;
+  padding: 0 3px;
+}
+#workspaces button.urgent {
+  background-color: #440000;
 }
 
+#window {
+  background: #000000;
+  border-radius: 10px;
+  padding: 4px 10px;
+}
+
+#battery.warning {
+  color: #ff8800;
+}
 #battery.critical:not(.charging) {
   background: #ff0000;
-  color: @text;
+  color: #dd0000;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -90,72 +79,13 @@ window#waybar {
   animation-direction: alternate;
 }
 
-#cpu {
-  background: @bg;
-  color: @text;
-}
-
-#memory {
-  background: @bg;
-  color: @text;
-}
-
+#pulseaudio,
 #backlight {
-  background: @bg;
-  color: @text;
+  color: #ff0000;
 }
 
-#network {
-  background: @bg;
-  color: @text;
-}
-
-#network.disconnected {
-  background: @bg;
-  color: @text;
-}
-
-#pulseaudio {
-  background: @bg;
-  color: @text;
-}
-
-#pulseaudio.muted {
-  background: @bg;
-  color: @text;
-}
-
-#custom-media {
-  background: @bg;
-  color: @text;
-}
-
-.custom-spotify {
-  background: @bg;
-}
-
-.custom-vlc {
-  background: @bg;
-}
-
-#temperature {
-  background: @bg;
-}
-
-#temperature.critical {
-  background: #ff0000;
-}
-
-#tray {
-  background-color: @bg;
-  color: @text;
-}
-
-#idle_inhibitor {
-  background-color: @bg;
-}
-
-#idle_inhibitor.activated {
-  background-color: @bg;
-  color: @text;
+@keyframes blink {
+  to {
+    color: #ff0000;
+  }
 }

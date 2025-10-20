@@ -10,7 +10,6 @@
     parsec-bin
     unityhub
     # voicevox
-    vscode
     zoom-us
 
     clang-tools

@@ -1,0 +1,48 @@
+window {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff0000;
+  border-radius: 6px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+}
+
+#input {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #ff0000;
+  color: #ffdddd;
+  border-radius: 6px;
+  padding: 6px;
+  font-family: "CaskaydiaCove Nerd Font Mono", monospace;
+  caret-color: #ff0000;
+}
+
+#scroll {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+#entry {
+  background: transparent;
+  border-radius: 6px;
+  padding: 5px 8px;
+  color: #ffbbbb;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+#entry:selected {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: #ffffff;
+  box-shadow: 0 0 10px #ff2222;
+  font-weight: bold;
+}
+
+#text {
+  font-family: "CaskaydiaCove Nerd Font Mono", monospace;
+  font-size: 13px;
+}
+
+#img {
+  margin-right: 8px;
+  opacity: 0.9;
+}
