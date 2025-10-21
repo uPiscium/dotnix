@@ -51,10 +51,10 @@
           "\"nathaniel.iruma.arc. IN A 192.168.11.131\""
 
           # Zadkiel VMs
-          "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
+          "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
 
-          # Lucifer VMs
-          "\"sahaqiel.iruma.arc. IN A 192.168.11.160\""
+          # Windows
+          "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
 
           # Services
           "\"proxmox.iruma.arc. IN A 192.168.11.114\""
