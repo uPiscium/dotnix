@@ -2,6 +2,9 @@
   "layer": "top",
   "position": "bottom",
   "height": 36,
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
   "modules-center": [
     "wlr/taskbar"
   ],
@@ -9,10 +12,20 @@
     "tray"
   ],
 
-  "tray": {
-    "icon-size": 25,
-    "spacing": 8
+  "hyprland/workspaces": {
+    "format": "{name}{icon}",
+    "disable-scroll": true,
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "6": "",
+      "active": ""
+    }
   },
+
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 25,
@@ -20,5 +33,10 @@
     "tooltip-format": "{title}",
     "on-click": "activate",
     "active-first": true
+  },
+
+  "tray": {
+    "icon-size": 25,
+    "spacing": 8
   }
 }

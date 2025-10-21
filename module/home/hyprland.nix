@@ -37,11 +37,6 @@
     source = ../../config.d/hypr/platforms/${hostname}.conf;
   };
 
-  home.file.".config/ly" = {
-    source = ../../config.d/ly;
-    recursive = true;
-  };
-
   home.file.".config/swaync" = {
     source = ../../config.d/swaync;
     recursive = true;

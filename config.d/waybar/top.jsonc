@@ -3,12 +3,11 @@
   "position": "top",
   "height": 32,
   "modules-left": [
-    "hyprland/workspaces",
     "cpu",
     "memory",
+    "backlight",
     "pulseaudio",
-    "battery",
-    "backlight"
+    "battery"
   ],
   "modules-center": [
     "clock"
@@ -16,20 +15,6 @@
   "modules-right": [
     "network"
   ],
-
-  "hyprland/workspaces": {
-    "format": "{name}{icon}",
-    "disable-scroll": true,
-    "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "active": ""
-    }
-  },
 
   "cpu": {
     "format": "  {usage}%",
