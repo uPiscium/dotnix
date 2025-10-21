@@ -5,11 +5,10 @@
     recommendedGzipSettings = true;
     recommendedOptimisation = true;
 
-    virtualHosts."model-gen.upiscium.f5.si" = {
+    virtualHosts."modelgen.upiscium.f5.si" = {
       forceSSL = false;
       locations."/" = {
-        proxyPass = "http://azrael.iruma.arc:8003";
-        proxyWebsockets = true; # allow WebSocket
+        proxyPass = "http://192.168.11.145:8001";
       };
     };
   };
