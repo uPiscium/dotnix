@@ -11,6 +11,12 @@
         email = "upiscium@gmail.com";
       };
 
+      push.autoSetupRemote = true;
+      pull.rebase = false;
+      credential.helper = "store";
+      fetch.prune = true;
+      init.defaultBranch = "main";
+
       alias = {
         a = "add";
         aa = "!sh ~/dotnix/resources/scripts/addAll.sh";
@@ -18,8 +24,6 @@
         bd = "!sh ~/dotnix/resources/scripts/deleteBranch.sh";
         c = "commit -m";
         cc = "rm -r --cached .";
-        ch = "checkout";
-        cb = "checkout -b";
         l = "!git fetch -p && git pull";
         m = "merge";
         p = "push";
@@ -28,14 +32,6 @@
         w = "switch";
         wc = "switch -c";
         wd = "switch -d";
-      };
-
-      extraConfig = {
-        push = { autoSetupRemote = true; };
-        pull = { rebase = false; };
-        init = { defaultBranch = "main"; };
-        credential = { helper = "store"; };
-        fetch = { prune = true; };
       };
     };
   };
