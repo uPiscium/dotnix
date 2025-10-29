@@ -2,27 +2,29 @@
 --   pattern = { "*.ts", "*.tsx", "*.js", "*.jsx", "*.md", "*.json", "*.lua" },
 --   command = "set shiftwidth=2",
 -- })
+--
+local api = vim.api
 
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 	pattern = { "*.py", "*.tf", "*.tfvars" },
 	command = "set shiftwidth=4",
 })
 
-vim.api.nvim_create_autocmd({ "TermOpen" }, {
+api.nvim_create_autocmd({ "TermOpen" }, {
 	pattern = "*",
 	command = "startinsert",
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*.typ", "*.tex", "*.md" },
 	command = "silent! %s/。/. /g | silent! %s/、/, /g",
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+api.nvim_create_autocmd("LspAttach", {
+	group = api.nvim_create_augroup("UserLspConfig", {}),
 	callback = function(ev)
 		-- 保存時に自動フォーマット
-		vim.api.nvim_create_autocmd("BufWritePre", {
+		api.nvim_create_autocmd("BufWritePre", {
 			pattern = { "*.rs", "*.cpp", "*.hpp", "*.py", "*.ts", "*.tf" },
 			callback = function()
 				vim.lsp.buf.format({

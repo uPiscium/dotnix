@@ -16,7 +16,10 @@ keymap.set("n", "<C-b><C-l>", "<cmd>BufferNext<CR>", { noremap = true, silent = 
 keymap.set("n", "<C-b>d", "<cmd>BufferDelete<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-b><C-d>", "<cmd>BufferClose<CR>", { noremap = true, silent = true })
 keymap.set("n", "<C-i>", "<C-a>", { noremap = true, silent = true }) -- increment
-keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true }) -- select all
+keymap.set("n", "sa", "ggVG", { noremap = true, silent = true }) -- select all
+keymap.set("n", "sw", "vw", { noremap = true, silent = true }) -- select word
+keymap.set("n", "<C-h>", "zo")
+keymap.set("n", "<C-H>", "zR")
 
 -- plugins
 -- Neo-tree
@@ -30,7 +33,7 @@ keymap.set("n", "<Space>o", "<cmd>Telescope oldfiles<cr>", { noremap = true, sil
 keymap.set("n", "<Space>r", "<cmd>Telescope live_grep<CR>", { noremap = true, silent = true })
 
 -- lightspeed
-keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
+-- keymap.set("n", "s", "<Plug>Lightspeed_s", { noremap = true, silent = true })
 
 -- builtin lsp
 keymap.set("n", "gn", "<cmd>lua vim.lsp.buf.rename()<CR>", { silent = true }) -- rename
@@ -52,13 +55,13 @@ keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, sile
 keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- camel-case-motion
-keymap.set("n", "cw", "<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
+keymap.set("n", "w", "<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
 -- keymap.set("n", "cb", "<Plug>CamelCaseMotion_b", { noremap = true, silent = true })
 -- keymap.set("n", "ce", "<Plug>CamelCaseMotion_e", { noremap = true, silent = true })
-keymap.set("n", "ycw", "v<Plug>CamelCaseMotion_iwy", { noremap = true, silent = true })
+-- keymap.set("n", "ycw", "v<Plug>CamelCaseMotion_iwy", { noremap = true, silent = true })
 -- keymap.set("n", "vb", "v<Plug>CamelCaseMotion_ib", { noremap = true, silent = true })
 -- keymap.set("n", "ve", "v<Plug>CamelCaseMotion_ie", { noremap = true, silent = true })
-keymap.set("n", "dcw", "d<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
+keymap.set("n", "dw", "d<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
 -- keymap.set("n", "dcb", "d<Plug>CamelCaseMotion_b", { noremap = true, silent = true })
 -- keymap.set("n", "de", "d<Plug>CamelCaseMotion_e", { noremap = true, silent = true })
 
