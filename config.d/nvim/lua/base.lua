@@ -41,13 +41,8 @@ opt.list = true
 opt.cursorline = true
 opt.completeopt = "menu,menuone,noselect"
 
-function Foldtext()
-	local line = vim.fn.getline(vim.v.foldstart)
-	local count = vim.v.foldend - vim.v.foldstart + 1
-	return string.format("%s (%d lines folded)", line, count)
-end
-
-opt.foldmethod = "indent"
+opt.foldcolumn = '1'
+opt.foldmethod = 'indent'
 opt.foldlevel = 99
-opt.foldtext = "v:lua.Foldtext()"
-opt.fillchars = { fold = " " }
+opt.foldlevelstart = 99
+opt.foldenable = true

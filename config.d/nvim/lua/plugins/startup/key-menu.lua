@@ -1,3 +1,3 @@
 return {
-  { "emmanueltouzery/key-menu.nvim", lazy = true }
+  -- { "emmanueltouzery/key-menu.nvim", lazy = true }
 }
