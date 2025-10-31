@@ -1,6 +1,6 @@
 { hostname, ... }: {
   services.openssh.enable = true;
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
   programs.kdeconnect.enable = true;
 
   networking.hostName = hostname;

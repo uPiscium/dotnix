@@ -1,0 +1,32 @@
+layout {
+  gaps 2
+  center-focused-column "always"
+  empty-workspace-above-first
+
+  preset-column-widths {
+    proportion 0.5
+    proportion 0.25
+    proportion 0.33333
+    proportion 0.66667
+    proportion 0.75
+    proportion 1.0
+  }
+  preset-row-heights {
+    proportion 0.5
+    proportion 1.0
+  }
+
+  default-column-width {}
+
+  border {
+    width 2
+    active-color "#ff0000"
+    inactive-color "#440000"
+    urgent-color "#880000"
+  }
+
+  shadow { on }
+  geometry-corner-radius 12
+  clip-to-geometry true
+  tile-state true
+}

@@ -1,0 +1,7 @@
+include "animations.kdl"
+include "exec.kdl"
+include "gestures.kdl"
+include "keybinds.kdl"
+include "layout.kdl"
+include "misc.kdl"
+include "platform.kdl"

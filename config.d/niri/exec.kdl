@@ -1,0 +1,6 @@
+spawn-at-startup "fcitx5"
+spawn-at-startup "nm-applet"
+spawn-at-startup "hypridle"
+spawn-at-startup "hyprpaper"
+spawn-sh-at-startup "waybar -c ~/.config/waybar/top.jsonc -s ~/.config/waybar/style.css"
+spawn-sh-at-startup "waybar -c ~/.config/waybar/bottom.jsonc -s ~/.config/waybar/style.css"

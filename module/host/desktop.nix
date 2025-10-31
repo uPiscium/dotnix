@@ -3,11 +3,15 @@
     kanshi
   ];
 
-  programs.hyprland = {
+  # programs.hyprland = {
+  #   enable = true;
+  #   withUWSM = true;
+  #   # withUWSM = false;
+  #   package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+  # };
+
+  programs.niri = {
     enable = true;
-    withUWSM = true;
-    # withUWSM = false;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
   };
 
   # services.displayManager.sddm = {

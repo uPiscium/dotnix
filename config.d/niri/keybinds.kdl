@@ -1,0 +1,33 @@
+binds {
+    Alt+Q { close-window; }
+    Alt+R { spawn-sh "wofi --show drun"; }
+    Alt+R { spawn "nemo"; }
+    Alt+T { spawn "kitty"; }
+
+    XF86AudioMute allow-when-locked=true { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle"; }
+    F1 allow-when-locked=true { spawn-sh "pactl set-sink-mute @DEFAULT_SINK@ toggle"; }
+
+    XF86AudioMicMute allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
+    Ctrl+F4 allow-when-locked=true { spawn-sh "pactl set-source-mute @DEFAULT_SOURCE@ toggle"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%"; }
+    Ctrl+XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +1%"; }
+    Ctrl+F3 allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +10%"; }
+    Ctrl+Shift+F3 allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ +1%"; }
+
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%"; }
+    Ctrl+XF86AudioLowerVolume allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -1%"; }
+    Ctrl+F2 allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -10%"; }
+    Ctrl+Shift+F2 allow-when-locked=true { spawn-sh "pactl set-sink-volume @DEFAULT_SINK@ -1%"; }
+
+    F7 { spawn-sh "brightnessctl set 5%-"; }
+    Shift+F7 { spawn-sh "brightnessctl set 1%-"; }
+    F8 { spawn-sh "brightnessctl set +5%"; }
+    Shift+F8 { spawn-sh "brightnessctl set +1%"; }
+
+    Alt+Space { spawn-sh "~/dotnix/resources/scripts/toggleTouchpad.sh"; }
+    Alt+N { spawn-sh "swaync-client -t"; }
+
+    Alt+Print { spawn-sh "~/dotnix/resources/scripts/screenshot.sh whole"; }
+    Alt+F6 { spawn-sh "~/dotnix/resources/scripts/screenshot.sh selection"; }
+}

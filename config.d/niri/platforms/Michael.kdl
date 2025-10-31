@@ -1,0 +1,28 @@
+output "eDP-1" {
+  mode "2560x1600"
+  pos "0x0"
+  scale "1.6"
+  transform "normal"
+  forcus-at-startup
+}
+
+output "HDMI-A-3" {
+  mode "1920x1080"
+  pos "-2560x0"
+  scale "1.0"
+  transform "normal"
+}
+
+bind {
+    Alt+G { spawn "google-chrome-stable"; }
+    Alt+U { spawn-sh "google-chrome-stable --profile-directory='Default'"; }
+    Alt+Shift+U { spawn-sh "google-chrome-stable --profile-directory='Profile 4'"; }
+    Alt+I { spawn-sh "google-chrome-stable --profile-directory='Profile 1'"; }
+
+    Alt+F2 { spawn-sh "asusctl -p"; }
+    Alt+F3 { spawn-sh "asusctl -n"; }
+    Alt+F4 { spawn-sh "asusctl aura -n"; }
+    Alt+F9 { spawn-sh "gpu-screen-recorder-gtk"; }
+
+    Alt+F5 { spawn-sh "~/dotnix/resources/scripts/toggle_vpn.sh"; }
+}
