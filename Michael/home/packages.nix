@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    discord
+    blender
+    # discord
+    vesktop
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk

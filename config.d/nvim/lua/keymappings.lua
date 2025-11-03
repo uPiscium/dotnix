@@ -23,8 +23,8 @@ keymap.set("n", "dl", "d$", opts) -- delete to end of line
 keymap.set("n", "dh", "d0", opts) -- delete to beginning of line
 keymap.set("n", "zM", require("ufo").closeAllFolds)
 keymap.set("n", "zR", require("ufo").openAllFolds)
-keymap.set("n", "<C-h>", "za")
-keymap.set("n", "<C-l>", "zo")
+keymap.set("n", "H", "za")
+keymap.set("n", "L", "zo")
 keymap.set("n", "<Space>h", "zM")
 keymap.set("n", "<Space>l", "zR")
 
