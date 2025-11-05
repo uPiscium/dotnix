@@ -62,13 +62,13 @@ keymap.set("n", "<Space>tt", "<cmd>lua tig_toggle()<CR>", { noremap = true, sile
 keymap.set("t", "<C-n>", "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 
 -- camel-case-motion
-keymap.set("n", "w", "<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
+keymap.set("n", "cw", "<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
 -- keymap.set("n", "cb", "<Plug>CamelCaseMotion_b", { noremap = true, silent = true })
 -- keymap.set("n", "ce", "<Plug>CamelCaseMotion_e", { noremap = true, silent = true })
 -- keymap.set("n", "ycw", "v<Plug>CamelCaseMotion_iwy", { noremap = true, silent = true })
 -- keymap.set("n", "vb", "v<Plug>CamelCaseMotion_ib", { noremap = true, silent = true })
 -- keymap.set("n", "ve", "v<Plug>CamelCaseMotion_ie", { noremap = true, silent = true })
-keymap.set("n", "dw", "d<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
+keymap.set("n", "dcw", "d<Plug>CamelCaseMotion_w", { noremap = true, silent = true })
 -- keymap.set("n", "dcb", "d<Plug>CamelCaseMotion_b", { noremap = true, silent = true })
 -- keymap.set("n", "de", "d<Plug>CamelCaseMotion_e", { noremap = true, silent = true })
 
