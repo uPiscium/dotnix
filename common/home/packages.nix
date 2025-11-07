@@ -3,6 +3,7 @@
     bottom
     bun
     cifs-utils
+    colordiff
     fastfetch
     ffmpeg
     fzf

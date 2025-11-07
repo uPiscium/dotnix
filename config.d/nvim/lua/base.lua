@@ -40,4 +40,9 @@ opt.pumblend = 7
 opt.list = true
 opt.cursorline = true
 opt.completeopt = "menu,menuone,noselect"
--- opt.rocks.hererocks = false
+
+opt.foldcolumn = '1'
+opt.foldmethod = 'indent'
+opt.foldlevel = 99
+opt.foldlevelstart = 99
+opt.foldenable = true
