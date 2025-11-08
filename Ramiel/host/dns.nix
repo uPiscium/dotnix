@@ -52,6 +52,8 @@
 
           # Zadkiel VMs
           "\"sahaqiel.iruma.arc. IN A 192.168.11.145\""
+          "\"phanuel.iruma.arc. IN A 192.168.11.146\"" # Proxmox VE backup server
+          "\"cassiel.iruma.arc. IN A 192.168.11.147\""
 
           # Windows
           "\"baraqiel.iruma.arc. IN A 192.168.11.144\""
