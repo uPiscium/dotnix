@@ -8,7 +8,6 @@
   imports =
     [
       # Include the results of the hardware scan.
-      ./extrauser.nix
       ./firewall.nix
       ./hardware.nix
       ./wireguard.nix
