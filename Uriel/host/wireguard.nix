@@ -49,6 +49,11 @@
           publicKey = "cU5bKv885WE2Zx3D+rz60RjSiFX5HYNwG5P5MUEI8Xs=";
           allowedIPs = [ "10.0.0.6/32" ];
         }
+        {
+          # Any device
+          publicKey = "oy+uRe3yGR+j4JUxRLcXGeMFLHeo5O+KuAOWP+lHVRo=";
+          allowedIPs = [ "10.0.0.7/32" ];
+        }
       ];
     };
   };
