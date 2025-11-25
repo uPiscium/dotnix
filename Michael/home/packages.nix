@@ -7,7 +7,8 @@
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     jetbrains-toolbox
-    libreoffice-fresh
+    # libreoffice-fresh
+    onlyoffice-desktopeditors
     obsidian
     parsec-bin
     unityhub
