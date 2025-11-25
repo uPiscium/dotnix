@@ -1,107 +1,72 @@
 return {
-	"hrsh7th/nvim-cmp",
+	"saghen/blink.cmp",
+	-- optional: provides snippets for the snippet source
 	dependencies = {
-		{ "hrsh7th/cmp-nvim-lsp" },
-		-- { "hrsh7th/cmp-vsnip" },
-		{ "saadparwaiz1/cmp_luasnip" },
-		{ "hrsh7th/cmp-buffer" },
-		{ "hrsh7th/cmp-path" },
-		{ "hrsh7th/cmp-cmdline" },
-		{ "hrsh7th/cmp-nvim-lsp-signature-help" },
-		{ "onsails/lspkind-nvim" },
+		"rafamadriz/friendly-snippets",
 	},
-	config = function()
-		local cmp = require("cmp")
-		local lspkind = require("lspkind")
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		cmp.setup({
-			snippet = {
-				-- REQUIRED - you must specify a snippet engine
-				expand = function(args)
-					-- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
-					-- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-					-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-				end,
-			},
-			window = {
-				completion = cmp.config.window.bordered(),
-				documentation = cmp.config.window.bordered(),
-				border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-			},
-			experimental = {
-				ghost_text = true,
-			},
-			mapping = cmp.mapping.preset.insert({
-				["<C-d>"] = cmp.mapping.scroll_docs(-4),
-				["<C-u>"] = cmp.mapping.scroll_docs(4),
-				["<C-Space>"] = cmp.mapping.complete(),
-				["<C-e>"] = cmp.mapping.abort(),
-				["<CR>"] = cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace }),
-				["<C-i>"] = cmp.mapping.confirm({ select = true }),
-				["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
-				["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
-				["<Tab>"] = cmp.config.disable,
-			}),
-			performance = {
-				-- It is recommended to increase the timeout duration due to
-				-- the typically slower response speed of LLMs compared to
-				-- other completion sources. This is not needed when you only
-				-- need manual completion.
-				fetching_timeout = 2000,
-			},
-			sources = cmp.config.sources({
-				{ name = "minuet" },
-				{ name = "nvim_lsp" },
-				-- { name = 'vsnip' }, -- For vsnip users.
-				{ name = "luasnip" }, -- For luasnip users.
-				-- { name = 'ultisnips' }, -- For ultisnips users.
-				-- { name = 'snippy' }, -- For snippy users.
-				-- {name = "codecompanion"}
-			}, {
-				{ name = "buffer" },
-			}),
-			formatting = {
-				fields = { "abbr", "kind", "menu" },
-				expandable_indicator = true,
-				format = lspkind.cmp_format({ with_text = true, maxwidth = 50 }),
-			},
-		})
+	-- use a release tag to download pre-built binaries
+	version = "*",
+	-- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+	-- build = 'cargo build --release',
+	-- If you use nix, you can build from source using latest nightly rust with:
+	-- build = 'nix run .#build-plugin',
 
-		-- Set configuration for specific filetype.
-		-- cmp.setup.filetype("gitcommit", {
-		-- 	sources = cmp.config.sources({
-		-- 		{ name = "git" }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
-		-- 	}, {
-		-- 		{ name = "buffer" },
-		-- 	}),
-		-- })
+	---@module 'blink.cmp'
+	---@type blink.cmp.Config
+	opts = {
+		-- 'default' (recommended) for mappings similar to built-in completions (C-y to accept, C-n/C-p for up/down)
+		-- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys for up/down)
+		-- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+		--
+		-- All presets have the following mappings:
+		-- C-space: Open menu or open docs if already open
+		-- C-e: Hide menu
+		-- C-k: Toggle signature help
+		--
+		-- See the full "keymap" documentation for information on defining your own keymap.
+		keymap = {
+			preset = "default",
+			["<C-i>"] = { "select_and_accept", "fallback" },
+			["<C-e>"] = {}, -- disable, cause it's conflicting with emacs-like keybinds
+		},
 
-		-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-		cmp.setup.cmdline({ "/", "?" }, {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = {
-				{ name = "buffer" },
+		appearance = {
+			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
+			-- Useful for when your theme doesn't support blink.cmp
+			-- Will be removed in a future release
+			-- use_nvim_cmp_as_default = true,
+			-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+			-- Adjusts spacing to ensure icons are aligned
+			nerd_font_variant = "mono",
+		},
+
+		completion = {
+			documentation = {
+				auto_show = true,
+				window = { border = "single" },
 			},
-		})
+			menu = { border = "single" },
+		},
+		signature = {
+			enabled = true,
+			window = { border = "single" },
+		},
 
-		-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-		cmp.setup.cmdline(":", {
-			mapping = cmp.mapping.preset.cmdline(),
-			sources = cmp.config.sources({
-				{ name = "path" },
-			}, {
-				{ name = "cmdline" },
-			}),
-		})
+		-- Default list of enabled providers defined so that you can extend it
+		-- elsewhere in your config, without redefining it, due to `opts_extend`
+		sources = {
+			default = { "lsp", "path", "snippets", "buffer"},
+			providers = {},
+		},
 
-		-- Set up lspconfig. -->>> lsp.lua
-		-- local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		-- -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-		-- require('lspconfig')['stylua'].setup {
-		--   capabilities = capabilities
-		-- }
-	end,
-	event = "VeryLazy",
+		-- Blink.cmp uses a Rust fuzzy matcher by default for typo resistance and significantly better performance
+		-- You may use a lua implementation instead by using `implementation = "lua"` or fallback to the lua implementation,
+		-- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
+		--
+		-- See the fuzzy documentation for more information
+		fuzzy = { implementation = "prefer_rust_with_warning" },
+	},
+	opts_extend = { "sources.default" },
+	event = "InsertEnter",
 }
