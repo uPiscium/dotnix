@@ -8,7 +8,9 @@
       # Executables
       # ansible
       deno
-      clang-tools
+      (clang-tools.override {
+        enableLibcxx = true;
+      })
       gcc
       gnumake
       nodejs
