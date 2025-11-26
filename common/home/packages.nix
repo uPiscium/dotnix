@@ -3,6 +3,7 @@
     bottom
     bun
     cifs-utils
+
     colordiff
     fastfetch
     ffmpeg
@@ -22,8 +23,8 @@
     zsh-nix-shell
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "libxml2-2.13.8"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "libxml2-2.13.8"
+  # ];
   nixpkgs.config.allowUnfree = true;
 }
