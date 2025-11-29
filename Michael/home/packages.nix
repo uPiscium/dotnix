@@ -11,6 +11,7 @@
     onlyoffice-desktopeditors
     obsidian
     parsec-bin
+    # slack
     unityhub
     # voicevox
     zoom-us
