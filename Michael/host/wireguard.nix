@@ -3,7 +3,7 @@
   networking.wg-quick.interfaces = {
     wg0 = {
       address = [ "10.1.0.3/32" ];
-      dns = [ "192.168.11.92" ];
+      dns = [ "dns.upiscium.duckdns.org" ];
       mtu = 1420;
       privateKeyFile = "/home/upiscium/WireGuard/Michael.key";
       postUp = ''
