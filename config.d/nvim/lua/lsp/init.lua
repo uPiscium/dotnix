@@ -55,6 +55,9 @@ for _, server_name in ipairs(lsp_names) do
 	elseif server_name == "clangd" then
 		opts.cmd = { "clangd", "--offset-encoding=utf-16", "--enable-config" }
 		opts.filetypes = { "c", "cpp", "objc", "objcpp" }
+    opts.init_options = {
+      fallbackFlags = { '-std=c++17' },
+    }
 	-- elseif server_name == "eslint" then
 	-- 	opts.on_attach = function(client, bufnr)
 	-- 		vim.api.nvim_create_autocmd("BufWritePre", {

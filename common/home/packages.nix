@@ -8,7 +8,7 @@
     fastfetch
     ffmpeg
     fzf
-    gcc
+    gcc15
     imagemagick
     less
     lua

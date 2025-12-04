@@ -16,12 +16,16 @@
     # voicevox
     zoom-us
 
-    clang-tools
+    (clang-tools.override {
+        enableLibcxx = true;
+    })
+    # clang
     clangStdenv
     dig
     docker-compose
     flex
-    gcc
+    # libgcc
+    gcc15
     gdb
     grim
     jdk17

@@ -11,7 +11,8 @@
       (clang-tools.override {
         enableLibcxx = true;
       })
-      gcc
+      # clang
+      gcc15
       gnumake
       nodejs
       tree-sitter
