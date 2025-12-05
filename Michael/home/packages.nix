@@ -7,25 +7,21 @@
     gpu-screen-recorder
     gpu-screen-recorder-gtk
     jetbrains-toolbox
-    # libreoffice-fresh
     onlyoffice-desktopeditors
     obsidian
     parsec-bin
-    # slack
     unityhub
-    # voicevox
     zoom-us
 
     (clang-tools.override {
         enableLibcxx = true;
     })
-    # clang
-    clangStdenv
+    # clangStdenv
     dig
     docker-compose
     flex
     # libgcc
-    gcc15
+    gcc
     gdb
     grim
     jdk17

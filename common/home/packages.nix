@@ -8,7 +8,8 @@
     fastfetch
     ffmpeg
     fzf
-    gcc15
+    libgcc
+    gcc
     imagemagick
     less
     lua
@@ -23,8 +24,5 @@
     zsh-nix-shell
   ];
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "libxml2-2.13.8"
-  # ];
   nixpkgs.config.allowUnfree = true;
 }

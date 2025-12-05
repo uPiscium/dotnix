@@ -6,13 +6,18 @@
     extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
       # Executables
-      # ansible
       deno
       (clang-tools.override {
         enableLibcxx = true;
       })
-      # clang
-      gcc15
+      clangStdenv
+      libllvm
+      llvmPackages.stdenv
+      llvmPackages.libcxxClang
+      llvmPackages.libcxxStdenv
+      libgcc
+      vimPlugins.clangd_extensions-nvim
+      gcc
       gnumake
       nodejs
       tree-sitter
