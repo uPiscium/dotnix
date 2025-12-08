@@ -10,14 +10,8 @@
       (clang-tools.override {
         enableLibcxx = true;
       })
-      clangStdenv
-      libllvm
-      llvmPackages.stdenv
-      llvmPackages.libcxxClang
-      llvmPackages.libcxxStdenv
-      libgcc
-      vimPlugins.clangd_extensions-nvim
       gcc
+      glibc
       gnumake
       nodejs
       tree-sitter
@@ -61,4 +55,7 @@
     source = ../../config.d/mcphub;
     recursive = true;
   };
+
+  home.file.".clang-tidy".source = ../../config.d/clangd/.clang-tidy;
+  home.file.".config/clangd/config.yaml".source = ../../config.d/clangd/config.yaml;
 }

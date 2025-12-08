@@ -1,0 +1,9 @@
+---
+If:
+  PathMatch: .*\.cpp
+CompileFlags:
+  Add:
+    - -Wall
+    - stdlib=glibc++
+    - --driver-mode=g++
+  Compiler: ~/.nix-profile/bin/g++

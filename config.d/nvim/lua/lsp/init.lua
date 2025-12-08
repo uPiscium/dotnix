@@ -53,11 +53,20 @@ for _, server_name in ipairs(lsp_names) do
 			},
 		}
 	elseif server_name == "clangd" then
-		opts.cmd = { "clangd", "--offset-encoding=utf-16" }
-		opts.filetypes = { "c", "cpp", "objc", "objcpp" }
-    opts.init_options = {
-      fallbackFlags = { '-std=c++17' },
-    }
+		opts.cmd = {
+			"clangd",
+			"--offset-encoding=utf-16",
+			"--enable-config",
+			"--header-insertion=never",
+			"--clang-tidy",
+			"--background-index",
+			"--query-driver=/nix/store/**/*",
+			-- "--index=x86_64-unknown-linux-gnu",
+		}
+		opts.filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" }
+		opts.init_options = {
+			fallbackFlags = { "-std=c++20" },
+		}
 	elseif server_name == "stylelint_lsp" then
 		opts.filetypes = { "css", "scss", "less", "sass" } -- exclude javascript and typescript
 	elseif server_name == "jsonls" then

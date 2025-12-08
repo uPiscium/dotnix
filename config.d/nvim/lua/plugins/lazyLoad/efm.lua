@@ -57,8 +57,10 @@ return {
 				rootMarkers = { ".git/" },
 				languages = {
 					c = { clang_format, clang_tidy },
+					-- c = { clang_format },
 					cmake = { cmake_lint, cmake_format },
 					cpp = { clang_format, clang_tidy },
+					-- cpp = { clang_format },
 					json = { prettier },
 					latex = { latexindent },
 					lua = { stylua },
