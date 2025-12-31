@@ -5,10 +5,9 @@
       ids = [ "*" ];
       settings = {
         main = {
-          capslock = "overload(control, esc)";
+          capslock = "overload(meta, esc)";
           # capslock = "esc";
           muhenkan = "leftalt";
-          # space = "overload(shift, space)";
         };
       };
     };

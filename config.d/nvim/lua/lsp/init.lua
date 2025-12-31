@@ -61,6 +61,8 @@ for _, server_name in ipairs(lsp_names) do
 			"--clang-tidy",
 			"--background-index",
 			"--query-driver=/nix/store/**/*",
+			"--compile-commands-dir=build",
+      "--log=verbose",
 			-- "--index=x86_64-unknown-linux-gnu",
 		}
 		opts.filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" }
