@@ -1,8 +1,16 @@
-{pkgs, ...}: {
-  xdg.portal.enable = true;
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gtk
-  ];
+{ pkgs, ... }: {
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+    ];
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+    };
+  };
 
   services.xserver.enable = true;
   services.xserver = {
