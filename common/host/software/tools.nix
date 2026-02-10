@@ -7,6 +7,7 @@
     nix-index
     usbutils
     vim
+    tmux
     wget
     zsh
   ];

@@ -17,7 +17,7 @@ api.nvim_create_autocmd({ "TermOpen" }, {
 
 api.nvim_create_autocmd({ "BufWritePre" }, {
 	pattern = { "*.typ", "*.tex", "*.md" },
-	command = "silent! %s/。/. /g | silent! %s/、/, /g",
+	command = "silent! %s/。/．/g | silent! %s/、/，/g | silent! %s/（/(/g | silent! %s/）/)/g | silent! %s/「/\"/g | silent! %s/」/\"/g",
 })
 
 api.nvim_create_autocmd("LspAttach", {

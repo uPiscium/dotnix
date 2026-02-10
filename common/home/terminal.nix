@@ -11,4 +11,9 @@
     source = ../../config.d/kitty;
     recursive = true;
   };
+
+  home.file.".config/tmux" = {
+    source = ../../config.d/tmux;
+    recursive = true;
+  };
 }
