@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
-    # cifs-utils
+    cifs-utils
     curl
     lshw
     neovim
