@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     bambu-studio
     blender
+    # discord
     vesktop
     gdlauncher-carbon
     gpu-screen-recorder
@@ -13,6 +14,7 @@
     parsec-bin
     slack
     unityhub
+    # teams-for-linux
     vlc
     wireshark
     zoom-us
@@ -23,7 +25,7 @@
     power-profiles-daemon
     slurp
     swappy
-    termpdfpy
+    # termpdfpy
     typst
     unzip
     wayland-scanner
