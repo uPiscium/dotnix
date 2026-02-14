@@ -4,7 +4,7 @@
     useDHCP = false;
     ipv4.addresses = [
       {
-        address = "10.0.3.11";
+        address = "10.0.3.2";
         prefixLength = 24;
       }
     ];

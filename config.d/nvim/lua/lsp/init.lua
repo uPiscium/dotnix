@@ -62,7 +62,7 @@ for _, server_name in ipairs(lsp_names) do
 			"--background-index",
 			"--query-driver=/nix/store/**/*",
 			"--compile-commands-dir=build",
-      "--log=verbose",
+      "--log=error",
 			-- "--index=x86_64-unknown-linux-gnu",
 		}
 		opts.filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" }

@@ -29,7 +29,8 @@
       nixpkgs-fmt
       nixpkgs-lint
       pyright
-      python312Packages.jedi-language-server
+      # python312Packages.jedi-language-server
+      pyright
       ruff
       rust-analyzer
       glsl_analyzer
