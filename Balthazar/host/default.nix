@@ -11,6 +11,7 @@
       ./hardware.nix
       ./ipfix.nix
       ./ollama.nix
+      ./sunshine.nix
 
       ../../common/host
       ../../module/host/desktop.nix

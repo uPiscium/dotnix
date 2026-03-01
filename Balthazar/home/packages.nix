@@ -16,7 +16,6 @@
     # obsidian
     # parsec-bin
     # slack
-    sunshine
     unityhub
     # teams-for-linux
     vlc
