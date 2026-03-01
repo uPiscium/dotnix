@@ -12,6 +12,7 @@
     jetbrains-toolbox
     # modrinth-app
     # krita
+    moonlight-qt
     onlyoffice-desktopeditors
     obsidian
     parsec-bin

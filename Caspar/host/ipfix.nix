@@ -4,11 +4,11 @@
     useDHCP = false;
     ipv4.addresses = [
       {
-        address = "10.0.3.2";
+        address = "10.0.1.2";
         prefixLength = 24;
       }
     ];
   };
-  networking.defaultGateway = "10.0.3.1";
+  networking.defaultGateway = "10.0.1.1";
   networking.nameservers = [ "192.168.11.92" ];
 }
