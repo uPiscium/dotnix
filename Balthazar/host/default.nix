@@ -10,15 +10,16 @@
       ./firewall.nix
       ./hardware.nix
       ./ipfix.nix
-      ./nvidia.nix
       ./ollama.nix
 
       ../../common/host
+      ../../module/host/desktop.nix
       ../../module/host/proxmox.nix
       # ../../module/NixOS/docker/rootful.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
+      common-gpu-nvidia
       common-pc-ssd
     ]);
 
@@ -28,11 +29,44 @@
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  services.xserver.displayManager.lightdm.enable = false;
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia-drm.fbdev=1"
+  ];
 
-  # environment.systemPackages = with pkgs; [ ];
+  nixpkgs.config = {
+    allowUnfree = true;
+    pulseaudio = true;
+    nvidia.acceptLicense = true;
+  };
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia = {
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
+
+    prime = {
+      reverseSync.enable = false;
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+
+      nvidiaBusId = "PCI:0:10:0";
+      amdgpuBusId = "PCI:0:2:0";
+    };
+  };
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    nvtopPackages.full
+    nvitop
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
