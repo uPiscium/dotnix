@@ -28,14 +28,14 @@ return {
 					return require("codecompanion.adapters").extend("ollama", {
 						name = "ollama_remote",
 						env = {
-							url = "http://sahaquiel.iruma.arc:11434",
+							url = "https://ollama.arc.upiscium.dev",
 						},
 						parameters = {
 							sync = true,
 						},
 						schema = {
 							model = {
-								default = "qwen2.5-coder:14b",
+								default = "gpt-oss:20b",
 							},
 							num_ctx = {
 								default = 16384,
