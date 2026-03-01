@@ -17,7 +17,7 @@ fi
 find "$DOTFILES_DIR" -mindepth 1 -maxdepth 1 | while IFS= read -r file; do
     # Get the base name of the file/directory
     base_name="$(basename "$file")"
-    target="$HOME/$base_name"
+    target="$HOME/.config/$base_name"
 
     # Check if the target already exists and is not a symbolic link
     if [ -e "$target" ] && [ ! -L "$target" ]; then
