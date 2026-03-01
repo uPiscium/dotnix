@@ -5,7 +5,7 @@
       address = [ "10.1.0.3/32" ];
       dns = [ "dns.upiscium.duckdns.org" ];
       mtu = 1420;
-      privateKeyFile = "/home/upiscium/WireGuard/Michael.key";
+      privateKeyFile = "/home/upiscium/secrets/wireguard/Michael.key";
       postUp = ''
         resolvectl dns wg0 192.168.11.92 && resolvectl domain wg0 '~.'
       '';

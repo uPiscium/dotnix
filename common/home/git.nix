@@ -19,11 +19,11 @@
 
       alias = {
         a = "add";
-        aa = "!sh ~/dotnix/resources/scripts/addAll.sh";
+        aa = "!sh ~/dotnix/scripts/addAll.sh";
         b = "branch";
-        bd = "!sh ~/dotnix/resources/scripts/deleteBranch.sh";
+        ba = "branch -a";
         c = "commit -m";
-        cc = "rm -r --cached .";
+        rc = "rm -r --cached";
         l = "!git fetch -p && git pull";
         m = "merge";
         p = "push";

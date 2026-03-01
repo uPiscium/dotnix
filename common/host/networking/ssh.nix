@@ -10,7 +10,6 @@
   };
 
   users.users."upiscium".openssh.authorizedKeys.keyFiles = [
-    ../../../config.d/pubkeys/Michael.pub
-    ../../../config.d/pubkeys/Sariel.pub
+    ../../../config.d/pubkeys/arc.pub
   ];
 }
