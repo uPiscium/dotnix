@@ -19,7 +19,7 @@
 
       alias = {
         a = "add";
-        aa = "!sh ~/dotnix/resources/scripts/addAll.sh";
+        aa = "!sh ~/dotnix/scripts/addAll.sh";
         b = "branch";
         ba = "branch -a";
         c = "commit -m";
