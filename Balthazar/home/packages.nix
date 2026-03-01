@@ -1,26 +1,27 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     antigravity
-    bambu-studio
-    blender
+    # bambu-studio
+    # blender
     # discord
-    vesktop
+    # vesktop
     claude-code
-    gdlauncher-carbon
+    # gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
-    jetbrains-toolbox
+    # jetbrains-toolbox
     # modrinth-app
     # krita
-    onlyoffice-desktopeditors
-    obsidian
-    parsec-bin
-    slack
+    # onlyoffice-desktopeditors
+    # obsidian
+    # parsec-bin
+    # slack
+    sunshine
     unityhub
     # teams-for-linux
     vlc
     wireshark
-    zoom-us
+    # zoom-us
 
     dig
     grim
