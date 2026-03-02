@@ -38,7 +38,7 @@
       signing = {
         signByDefault = true;
         format = "openpgp";
-        key = "19428DEB725E9362D9FC18561DDFAB23C3F98531";
+        key = "1B42AFA71A8CB553923473DF504D64B90F5356C1";
       };
     };
   };
