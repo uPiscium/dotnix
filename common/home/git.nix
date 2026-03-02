@@ -40,6 +40,8 @@
         format = "openpgp";
         key = "1B42AFA71A8CB553923473DF504D64B90F5356C1";
       };
+      commit.gpgSign = true;
+      tag.gpgSign = true;
     };
   };
 
