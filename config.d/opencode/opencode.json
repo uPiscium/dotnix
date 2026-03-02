@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "https://balthazar.arc.service:11434/v1"
+      },
+      "models": {
+        "devstral-small-2": {
+          "name": "devstral-small-2:24b-instruct-2512-q4_K_M",
+          "maxTokens": 2048,
+          "temperature": 0.7,
+          "topP": 1,
+          "frequencyPenalty": 0,
+          "presencePenalty": 0
+        }
+      }
+    }
+  }
+}
