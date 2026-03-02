@@ -25,7 +25,6 @@
     ]);
 
   # Bootloader.
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest kernel for better hardware support
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
