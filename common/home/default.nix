@@ -3,6 +3,7 @@
     ./git.nix
     ./neovim.nix
     ./packages.nix
+    ./ssh.nix
     ./terminal.nix
     ./zsh.nix
   ];
