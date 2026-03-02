@@ -11,15 +11,15 @@
       ./hardware.nix
       ./ipfix.nix
       ./ollama.nix
+      # ./sunshine.nix
 
       ../../common/host
-      ../../module/host/desktop.nix
       ../../module/host/proxmox.nix
       # ../../module/NixOS/docker/rootful.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
-      common-gpu-nvidia
+      # common-gpu-nvidia
       common-pc-ssd
     ]);
 
@@ -43,20 +43,20 @@
   hardware.nvidia = {
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    open = false;
+    open = true;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
 
-    prime = {
-      reverseSync.enable = false;
-      offload = {
-        enable = true;
-        enableOffloadCmd = true;
-      };
+    # prime = {
+    #   reverseSync.enable = false;
+    #   offload = {
+    #     enable = true;
+    #     enableOffloadCmd = true;
+    #   };
 
-      nvidiaBusId = "PCI:0:10:0";
-      amdgpuBusId = "PCI:0:2:0";
-    };
+    #   nvidiaBusId = "PCI:0:10:0";
+    #   amdgpuBusId = "PCI:0:2:0";
+    # };
   };
   hardware.graphics = {
     enable = true;
@@ -67,6 +67,8 @@
     nvtopPackages.full
     nvitop
   ];
+
+  services.xserver.displayManager.lightdm.enable = false;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
