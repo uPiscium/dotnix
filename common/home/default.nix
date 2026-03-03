@@ -1,7 +1,7 @@
 { ... }: {
   imports = [
     ./git.nix
-    ./gpg.nix
+    # ./gpg.nix
     ./neovim.nix
     ./packages.nix
     ./ssh.nix
