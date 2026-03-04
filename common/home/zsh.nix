@@ -14,6 +14,7 @@
       ll = "ls -l";
       la = "ls -a";
       g = "git";
+      "-" = "cd -";
     };
 
     history = {

@@ -5,7 +5,6 @@
     blender
     # discord
     vesktop
-    claude-code
     gdlauncher-carbon
     gpu-screen-recorder
     gpu-screen-recorder-gtk
@@ -13,8 +12,9 @@
     # modrinth-app
     # krita
     moonlight-qt
-    onlyoffice-desktopeditors
     obsidian
+    onlyoffice-desktopeditors
+    opencode
     parsec-bin
     slack
     unityhub

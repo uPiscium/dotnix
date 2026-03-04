@@ -16,23 +16,32 @@
       credential.helper = "store";
       fetch.prune = true;
       init.defaultBranch = "main";
-
+      ghq = {
+        root = "~/src";
+      };
       alias = {
         a = "add";
-        aa = "!sh ~/dotnix/scripts/addAll.sh";
+        aa = "!~/dotnix/scripts/addAll.sh";
         b = "branch";
         ba = "branch -a";
         c = "commit -m";
-        rc = "rm -r --cached";
+        cc = "rm -r --cached";
         l = "!git fetch -p && git pull";
         m = "merge";
         p = "push";
         r = "reset";
         s = "status";
+        t = "tag";
         w = "switch";
         wc = "switch -c";
-        wd = "switch -d";
       };
+      # signing = {
+      #   signByDefault = true;
+      #   format = "openpgp";
+      #   key = "1B42AFA71A8CB553923473DF504D64B90F5356C1";
+      # };
+      # commit.gpgSign = true;
+      # tag.gpgSign = true;
     };
   };
 
@@ -47,14 +56,11 @@
     settings = {
       editor = "nvim";
       aliases = {
-        rpcr = "repo create";
-        rpc = "repo clone";
-        prc = "pr create -B";
-        prm = "pr merge";
-        rlc = "release create";
-        rll = "release list";
+        pc = "pr create -B";
+        pm = "pr merge";
+        rc = "release create";
+        rl = "release list";
       };
     };
   };
 }
-
