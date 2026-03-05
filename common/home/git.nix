@@ -56,6 +56,8 @@
     settings = {
       editor = "nvim";
       aliases = {
+        rpc = "repo clone";
+        rpcr = "repo create";
         pc = "pr create -B";
         pm = "pr merge";
         rc = "release create";
