@@ -18,6 +18,7 @@
       t = "tmux";
       tl = "tmux ls";
       tt = "tmux a -t";
+      tr = "tmux rename -t";
     };
 
     history = {
