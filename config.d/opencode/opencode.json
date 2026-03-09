@@ -5,12 +5,12 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
       "options": {
-        "baseURL": "http://balthazar.arc.service:11434/v1"
+        "baseURL": "http://10.0.2.5:11434/v1"
       },
       "models": {
         "devstral-small-2:24b-instruct-2512-q4_K_M": {
           "name": "devstral-small-2",
-          "maxTokens": 8192
+          "maxTokens": 32768
         }
       }
     }

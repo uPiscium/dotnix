@@ -14,6 +14,11 @@
       ll = "ls -l";
       la = "ls -a";
       g = "git";
+      "-" = "cd -";
+      t = "tmux";
+      tl = "tmux ls";
+      tt = "tmux a -t";
+      tr = "tmux rename -t";
     };
 
     history = {
