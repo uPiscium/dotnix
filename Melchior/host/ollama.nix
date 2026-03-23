@@ -7,6 +7,9 @@
     enable = true;
     package = pkgs.ollama-cuda;
     environmentVariables = {
+      OLLAMA_NUM_CTX = "16384";
+      OLLAMA_NUM_GPU = "999";
+      OLLAMA_GPU_OVERHEAD = "0";
       OLLAMA_FLASH_ATTANTION = "1";
       OLLAMA_KV_CACHE_TYPE = "q8_0";
     };
