@@ -22,8 +22,9 @@
       alias = {
         a = "add";
         aa = "!~/dotnix/scripts/addAll.sh";
-        b = "branch";
-        ba = "branch -a";
+        b = "branch -a";
+        bd = "branch -D";
+        rbd = "push origin --delete";
         c = "commit -m";
         cc = "rm -r --cached";
         l = "!git fetch -p && git pull";
