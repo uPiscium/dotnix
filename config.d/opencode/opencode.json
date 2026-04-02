@@ -5,12 +5,12 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
       "options": {
-        "baseURL": "http://10.0.2.5:11434/v1"
+        "baseURL": "http://ollama-melchior.arc.upiscium.dev/v1"
       },
       "models": {
         "devstral-small-2:24b-instruct-2512-q4_K_M": {
           "name": "devstral-small-2",
-          "maxTokens": 32768
+          "maxTokens": 16384
         }
       }
     }
