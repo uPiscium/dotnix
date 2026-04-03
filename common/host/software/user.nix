@@ -3,7 +3,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "uPiscium";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" ];
   };
 }
 
