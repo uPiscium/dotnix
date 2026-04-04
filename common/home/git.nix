@@ -29,12 +29,19 @@
         cc = "rm -r --cached";
         l = "!git fetch -p && git pull";
         m = "merge";
-        p = "push";
-        r = "reset";
+        p = "!git push && git worktree prune";
+        r = "reset --soft";
+        rh = "reset --hard";
         s = "status";
         t = "tag";
         w = "switch";
         wc = "switch -c";
+        wt = "worktree";
+        wa = "worktree add -b";
+        we = "worktree repair";
+        wk = "worktree lock";
+        wl = "worktree list";
+        wr = "worktree remove";
       };
       # signing = {
       #   signByDefault = true;
