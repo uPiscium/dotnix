@@ -186,7 +186,6 @@ in
       };
       alias = {
         a = "add";
-        # aa = "!~/dotnix/scripts/addAll.sh";
         b = "branch -a";
         bd = "branch -D";
         rbd = "push origin --delete";
@@ -202,11 +201,9 @@ in
         w = "switch";
         wc = "switch -c";
         wt = "worktree";
-        # wa = "worktree add -b";
         wr = "worktree repair";
         wk = "worktree lock";
         wl = "worktree list";
-        # wr = "worktree remove";
       };
       # signing = {
       #   signByDefault = true;
