@@ -73,17 +73,26 @@
       if [ -d ~/secrets/private-key ]; then
         ssh-add ~/secrets/private-key/* > /dev/null;
       fi
-      # if ~/secrets exists, source its directory files
-      # if [ -d ~/secrets ]; then
-      #     for f in ~/secrets/*; do
-      #         if [ -r "$f" ]; then
-      #             source "$f"
-      #         fi
-      #     done
-      # fi
 
       # Set the default directory for grim screenshots
       export GRIM_DEFAULT_DIR="$HOME/Pictures/screenshots";
+
+      # Completion for git worktree
+      _git-wb() {
+        if type _git-checkout >/dev/null 2>&1; then
+          _git-checkout "$@"
+        fi
+      }
+      _git-wd() {
+        if type _git-branch >/dev/null 2>&1; then
+          _git-branch "$@"
+        fi
+      }
+      _git-aa() {
+        if type _git-add >/dev/null 2>&1; then
+          _git-add "$@"
+        fi
+      }
     '';
   };
 
