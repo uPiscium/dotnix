@@ -3,6 +3,9 @@
     enable = true;
     viAlias = true;
 
+    withRuby = true;
+    withPython3 = true;
+
     extraLuaPackages = ps: [ ps.magick ps.tiktoken_core ];
     extraPackages = with pkgs; [
       # Executables
