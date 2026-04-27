@@ -2,7 +2,10 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
-			local ts = require("nvim-treesitter.configs")
+			local ok, ts = pcall(require, "nvim-treesitter.configs")
+			if not ok then
+				return
+			end
 			ts.setup({
 				event = "BufRead",
 				ensure_installed = {
@@ -45,7 +48,7 @@ return {
 				highlight = {
 					enable = true,
 					disable = { "latex" },
-					additional_vim_regex_highlighting = { "letex", "markdown" },
+					additional_vim_regex_highlighting = { "latex", "markdown" },
 				},
 				indent = {
 					enable = true,
