@@ -15,11 +15,12 @@ local lsp_names = {
 	"lua_ls",
 	"mdx_analyzer",
 	"pyright",
-	"jedi_language_server",
-	"roslyn_ls",
+	"omnisharp",
+	"rust_analyzer",
 	"taplo",
 	"terraformls",
 	"tinymist",
+	"ts_ls",
 	"vimls",
 	"yamlls",
 }
@@ -62,7 +63,7 @@ for _, server_name in ipairs(lsp_names) do
 			"--background-index",
 			"--query-driver=/nix/store/**/*",
 			"--compile-commands-dir=build",
-      "--log=error",
+			"--log=error",
 			-- "--index=x86_64-unknown-linux-gnu",
 		}
 		opts.filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" }
@@ -78,6 +79,13 @@ for _, server_name in ipairs(lsp_names) do
 				validate = true,
 			},
 		}
+    elseif server_name == "omnisharp" then
+      opts.cmd = { "OmniSharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
+      opts.root_dir = function(fname)
+                        -- Unityのプロジェクトルートを見つけるために .sln を探す
+        local root_files = { "*.sln", "*.csproj", "omnisharp.json", "function.json" }
+        return vim.fs.root(0, root_files) or vim.fn.getcwd()
+      end
 	elseif server_name == "yamlls" then
 		opts.settings = {
 			yaml = {
