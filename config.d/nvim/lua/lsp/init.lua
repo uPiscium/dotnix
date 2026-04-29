@@ -15,7 +15,7 @@ local lsp_names = {
 	"nil_ls",
 	"lua_ls",
 	"mdx_analyzer",
-	"pyright",
+	"basedpyright",
 	"omnisharp",
 	"rust_analyzer",
 	"taplo",
@@ -29,6 +29,7 @@ local lsp_names = {
 for _, server_name in ipairs(lsp_names) do
 	local opts = {
 		capabilities = require("blink.cmp").get_lsp_capabilities(),
+		-- capabilities = vim.lsp.protocol.make_client_capabilities(),
 	}
 	if server_name == "denols" then
 		opts.root_dir = function(_, callback)
@@ -126,7 +127,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if not client then
 			return
 		end
-		client.server_capabilities.semanticTokensProvider = nil
+		-- client.server_capabilities.semanticTokensProvider = nil
 		if client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint.enable(true)
 		end

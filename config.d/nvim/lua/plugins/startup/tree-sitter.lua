@@ -67,10 +67,10 @@ return {
 			})
 		end,
 	},
-	{
-		"nvim-treesitter/nvim-tree-docs",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
+	-- {
+	-- 	"nvim-treesitter/nvim-tree-docs",
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	-- },
 	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },

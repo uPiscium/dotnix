@@ -33,7 +33,7 @@
       nixpkgs-lint
       typescript-language-server 
       omnisharp-roslyn 
-      pyright
+      basedpyright
       python312Packages.debugpy
       ruff
       rust-analyzer
