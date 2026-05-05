@@ -2,21 +2,21 @@
   networking.wireguard.enable = true;
   networking.wg-quick.interfaces = {
     wg0 = {
-      address = [ "10.1.0.3/32" ];
-      dns = [ "dns.upiscium.duckdns.org" ];
+      address = [ "10.255.255.2/32" ];
+      dns = [ "192.168.11.81" ];
       mtu = 1420;
       privateKeyFile = "/home/upiscium/secrets/wireguard/Michael.key";
       postUp = ''
-        resolvectl dns wg0 192.168.11.92 && resolvectl domain wg0 '~.'
+        resolvectl dns wg0 192.168.11.81 && resolvectl domain wg0 '~.'
       '';
       postDown = ''
         resolvectl revert wg0
       '';
       peers = [
         {
-          publicKey = "kuOclu/0Oig8B9HEpPfNPHG0Ycc8RnD7QW8rMQwRfyo=";
+          publicKey = "5JAuBQtazvI9J8vp5Nxgr1FL28+xN5NciVafTcsiYk4=";
           allowedIPs = [ "0.0.0.0/0" ];
-          endpoint = "upiscium.f5.si:2000";
+          endpoint = "vpn.upiscium.dev:50000";
           persistentKeepalive = 25;
         }
       ];
