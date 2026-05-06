@@ -15,7 +15,7 @@
       la = "ls -a";
       g = "git";
       "-" = "cd -";
-      t = "tmux";
+      t = "tmux new -s";
       tl = "tmux ls";
       tt = "tmux a -t";
       tr = "tmux rename -t";

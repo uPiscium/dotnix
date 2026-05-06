@@ -1,3 +1,4 @@
+require("lspconfig")
 local lsp_names = {
 	"bashls",
 	"clangd",
@@ -14,12 +15,13 @@ local lsp_names = {
 	"nil_ls",
 	"lua_ls",
 	"mdx_analyzer",
-	"pyright",
-	"jedi_language_server",
-	"roslyn_ls",
+	"basedpyright",
+	"omnisharp",
+	"rust_analyzer",
 	"taplo",
 	"terraformls",
 	"tinymist",
+	"ts_ls",
 	"vimls",
 	"yamlls",
 }
@@ -27,6 +29,7 @@ local lsp_names = {
 for _, server_name in ipairs(lsp_names) do
 	local opts = {
 		capabilities = require("blink.cmp").get_lsp_capabilities(),
+		-- capabilities = vim.lsp.protocol.make_client_capabilities(),
 	}
 	if server_name == "denols" then
 		opts.root_dir = function(_, callback)
@@ -62,7 +65,7 @@ for _, server_name in ipairs(lsp_names) do
 			"--background-index",
 			"--query-driver=/nix/store/**/*",
 			"--compile-commands-dir=build",
-      "--log=error",
+			"--log=error",
 			-- "--index=x86_64-unknown-linux-gnu",
 		}
 		opts.filetypes = { "c", "cpp", "objc", "objcpp", "hpp", "h" }
@@ -78,6 +81,13 @@ for _, server_name in ipairs(lsp_names) do
 				validate = true,
 			},
 		}
+	elseif server_name == "omnisharp" then
+		opts.cmd = { "OmniSharp", "--languageserver", "--hostPID", tostring(vim.fn.getpid()) }
+		opts.root_dir = function(fname)
+			-- Unityのプロジェクトルートを見つけるために .sln を探す
+			local root_files = { "*.sln", "*.csproj", "omnisharp.json", "function.json" }
+			return vim.fs.root(0, root_files) or vim.fn.getcwd()
+		end
 	elseif server_name == "yamlls" then
 		opts.settings = {
 			yaml = {
@@ -117,7 +127,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		if not client then
 			return
 		end
-		client.server_capabilities.semanticTokensProvider = nil
+		-- client.server_capabilities.semanticTokensProvider = nil
 		if client.server_capabilities.inlayHintProvider then
 			vim.lsp.inlay_hint.enable(true)
 		end

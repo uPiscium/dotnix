@@ -18,6 +18,7 @@ return {
 		local yamllint = require("efmls-configs.linters.yamllint")
 		local prettier = require("efmls-configs.formatters.prettier")
 		local nixfmt = require("efmls-configs.formatters.nixfmt")
+		local textlint = require("efmls-configs.linters.textlint")
 		-- Python
 		local ruff = require("efmls-configs.formatters.ruff")
 		local black = require("efmls-configs.formatters.black")

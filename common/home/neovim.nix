@@ -31,9 +31,10 @@
       nil
       nixpkgs-fmt
       nixpkgs-lint
-      pyright
-      # python312Packages.jedi-language-server
-      pyright
+      typescript-language-server 
+      omnisharp-roslyn 
+      basedpyright
+      python312Packages.debugpy
       ruff
       rust-analyzer
       glsl_analyzer
