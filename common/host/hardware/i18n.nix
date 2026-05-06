@@ -48,6 +48,12 @@
       source-serif
       source-han-sans
       source-han-serif
+      # symbol
+      # wingdings
+      # wingdings-2
+      # wingdings-3
+      # webdings
+      # mt-extra
     ];
     fontDir.enable = true;
     fontconfig = {

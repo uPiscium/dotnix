@@ -49,3 +49,33 @@ dap.configurations.cpp = {
 
 -- C言語も同じ設定を使う
 dap.configurations.c = dap.configurations.cpp
+
+-- Python 用のデバッグ設定を追加
+local debugpy_path = vim.fn.exepath("debugpy-adapter") 
+-- Nixでインストールされる実行ファイル名に依存します。
+-- 'python' にモジュールとして実行させるパターンもあります。
+
+dap.adapters.python = function(cb, config)
+  if config.request == 'attach' then
+    --- ... 既存のプロセスへのアタッチ設定 (必要であれば)
+  else
+    cb({
+      type = 'executable',
+      command = vim.fn.exepath('python'), -- Nix環境のPythonバイナリ
+      args = { '-m', 'debugpy.adapter' },
+    })
+  end
+end
+
+dap.configurations.python = {
+  {
+    type = 'python',
+    request = 'launch',
+    name = "Launch file",
+    program = "${file}",
+    pythonPath = function()
+      -- 必要であれば仮想環境を解決するロジックをここに入れます
+      return vim.fn.exepath('python')
+    end,
+  },
+}

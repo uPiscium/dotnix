@@ -13,7 +13,9 @@
     # krita
     moonlight-qt
     obsidian
-    onlyoffice-desktopeditors
+    # onlyoffice-desktopeditors
+    wpsoffice
+    libreoffice
     opencode
     parsec-bin
     slack
