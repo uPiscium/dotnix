@@ -15,7 +15,7 @@
 
       ../../common/host
       ../../module/host/proxmox.nix
-      # ../../module/NixOS/docker/rootful.nix
+      ../../module/host/docker/rootless.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
       common-cpu-amd
