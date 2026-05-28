@@ -7,32 +7,41 @@
 {
   imports =
     [
+      # Include the results of the hardware scan.
       ./firewall.nix
       ./hardware.nix
-      ./ipfix.nix
-      ./nvidia.nix
-      ./ollama.nix
+      ./udev.nix
+      ./wireguard.nix
 
       ../../common/host
-      ../../module/host/proxmox.nix
-      # ../../module/NixOS/docker/rootful.nix
+      ../../module/host/asusctl.nix
+      ../../module/host/desktop.nix
+      ../../module/host/docker/rootless.nix
+      ../../module/host/steam.nix
     ]
     ++ (with inputs.nixos-hardware.nixosModules; [
-      common-cpu-amd
+      common-cpu-intel
       common-pc-ssd
     ]);
 
   # Bootloader.
   # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  # boot.kernelPackages = pkgs.linuxPackages_latest;
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest; # Use latest kernel for better hardware support
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  services.xserver.displayManager.lightdm.enable = false;
+  nixpkgs.config = {
+    allowUnfree = true;
+    pulseaudio = true;
+  };
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
-  # environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
@@ -42,3 +51,4 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "26.05"; # Did you read the comment?
 }
+
